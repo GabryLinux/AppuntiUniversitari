@@ -1,0 +1,67 @@
+\section{Numeri Complessi}
+\paragraph{Definizione.} Il campo complesso $\mathbb{C}$ è la chiusura algebrica di un polinomio di grado $n$ a coefficienti reali.
+Un numero $z \in \mathbb{C}$ è definito dall'\textit{unità immaginaria}:
+\begin{equation}
+    i = j = \sqrt{-1}
+\end{equation}
+
+\subsection{Rappresentazioni}
+Un complesso $z$, che può essere scritto in diverse forme, viene rappresentato sul \textit{Piano di Gauss}, 
+un piano definito dall'asse orizzontale $\mathbb{R}e$ e dall'asse verticale $\mathbb{I}m$
+\subsubsection{Coordinate Rettangolari}
+Un complesso può essere rappresentato come un punto $\left(x,y\right)$ sul piano di Gauss, con $x$ e $y \in \mathbb{R}$ . La forma che lo rappresenta è la forma \textit{algebrica}:
+\begin{equation}
+    z = x + jy
+\end{equation}
+Con $x$ la parte reale (ossia $\mathbb{R}e(z) = x$) e $y$ la parte immaginaria (ossia $\mathbb{I}m(z) = y$)
+
+\subsubsection{Coordinate Polari}
+Un complesso $z$ può essere anche rappresentato in \textit{forma polare} sul piano in funzione della lunghezza $\rho$ del vettore che parte dall'origine (ossia il \textit{modulo}) e dell'angolo spazzato $\theta$ (ossia la \textit{fase}).
+\begin{equation}
+    z = \langle \rho, \theta \rangle = \rho\left(\cos\left(\theta\right) + j\sin\left(\theta\right) \right)
+\end{equation}
+In realtà, un'altra forma che permette di esprimere un complessi in coordinate polari è la forma \textit{esponenziale}
+\begin{equation}
+    z = \rho e^{j\theta} = \rho\left(\cos\left(\theta\right) + j\sin\left(\theta\right) \right) 
+\end{equation} 
+
+
+\subsection{Conversioni}
+\subsubsection{Polare a Rettangolare}
+Dato $z = \langle\rho, \theta\rangle $
+\begin{equation}
+    \begin{cases}
+        x = \rho\cos\left(\theta\right)\\
+        y = \rho\sin\left(\theta\right)
+    \end{cases}
+\end{equation}
+
+\subsubsection{Rettangolare a Polare}
+Dato $z = x + jy$
+\begin{equation}
+    \begin{cases}
+        \rho = \sqrt{x^2 + y^2}\\
+        \theta = \text{atan2}\left(\frac{y}{x}\right)
+    \end{cases}
+\end{equation}
+Dove
+\begin{equation}
+    \text{atan2}\left(\frac{y}{x}\right) = \begin{cases}
+        \arctan\left(\frac{y}{x}\right) \text{ se } x > 0 \\
+        \arctan\left(\frac{y}{x}\right) + \pi \text{ se } x < 0
+    \end{cases}
+\end{equation}
+
+\subsection{Complesso Coniugato}
+\subsubsection{Definizione}
+Dato un $z \in \mathbb{C}$ t.c $z = x + jy = \rho e^{j\theta}$ allora il suo coniugato sarà
+\begin{eqnarray}
+    \overline{z} =  x - jy \\
+    \overline{z} = \rho e^{-j\theta}
+\end{eqnarray}
+In parole povere, il coniugato di un complesso è il complesso che ha stessa parte reale ma opposta parte immaginaria
+\subsubsection{Proprietà}
+\begin{itemize}
+    \item $\displaystyle z + \overline{z} = 2 \mathbb{R}e(z)$
+    \item $z \cdot \overline{z} = x^2 + y^2 = \rho^2$
+\end{itemize}

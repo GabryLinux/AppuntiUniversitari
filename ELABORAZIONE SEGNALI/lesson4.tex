@@ -1,0 +1,198 @@
+\section{Segnali Continui}
+\subsection{Operazioni Sui Segnali Continui}
+\subsubsection{Traslazione}
+Dato un segnale $y = f(x)$ possiamo definire il segnale traslato $y'$ come
+\begin{itemize}
+    \item $y' = f(x - x_0)$ ossia una \textit{traslazione in avanti} di $x_0$
+    \item $y' = f(x + x_0)$ ossia una \textit{traslazione all'indietro} di $x_0$
+\end{itemize}
+Quando la variabile indipendente $x$ è il tempo, possiamo dire che il segnale è, rispettivamente, in \textit{in ritardo} o \textit{in anticipo}
+
+\subsubsection{Scalatura della variabile dipendente}
+Dato $y = f(x)$ e $x \in \mathbb{R}$ allora possiamo definire $y'$ il segnale scalato come
+\begin{equation*}
+    y' = f(ax)
+\end{equation*}
+Dove $a \in \mathbb{R}$ è detto \textit{fattore di scala}.
+In base ai valori assunti da $a$, il segnale può:
+\begin{itemize}
+    \item \textbf{Espandersi} se $|a| < 1$
+    \item \textbf{Comprimersi} se $|a| > 1$
+    \item \textbf{Specchiarsi} rispetto all'asse $y$ se $a < 0$ 
+\end{itemize} 
+
+\newpage
+\subsection{Segnali Notevoli}
+Riporto di seguito alcune funzioni(segnali) che useremo spesso nel corso:
+
+\subsubsection{Funzione Rettangolo}
+Detta anche \textit{Impulso Rettangolare}, è una funzione che ha un picco tra $-\frac{1}{2}$ e $\frac{1}{2}$ e poi è sempre nulla.
+Possiamo definirla così:
+\begin{equation}
+    y = \mbox{rect}(t) = \begin{cases}
+        1 & \mbox{ se } -\frac{1}{2} \leq t \leq \frac{1}{2}\\
+        0 & \mbox{ altrimenti} 
+    \end{cases}
+\end{equation}
+\paragraph{Formula Generalizzata. } Data $A$ l'ampiezza del segnale, $t_0$ il centro del rettangolo e $D$ la durata dell'impulso, possiamo generalizzare la definizione precedente
+\begin{equation}
+    y = A\cdot \mbox{rect} \left( \frac{t - t_0}{D}\right)
+\end{equation}
+\begin{center}
+    \begin{tikzpicture}
+        % Assi
+        \draw[->] (-1,0) -- (8,0) node[below] {$t$}; % asse orizzontale (tempo)
+        \draw[->] (0,-2) -- (0,2) node[left] {$\mbox{rect}(t)$}; % asse verticale (ampiezza)
+    
+        % Segnale rettangolare
+        \draw[thick] (0,0) -- (2,0) -- (2,1) -- (6,1) -- (6,0) -- (8,0); 
+    
+        % Etichette
+        \node at (-1,1) {$A$};
+        \draw[dashed] (0,1) -- (2,1);
+    
+        % Etichettatura degli intervalli
+        \draw (2,0) node[below] {$t_0 - \frac{D}{2}$};
+        \draw[dashed] (4,1) -- (4,0) node[below] {$t_0$};
+        \draw (6,0) node[below] {$t_0 + \frac{D}{2}$};
+    
+    \end{tikzpicture}
+\end{center}
+
+\subsubsection{Gradino Unitario}
+Tale segnale è definibile come
+\begin{equation}
+    u(t) = \begin{cases}
+        1 & \mbox{per } t \geq 0\\
+        0 & \mbox{per } t < 0
+    \end{cases}
+\end{equation}
+\paragraph{Formula Generalizzata.} Data $A$ l'ampiezza del segnale e $t_0$ il tempo di ritardo
+\begin{equation}
+    y = A \cdot u(t-t_0)
+\end{equation}
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (-1,0) -- (8,0) node[below] {$t$};
+        \draw[->] (0,-1) -- (0,2) node[left] {$u(t)$};
+
+        \draw[thick] (-2, 0) -- (3, 0) -- (3, 1) -- (8,1);
+        \draw (3,0) node[below] {$t_0$};
+
+        \node at (-0.3,1) {$A$};
+        \draw[dashed] (0,1) -- (3,1);
+    \end{tikzpicture}
+\end{center}
+
+\subsubsection{Delta di Dirac (o Impulso Ideale)}
+Questo segnale si ottiene, a partire dall'impulso rettangolare, restringendo sempre di più $T$ e aumentando sempre di più l'ampiezza di un termine $\frac{1}{T}$ (questo per mantenere l'area sottesa, o energia, invariata).
+Possiamo determinare la formula analitica di questa operazione:
+\begin{equation*}
+    y(t) = \frac{1}{T}\mbox{rect}\left(\frac{t}{T}\right)
+\end{equation*}
+Facendo tendere a 0 il termine $T$ si ottiene proprio la \textit{delta di Dirac}:
+\begin{equation} \label{eq:delta}
+    \delta(t) = \lim_{T \rightarrow 0} \frac{1}{T}\mbox{rect}\left(\frac{t}{T}\right)
+\end{equation}
+Per com'è definita, la delta di Dirac non è una vera è propria funzione, è una funzione speciale, una distribuzione, che vale sempre 0 tranne quando $t = 0$; 
+in quel caso la funzione va ad infinito, perchè sarebbe l'impulso (ideale) applicato in un istante infinitesimo.
+Dal momento che in questa funzione l'ampiezza è infinita, ha senso considerare, invece, l'area sottesa, ossia l'energia dell'impulso.
+\paragraph{Rappresentazione Tradizionale.} Tradizionalmente la funzione delta viene rappresentata in $0$ con una freccia verso l'alto con la punta a $1$. In ogni altro punto, è $0$.
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (-3,0) -- (3,0) node[below] {$t$};
+        \draw[->] (0,-0.5) -- (0,2) node[left] {$\delta(t)$};
+
+        \draw[thick] (-3,0) -- (3, 0);
+        \draw[->,thick] (0,0) -- (0,1);
+
+        \node at (-0.3,1) {$1$};
+        
+    \end{tikzpicture}
+\end{center}
+
+\paragraph{Formula Generalizzata. } Data $A$ l'area (e non l'ampiezza, che sarebbe infinita) e $t_0$ il ritardo, la formula sarà:
+\begin{equation*}
+    y(t) = A \cdot \delta \left(t - t_0\right)
+\end{equation*}E il grafico sarà:
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (-3,0) -- (3,0) node[below] {$t$};
+        \draw[->] (0,-0.5) -- (0,2) node[left] {$\delta(t)$};
+
+        \draw[thick] (-3,0) -- (3, 0);
+        \draw[->,thick] (1,0) -- (1,1);
+
+        \draw (1,0) node[below] {$t_0$};
+        \draw[dashed] (0,1) -- (1,1);
+        \draw (0,1) node[left] {A};
+
+        
+    \end{tikzpicture}
+\end{center}
+
+\subsubsection{Proprietà della Delta}
+\begin{itemize}
+    \item \textbf{Area Unitaria}: l'integrale su tutto $\mathbb{R}$ della delta è esattamente $1$
+    \begin{equation}
+        \int_{-\infty}^{\infty} \delta(t)dt = 1
+    \end{equation}
+    \item \textbf{Proprietà del Campionamento}: per enunciare la proprietà è necessario introdurre il concetto di \textit{prodotto scalare tra funzioni}:\\
+    Si dice prodotto scalare tra le funzioni $f$ e $g$ come 
+    \begin{equation}
+        \langle f, g \rangle  = \int_{-\infty}^{\infty} f(t)g(t)dt
+    \end{equation}
+    Detto ciò, la proprietà della campionatura afferma che, per ogni funzione $f(t)$:
+    \begin{equation}
+        \langle f(t), \delta(t)\rangle = \int_{-\infty}^{\infty} f(t)\delta(t)dt = f(0)  
+    \end{equation}
+    Da ciò possiamo capire il significato del termine "campionatura": quando noi effettuiamo il prodotto scalare con il delta, 
+    è come se scattassimo una istantanea alla funzione $f$ in $0$. Questa proprietà ci servira per discretizzare una funzione.
+    Possiamo dunque generalizzare questa proprietà per un qualunque istante $t_0$:
+    \begin{equation}
+        \langle f(t), \delta(t - t_0) \rangle =  \int_{-\infty}^{\infty} f(t)\delta(t - t_0)dt = f(t_0)
+    \end{equation}
+
+    \item \textbf{Proprietà del Prodotto}: il prodotto tra una qualsiasi funzione $f(t)$ e il delta di dirac è sempre 0 laddove $t \neq t_0$:
+    \begin{equation}
+        f(t)\delta(t - t_0) = f(t_0)\delta(t - t_0)
+    \end{equation}
+
+    \item \textbf{Parità}:
+    \begin{equation}
+        \delta(t) = \delta(-t)
+    \end{equation}
+
+    \item \textbf{Integrazione}: la funzione integrale della delta di dirac è in realtà il gradino unitario
+    \begin{equation}
+        \int_{-\infty}^{t} \delta(\tau)d\tau = \begin{cases}
+            1 & \mbox{per } t \geq 0\\
+            0 & \mbox{per } t < 0
+        \end{cases} = u(t)
+    \end{equation}
+\end{itemize}
+
+\subsubsection{Segnali Periodici}
+Un segnale $s(t)$ si dice \textit{periodico} se e solo se il suo valore si ripete ad ogni periodo, ossia:
+\begin{equation}
+    s(t) = s(t + kT)
+\end{equation}
+Dove $k \in \mathbb{Z}$ è il numero di volte e $T \in \mathbb{R}$ è il periodo.\\
+Una cosa da tenere a mente è che, in segnali, solitamente, si normalizza in modo tale da mettere in evidenza
+direttamente nella formula la frequenza (che può essere molto utile).\\
+Es:
+\begin{equation*}
+    f(t) = \cos(2\pi f_0 t)
+\end{equation*}
+Da questa formula sappiamo subito che il periodo di questo segnale è:
+\begin{equation*}
+    \frac{\bcancel{2\pi}}{\bcancel{2\pi} f_0} = \frac{1}{f_0}
+\end{equation*}
+E dunque la sua frequenza è proprio $f_0$
+
+\subsubsection{Fasore}
+Questa funzione è una funzione complessa di variabile reale, con la seguente formula analitica:
+\begin{equation}
+    s(t) = e^{j2\pi f_0 t} = \cos(2\pi f_0 t) + j \sin(2\pi f_0 t)
+\end{equation} 
+

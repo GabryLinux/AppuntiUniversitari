@@ -1,0 +1,79 @@
+\section{Storia dell'IA}
+Studiare la storia dell'Intelligenza Artificiale è utile per capire quali sono stati i 
+problemi agli approcci usati in passato per capire il successo dei nuovi approcci più moderni.
+\subsection{Nascita}
+A differenza di molte altre discipline, l'IA ha una data e un luogo di nascita: il convegno di Dartmouth, organizzato dallo scienziato McCarty, 
+nel \textbf{1956}. A quel convegno parteciparono molti informatici, psicologi, statistici, matematici, che avevano il sentore di star affrontando tutti lo stesso problema ma da punti di vista differenti.
+Alla fine del convegno, questo sentore venne confermato e si diede un nome a questo importante problema: \textbf{Artificial Intelligence}
+
+\subsection{Prima era: l'Approccio Simbolico}
+Dal 1956 alla fine degli anni '60 ci fu il primo boom dell'IA: tale successo è dovuto alla realizzazione di agenti che "ragionassero" tramite manipolazioni simboliche e sintattiche, e tramite regole di inferenza logica.
+I primi risultati furono così tanto promettenti che si investì molto in questa tecnologia. Il fatto è che il grande entusiasmo, col tempo, non venne assecondato dai grandi limiti di questa tecnologia:
+\begin{itemize}
+    \item \textbf{Nessuna conoscenza specifica}: tali tecnologie si basavano SOLO ed ESCLUSIVAMENTE sulla manipolazione sintattica e regole logiche, per cui problemi reali, 
+    di dimensioni nemmeno troppo grandi, risultavano impossibili dal momento che queste intelligenze non avevano alcuna conoscenza del
+    dominio applicativo
+    \item \textbf{Esplosione combinatoria}: alcuni problemi venivano risolti dall'IA provando diverse combinazioni dei dati di un problema;
+    tuttavia questo approccio portava spesso a tempi di calcolo impraticabili (es: problemi NP-HARD). Dunque su istanze di problemi leggermente più grandi
+    tali intelligenze non scalavano.
+    \item \textbf{Limiti di rappresentazione della conoscenza:} l'approccio simbolico usato risultava davvero difficile da implementare
+    per far fronte all'incertezza della realtà e alle situazioni ambigue. Per cui i sistemi realizzati erano molto rigidi e poco scalabili.
+\end{itemize}
+Di fronte a tutti questi limiti, i fondi alla ricerca sull'IA vennero immediatamente congelati e si assistette al \textbf{primo inverno}
+
+\subsection{Seconda era: I Sistemi Esperti}
+Verso la fine degli anni'70, si pensò che il problema riscontrato nell'approccio precedente fosse dovuto 
+solo alla poca conoscenza del dominio applicativo. Per cui iniziarono a diffondersi agenti detti \textbf{Sistemi esperti} poichè \textbf{conoscevano}
+specificatamente il dominio per cui erano realizzati (quindi non vi era alcuna forma di ragionamento). Erano dotati di un sistema di reasoning (IF-THEN-ELSE) per assistere la gestione aziendale e 
+per altre operazioni. I risultati ottenuti da questi sistemi furono così incredibili che si decise di reinvestire TANTISSIMO. Alcune aziende
+già negli anni '80 aveva realizzato team IA, per lo sviluppo di sistemi esperti, con centinaia di membri.
+Ma ecco che, nuovamente, l'Hype generato non fu accompagnato dai risultati sperati:
+\begin{itemize}
+    \item \textbf{Nessun Apprendimento Automatico}: queste macchine, dal momento che mappavano staticamente ad ogni situazione una risposta, non potevano adattarsi alle varie situazioni
+    per cui, ad ogni nuova situazione era necessario che degli esperti aggiornassero le regole di reasoning
+    \item \textbf{Non scalabilità}: anche quest'approccio è affetto dal problema di scalabilità; se il primo approccio permetteva una certa forma di ragionamento logico, questo approccio è fondato solo ed unicamente sulla conoscenza. 
+    Il fatto è che tale forma di conoscenza rigida (IF-THEN) non può tener conto delle infinite situazioni incerte della realtà.
+    \item \textbf{Difficile formalizzazione}: con la crescita di dimensioni dei sistemi esperti, gli scienziati iniziarono ad avere
+    difficoltà a formalizzare regole sensate e coerenti con le precedenti (il ragionamento umano non è quasi mai algoritmico e lineare).
+    \item \textbf{Costi Eleveati}: per tutti questi motivi, la manutenzione e aggiornamento di questi sistemi risultò essere, nel tempo, COSTOSISSIMA.
+\end{itemize}
+Ed ecco che arrivò il \textbf{secondo inverno dell'IA}.
+
+\subsection{Un Nuovo Approccio}
+In generale, possiamo dire, che i primi due approcci esplorati per l'IA fossero fallimentari perchè cercavano di risolvere problemi
+tipicamente umani con il paradigma tradizionale dell'informatica:
+\begin{enumerate}
+    \item Analizzo il problema
+    \item Creo l'algoritmo
+    \item Passo i dati del problema all'algoritmo
+    \item Ottengo il risultato
+\end{enumerate}
+Il nuovo approccio usato è invece detto \textbf{Machine Learning}:
+\begin{enumerate}
+    \item Passo i dati di un problema e le soluzioni corrispondenti (detta Esperienza) ad un computer
+    \item Tale genererà un programma che possa trasformare i dati in input nelle soluzioni date
+    \item Tale programma potrà essere eseguito su nuovi input (con o senza buoni risultati)
+\end{enumerate}
+Purtroppo nei primi anni un tale approccio non era minimamente affrontabile per alcuni motivi:
+\begin{itemize}
+    \item \textbf{Mancanza di Dati}: per addestrare bene una rete neurale è necessaria una quantità di dati umani IMMENSA, cosa che negli anni 60-80 era impossibile.
+    Oggi, grazie ad internet e ai social network, in rete sono disponibili una quantità quasi infinita di dati (soprattutto testuale).
+    \item \textbf{Mancanza di Potenza Computazionale}: per addestrare in tempi utili una rete è necessaria una grande potenza computazionale, potenza che nei decenni successivi
+    si è sviluppata grazie all'industria dei Videogames e delle Schede Grafiche.
+\end{itemize}
+
+\section{Agenti}
+\subsection{Definizione}
+\textit{"Un agente è un ente immerso nell'ambiente. L'agente percepisce l'ambiente tramite \textbf{percettori} ed agisce tramite \textbf{attuatori}"}\footnote{Definizione di Russel-Narvig}.\\
+Tramite la percezione, l'ambiente modifica lo stato dell'agente. Tramite l'azione, l'agente modifica lo stato dell'ambiente. Percezioni e azioni possono essere concepite come flussi di informazioni.
+\subsection{Caratteristiche dell'Ambiente}
+Un ambiente può essere:
+\begin{itemize}
+    \item \textbf{Fully/Partially Observable}: nel primo caso l'agente conosce tutto lo stato dell'ambiente (es: a scacchi). Nel secondo caso, l'agente ne conosce solo una parte (es: il mondo reale)
+    \item \textbf{Single/Multi Agent}: in un ambiente l'agente può essere unico e indipendente oppure deve interagire con altri agenti (in competizione, in cooperazione, ecc...)
+    \item \textbf{Deterministico/Stocastico}: nel primo caso, l'agente conosce apriori l'effetto di ogni azione sull'ambiente. Nel secondo caso, l'effetto può essere solo stimato.
+    \item \textbf{Statico/Dinamico}: l'ambiente può non cambiare o cambiare
+    \item \textbf{A tempo discreto/continuo}
+    \item \textbf{Conosciuto/Sconosciuto}: l'agente può conoscere le regole e le caratteristiche del dominio in cui opera o deve scoprirle man mano.
+\end{itemize}
+

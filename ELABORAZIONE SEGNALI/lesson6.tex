@@ -1,0 +1,118 @@
+\subsection{Proprietà dei Segnali Discreti}
+\subsubsection{Durata}
+La durata di un segnale discreto è la somma delle "stecche" non nulle di un grafico, o meglio, la lunghezza del supporto di $s(t)$
+\begin{equation}
+    D = n_2 - n_1 + 1
+\end{equation}
+Dove $n_2,n_1$ sono gli estremi non nulli del segnale.
+
+\subsubsection{Area}
+Dato $s(n), n \in \mathbb{Z}$
+\begin{equation}
+    A = \sum_{n = -\infty}^{+\infty} s(n)
+\end{equation}
+
+\subsubsection{Valor Medio}
+Il valor medio è un $\tilde{s}$ tale che la funzione costante $s(t)' = \tilde{s}$ ha la stessa area di $s(t)$
+\begin{equation}
+    \tilde{s} = \lim_{N \rightarrow +\infty} \frac{1}{2N + 1} \sum_{n=-N}^{+N} s(n)
+\end{equation}
+
+\subsubsection{Potenza Istantanea}
+Non è altro che il modulo del segnale in un determinato istante $n$, ossia:
+\begin{equation}
+    P_s(n) = \begin{cases}
+        s(n)\overline{s(n)} \mbox{ se } s(n) \in \mathbb{C} \\
+        s(n)^2 \mbox{ altrimenti}
+    \end{cases}
+\end{equation}
+
+\subsubsection{Energia}
+è l'area della Potenza Istantanea, ossia:
+\begin{equation}
+    E_s = \sum_{n=-N}^{+N} |s(n)|^2
+\end{equation}
+
+\subsubsection{Potenza Media}
+è il valor medio della Potenza Istantanea, ossia:
+\begin{equation}
+    P_s =  \lim_{N \rightarrow +\infty} \frac{1}{2N + 1} \sum_{n=-N}^{+N} |s(n)|^2
+\end{equation}
+
+\subsubsection{Segnali Potenza ed Energia}
+Anche in questo caso possiamo fare la distinzione tra i segnali potenza e i segnali energia, la definizione è la stessa presentata 
+alla sezione \eqref{def: sep}
+
+\newpage
+
+\section{Sistemi}
+In forma generale, un sistema descrive una relazione/processo di Causa-Effetto tra un INPUT ed un OUTPUT. In particolare nel corso 
+ci focalizzeremo sui sitemi di Elaborazione dei Segnali.\\
+Un \textbf{Sistema di Elaborazione dei Segnali} può essere vista come una relazione o legge di trasformazione di un segnale in un altro,
+dunque, formalmente:\\
+Dato un sistema $S[\cdot]$, possiamo dire che:
+\begin{equation}
+    y(b) = S[x(t)]
+\end{equation}
+Dove $y(b)$è il segnale in output mentre $x(t)$ è il segnale in input.
+In base alla continuità dei segnali e dei domini possiamo distinguere i sistemi in: \textbf{Continui, Discreti e Misti}
+
+\subsection{Sistemi Continui}
+Dato un sistema $y(b) = S[x(a)]$, con $b \in B, a \in A$ questo si dice continuo se e solo se:
+\begin{itemize}
+    \item $A,B$ sono insiemi continui
+    \item $y(b),x(a)$ sono funzioni continue
+\end{itemize}
+Una classe importante di questi sistemi sono i \textbf{Sistemi Tempo-Continui} in cui la variabile è il tempo.
+
+\paragraph{Esempi. }
+\begin{itemize}
+    \item \textbf{Ritardatori}
+    \begin{equation}
+        y(t) = S[x(t)] = x(t - t_0)
+    \end{equation}
+    Questo sistema non fa altro che ritardare il segnale $x(t)$ di una quantità di $t_0$ secondi.
+
+    \item \textbf{Quantizzatore}
+    \begin{equation}
+        y(t) = \mbox{ROUND}(x(t))
+    \end{equation}
+    Questo sistema arrotonda ogni valore di $x(t)$ al suo intero più vicino.
+
+    \item \textbf{Integratore}
+    \begin{equation}
+        y(t) = S[x(t)] = \int_{t - T}^{t} x(\tau)d\tau
+    \end{equation}
+    Questo sistema associa ad ogni istante $t$ l'area compresa tra $t - T$ e $t$
+\end{itemize}
+
+\subsection{Proprietà dei Sistemi Tempo-Continui}
+\subsubsection{Non Dispersività}
+Un sistema $S[\cdot]$ è non dispersivo se e solo se il sistema dipende solo da $t$ e dal valore attuale di $x(t)$, ossia:
+\begin{equation}
+    y(t) = S[t; x(t)]
+\end{equation}
+possiamo dire che questi sistemi sono senza memoria perchè non considerano per nulla il passato.
+\paragraph{Esempio:}
+\textbf{Amplificatore Ideale}
+\begin{equation}\label{eq: AmpId}
+    y(t) = A \cdot x(t)
+\end{equation}
+
+\subsubsection{Causalità}
+Un sistema $S[\cdot]$ è causale se e solo se:
+\begin{equation}
+    y(t) = S[t; x(\tau) \mbox{ dove } \tau \leq T]
+\end{equation}
+Questi sistemi associano ad ogni istante t un valore dipendente non soltanto dal tempo attuale e dal valore $x(t)$, ma 
+anche della storia di $x(t)$. Bene o male tutti i sistemi reali sono causali, perchè dipendono anche dagli istanti passati di un segnale.
+Esistono (ma solo in teoria) i segnali \textbf{Anticausali}, in cui il sistema dipende dall'istante attuale e quelli futuri (e quindi il futuro causerebbe il presente, impossibile nella realtà)
+
+\subsubsection{Stabilità BIBO (Bounded Input, Bounded Output)}
+Un sistema è \textbf{Stabile} se e solo se per ogni input limitato, l'uscita è sempre limitata, ossia:\\
+Dato $S[\cdot]$ dove $y(t) = S[x(t)]$ con $|x(t)| \leq K_x < +\infty$  $\forall t \in \mathbb{R}$ allora:
+\begin{equation}
+    |y(t)| \leq K_y < +\infty \mbox{  } \forall t \in \mathbb{R}
+\end{equation}
+Dove $K_x,K_y$ sono rispettivamente il limite superiore/inferiore di $x(t),y(t)$
+\paragraph{Esempi:} L'Amplificatore Ideale \eqref{eq: AmpId}.

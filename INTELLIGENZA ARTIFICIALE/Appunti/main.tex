@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\makeatletter
+\renewcommand{\eqref}[1]{%
+  \hyperref[#1]{\textup{\tagform@{\ref*{#1}}}}%
+}
+
+\begin{document}
+\begin{titlepage}
+    \vspace{20mm}
+    \begin{center}
+        \Huge \textbf{Appunti di Intelligenza Artificiale} \\
+        \medskip
+        \LARGE By \textit{@Thisisfava}\\
+        \medskip
+        \large 2024/2025
+    \end{center}
+\end{titlepage}
+\newpage
+\addcontentsline{toc}{section}{}
+\tableofcontents
+\newpage
+\input{lesson1.tex}
+\newpage
+\input{lesson2.tex}
+\newpage
+\input{lesson3.tex}
+\newpage
+\input{lesson4.tex}
+\newpage
+\input{lesson5.tex}
+\input{lesson6.tex}
+\end{document}

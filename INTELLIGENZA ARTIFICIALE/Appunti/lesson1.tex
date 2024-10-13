@@ -1,0 +1,48 @@
+\section{Intelligenza}
+Dare una definizione generale e universale di intelligenza è davvero difficile, 
+dal momento che l'intelligenza può manifestarsi in diversi modi e atteggiamenti. 
+è stata data, tuttavia una \textbf{definizione operativa} che permette di descrivere diverse intelligenze rispetto a \textbf{come fare} e \textbf{cosa fare}.
+\subsection{Definizione Operativa}
+La definizione operativa di cui parlavo prima è riassumibile nella seguente tabella
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|p{5cm}|p{5cm}|}
+        \hline
+         & \textbf{Umanamente} & \textbf{Razionalmente} \\ \hline
+        \textbf{Pensare} & Codificare il funzionamento della mente in un programma & Un programma che usa deduzioni logiche per risolvere il problema \\ \hline
+        \textbf{Agire} & Un programma che ha comportamento umano & Un programma che prende "buone" decisioni \\ \hline
+    \end{tabular}
+\end{table}
+
+\paragraph{Pensare Umanamente.} Consiste nel ottenere un programma che pensa come il nostro cervello; 
+è impossibile dal momento che ancora oggi non lo conosciamo del tutto.
+\paragraph{Pensare Razionalmente.} Consiste nel formalizzare tutta la conoscenza tramite assiomi/regole logiche per poter dedurre/inferire ragionamenti
+\paragraph{Agire Umanamente.} Consiste nell'emulare il comportamento umano (sbagliando, commettendo imprecisioni, ecc...). I captcha sfruttano questa capacità per distinguere i bot dagli umani.
+\paragraph{Agire Razionalmente.} Consiste nella capacità da parte dell'agente di prendere delle decisioni che lo portano al raggiungimento dei suoi obiettivi. \\\textbf{Nota Bene: }Questa è la definizione che utilizzeremo nel corso. 
+
+\subsection{Problema dell'agire umanamente}
+Per quanto possa essere facile da realizzare e utile un agente che agisce umanamente (perchè quest'intelligenza è profondamente legata al task per il quale sono costruiti), esiste un problema che li affligge (soprattutto nei casi più complessi): 
+l'impossibilità di determinare il percorso di ragionamento che ha portato l'agente a prendere questa o quella decisione. 
+Il problema è così critico che l'intera industria dell'autonomous driving è stata rallentata.  
+
+
+\subsection{Test di Turing}
+Spesso, tuttavia, la tabella sopra proposta risulta essere poco pratica e molto astratta. 
+Alan Turing propose, invece, un esperimento che permettesse di determinare se l'agente è intelligente o meno a partire dall'essere intelligente (si spera ) per definizione: l'essere umano. 
+Una formulazione del Test di Turing è la seguente:\\
+Dati A e B agenti intelligenti (tipicamente un uomo e una donna), e C l'agente di cui testare l'intelligenza:
+\begin{itemize}
+    \item C deve indovinare il sesso di A e B
+    \item B collabora con C
+    \item A inganna C
+\end{itemize}
+Se swappando A con B si ottengono le stesse percentuali di successo, l'agente pensa umanamente.
+Questo perchè, per superare il test l'agente dovrebbe possedere le seguenti capacità: 
+\begin{itemize}
+    \item \textbf{interpretazione del linguaggio naturale} per comunicare con l'esaminatore 
+    nel suo linguaggio umano    
+    \item \textbf{rappresentazione della conoscenza} per memorizzare quello che sa o sente
+    \item \textbf{ragionamento automatico} per utilizzare la conoscenza memorizzata in modo 
+    da rispondere alle domande e trarre nuove conclusioni
+    \item \textbf{apprendimento} per adattarsi a nuove circostanze, individuare ed estrapolare pattern
+\end{itemize}

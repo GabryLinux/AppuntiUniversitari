@@ -1,0 +1,180 @@
+\subsection{Proprietà dei Segnali}
+\subsubsection{Durata}
+La durata di un segnale è, considerando un segnale nel tempo, la differenza tra il primo istante in cui il segnale non è nullo e l'ultimo istante.
+
+\subsubsection{Area}
+Si dice \textit{Area di un Segnale} $s(t)$ l'area sottesa dallo stesso segnale, ossia:
+\begin{equation}
+    \int_{-\infty}^{+\infty} s(t)dt
+\end{equation}
+
+\subsubsection{Valor Medio (o Media Temporale)}
+Il valor medio di un segnale $s(t)$ non è altro che quel valore $\tilde{s}$ tale che una funzione costante $s'(t) = \tilde{s}$ ha la stessa area di $s(t)$, ossia:
+\begin{equation}
+    \tilde{s} = \lim_{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^{+T}s(t)dt
+\end{equation}
+
+\subsubsection{Energia}
+Sebbene non stiamo parlando propriamente di lavoro e concetti fisici relativi, dobbiamo dire che un segnale è sempre associato ad una certa energia che il segnale stesso trasporta.
+Dunque \textit{l'energia di un segnale $(s(t))$} è:
+\begin{equation}
+    E_s = \int_{-\infty}^{+\infty} |s(t)|^2 dt
+\end{equation}
+
+\subsubsection{Potenza Istantanea}
+Per il discorso precedente, possiamo anche definire la Potenza Istantanea di un segnale (cioè la potenza in un istante del Segnale) come
+\begin{equation}
+    P[s(t)] = \begin{cases}
+        s(t_0)\overline{s(t_0)} & \mbox{ se } s(t_0) \in \mathbb{C} \\
+        s(t_0)^2 & \mbox{ se } s(t_0) \in \mathbb{R}
+    \end{cases}
+\end{equation}
+
+\subsubsection{Potenza Media}
+La potenza media possiamo, invece, vederla come il valore medio dell'energia, ossia:
+\begin{equation}
+    P_s = \lim_{T \rightarrow +\infty} \frac{1}{2T} \int_{-T}^{+T}|s(t)|^2 dt
+\end{equation}
+
+\subsubsection{Segnale Energia e Potenza} \label{def: sep}
+Innanzitutto possiamo notare come sia Potenza Media che Energia siano non negativi per costruzione;
+inoltre tra Potenza Media e Energia di un segnale è possibile vedere una correlazione: laddove l'energia del segnale è finita, allora la potenza è necessariamente nulla;
+laddove invece la potenza media è maggiore di 0, l'energia è infinita.
+
+In base a questo concetto è possibile definire:
+\begin{itemize}
+    \item \textbf{Segnale Energia} un segnale $s(t)$ se e solo se $0 < E_s < \infty$ e allora $P_s = 0$
+    \item \textbf{Segnale Potenza} un segnale $s(t)$ se e solo se $0 < P_s < \infty$ e allora $E_s \rightarrow +\infty$
+\end{itemize}
+
+\newpage
+
+\section{Segnali Discreti}
+A differenza dei segnali continui, i segnali discreti sono funzioni con Dominio discreto, solitamente rappresentate nella seguente maniera:
+\begin{equation*}
+    y = f(n), \mbox{  } n \in Z
+\end{equation*}
+Enunciamo ora tutte le proprietà, in maniera speculare, che abbiamo già descritto per i segnali continui:
+\subsection{Operazione sui Segnali Discreti}
+\subsubsection{Traslazione}
+Dato un segnale $y = f(n)$ definiamo $y' = f(n - n_0)$ traslazione in avanti di $n_0$; definiamo invece $y'' = f(n + n_0)$ traslazione indietro di $n_0$.
+\subsubsection{Decimazione/UpSampling}
+Dato $y=f(n)$ il segnale con $n \in \mathbb{Z}$, il segnale decimato è:
+\begin{equation}
+    y = f(an) \mbox{ con } a \in Z \mbox{ e } |a| \geq 1 
+\end{equation}
+Questa operazione è detta \textit{decimazione} dal momento che è come se prelevassi selettivamente i valori ogni $a$ campioni del segnale di partenza
+
+\subsubsection{Interpolazione/DownSampling}
+Dato $y=f(n)$ il segnale con $n \in \mathbb{Z}$, il segnale interpolato è:
+\begin{equation}
+    y = f\left(\frac{n}{a}\right) \mbox{ con } a \in Z \mbox{ e } |a| \geq 1 
+\end{equation}
+In parole povere, questa operazione non fa altro che distanziare ogni campione di $a$ intervalli.
+
+\newpage
+
+\subsection{Segnali Notevoli}
+\subsubsection{Rettangolo Discreto}
+Viene definito come:
+\begin{equation}
+    rect\left(\frac{n}{D}\right) = \begin{cases}
+        1 & \mbox{ se } |\frac{n}{D}| \leq \frac{1}{2}\\
+        0 & \mbox{ altrimenti}
+    \end{cases}
+\end{equation}
+\begin{center}
+    \begin{tikzpicture}
+        % Assi
+        \draw[->] (-4,0) -- (4,0) node[below] {$n$}; % asse del tempo discreto
+        \draw[->] (0,-2) -- (0,2) node[left] {$rect\left(\frac{n}{D}\right)$}; % asse dell'ampiezza
+    
+        
+        \draw[dashed] (-2,0) -- (-2,1);
+        \filldraw[blue] (-2,1) circle (2pt);
+        
+        \draw[dashed] (-1,0) -- (-1,1);
+        \filldraw[blue] (-1,1) circle (2pt);
+    
+        \draw[dashed] (0,0) -- (0,1);
+        \filldraw[blue] (0,1) circle (2pt);
+    
+        \draw[dashed] (1,0) -- (1,1);
+        \filldraw[blue] (1,1) circle (2pt);
+    
+        \draw[dashed] (2,0) -- (2,1);
+        \filldraw[blue] (2,1) circle (2pt);
+    
+        \filldraw[blue] (-3,0) circle (2pt);
+        \filldraw[blue] (3,0) circle (2pt);
+        \filldraw[blue] (-4,0) circle (2pt);
+        \filldraw[blue] (4,0) circle (2pt);
+    
+    
+    
+        % Etichettatura degli intervalli di campionamento
+        \draw (-2,0) node[below] {$-\frac{D}{2}$};
+        \draw (2,0) node[below] {$\frac{D}{2}$};
+        \draw (0,1) node[left] {$1$};
+    \end{tikzpicture}
+\end{center}
+
+\subsubsection{Gradino Unitario}
+Anche in questo caso, la formulazione è identica al Gradino Unitario continuo, ossia:
+\begin{equation}
+    u(t) = \begin{cases}
+        1 & \mbox{ se } n \geq 0\\
+        0 & \mbox{ se } n < 0
+    \end{cases} 
+\end{equation}
+
+\subsubsection{Impulso Discreto}
+Questo segnale è il parente "discreto" della \textit{Delta di Dirac} (\ref{eq:delta}) ma è più semplice da introdurre, dal momento che la sua formula è:
+\begin{equation}
+    \delta(n) = \begin{cases}
+        1 & \mbox{ se } n = 0\\
+        0 & \mbox{ se } n \neq 0
+    \end{cases}
+\end{equation}
+Possiamo dunque notare che, a differenza della delta, l'impulso discreto è una vera e propria funzione.
+
+\subsubsection{Proprietà dell'Impulso Discreto}
+\begin{itemize}
+    \item \textbf{Area Unitaria}: è abbastanza ovvia
+    \begin{equation}
+        \sum_{n=-\infty}^{+\infty} \delta(n) = 1
+    \end{equation}
+
+    \item \textbf{Prodotto Scalare con $\delta(n)$} 
+    \begin{equation}
+        \langle f,\delta \rangle = \sum_{n= -\infty}^{\infty} f(n)\delta(n) = f(0) 
+    \end{equation}
+
+    \item \textbf{Prodotto con $\delta(n)$}:
+    \begin{equation}
+        f(n)\delta(n - n_0) = f(n_0)\delta(n - n_0)
+    \end{equation}
+
+    \item \textbf{Integrazione Discreta}:
+    \begin{equation}
+        \sum_{i = -\infty}^{\infty} \delta(i) = \begin{cases}
+            1 & \mbox{ se } n \geq 0\\
+            0 & \mbox{ se } n < 0
+        \end{cases} = u(n)
+    \end{equation}
+\end{itemize}
+
+\subsubsection{Segnali Periodici Discreti}
+Dato $s(n)$ un segnale con $n \in \mathbb{Z}$ è periodico se e solo se
+\begin{equation}
+    s(n) = s(n + kN), \mbox{ con periodo }N, \forall n,k \in \mathbb{Z}
+\end{equation}
+Se $N$ è il periodo di $s(n)$, allora la frequenza sarà $\frac{1}{N}$; Dal momento che $|N| \geq 1$ sempre (non ha senso avere periodo nullo), allora la frequenza è sempre frazionaria.
+Si può dimostrare che solo un segnale con frequenza razionale può essere periodico, mentre se è irrazionale non lo potrà mai essere.
+
+\subsubsection{Fasore Discreto}
+La funzione è molto simile al fasore continuo:
+\begin{equation}
+    s(n) = e^{2\pi j f_0 n}
+\end{equation}
+Dove $f_0$ dev'essere razionale altrimenti la funzione non sarà periodica.

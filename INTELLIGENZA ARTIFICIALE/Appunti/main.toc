@@ -1,0 +1,59 @@
+\contentsline {section}{}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Intelligenza}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definizione Operativa}{3}{subsection.1.1}%
+\contentsline {paragraph}{Pensare Umanamente.}{3}{section*.2}%
+\contentsline {paragraph}{Pensare Razionalmente.}{3}{section*.3}%
+\contentsline {paragraph}{Agire Umanamente.}{3}{section*.4}%
+\contentsline {paragraph}{Agire Razionalmente.}{3}{section*.5}%
+\contentsline {subsection}{\numberline {1.2}Problema dell'agire umanamente}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Test di Turing}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Storia dell'IA}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Nascita}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Prima era: l'Approccio Simbolico}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Seconda era: I Sistemi Esperti}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Un Nuovo Approccio}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Agenti}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Definizione}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caratteristiche dell'Ambiente}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Tipi di Agenti}{8}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Agente Reflex}{8}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Agente Reflex con Modello}{8}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Agente basato su Goal}{8}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Agente basato su Utilità}{9}{subsubsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.4}Relazione di Preferenza}{9}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Definizioni}{9}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Proprietà}{9}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Teorema di Neumann-Morgenstein}{10}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Problemi di Search}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Formulazione del Problema}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Classificazione dei problemi}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Approccio Esaustivo/Esplicito}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Approccio Implicito}{12}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Caratteristiche di un Algoritmo}{12}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Problema di Riferimento}{13}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Ricerca Non Informata}{13}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Depth-First-Search}{13}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Breath-First-Search}{14}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}DFS/BFS Ottimizzati}{14}{subsubsection.4.7.3}%
+\contentsline {paragraph}{EQL (Enqueued List).}{15}{section*.6}%
+\contentsline {paragraph}{Frontiera.}{15}{section*.7}%
+\contentsline {subsection}{\numberline {4.8}UCS (Uniform Cost Search)}{16}{subsection.4.8}%
+\contentsline {paragraph}{Cost To Go Function. }{16}{section*.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Algoritmo (Ad alto livello)}{16}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Ottimalità di UCS}{17}{subsubsection.4.8.2}%
+\contentsline {paragraph}{Ipotesi. }{17}{section*.9}%
+\contentsline {paragraph}{Dimostrazione. }{17}{section*.10}%
+\contentsline {subsubsection}{\numberline {4.8.3}UCS con EXL}{17}{subsubsection.4.8.3}%
+\contentsline {subsection}{\numberline {4.9}Ricerca Informata}{17}{subsection.4.9}%
+\contentsline {subsubsection}{\numberline {4.9.1}A*}{18}{subsubsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.2}A* con EXL}{18}{subsubsection.4.9.2}%
+\contentsline {paragraph}{Euristica Consistente}{18}{section*.11}%
+\contentsline {subsubsection}{\numberline {4.9.3}Monotonicità di $f$}{18}{subsubsection.4.9.3}%
+\contentsline {paragraph}{Dimostrazione. }{19}{section*.12}%
+\contentsline {subsubsection}{\numberline {4.9.4}Ottimalità di A*}{19}{subsubsection.4.9.4}%
+\contentsline {paragraph}{Ipotesi}{19}{section*.13}%
+\contentsline {paragraph}{Dimostrazione}{19}{section*.14}%
+\contentsline {subsection}{\numberline {4.10}Progettare un'Euristica}{19}{subsection.4.10}%
+\contentsline {subsubsection}{\numberline {4.10.1}Problema Rilassato}{20}{subsubsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.2}Limiti di A*}{20}{subsubsection.4.10.2}%
+\contentsline {subsection}{\numberline {4.11}Focal Search}{20}{subsection.4.11}%

@@ -1,0 +1,100 @@
+\subsection{Tipi di Agenti}
+\subsubsection{Agente Reflex}
+L'agente reattivo è sicuramento quello più semplice (ma anche usato): è basato sulla statica mappatura 
+di percezione-azione. La particolarità di questo agente è l'assenza di stato: la mappatura non cambierà mai perchè 
+non viene tenuta in considerazione lo storico delle percezioni (è come se fosse un circuito combinatorio, una funzione ben definita).
+
+\subsubsection{Agente Reflex con Modello}
+Più adatto in ambienti parzialmente osservabili, l'Agente Reflex con Modello tiene traccia della parte dell'ambiente che non può osservare nell'istante corrente.
+Per poter far ciò, l'agente deve poter conoscere:
+\begin{itemize}
+    \item \textbf{Le leggi che descrivono l'ambiente}: (o quelle sufficienti) per poter determinare come può evolvere l'ambiente a prescindere dalle azioni
+    \item \textbf{Gli effetti delle azioni}: per poter determinare l'effetto delle azioni dell'agente sull'ambiente 
+\end{itemize}
+Questi 2 tipi di conoscenza vengono detti \textbf{Modelli del Mondo}
+
+\subsubsection{Agente basato su Goal}
+Un altro tipo di Agente è quello basato su Goal, ossia, quello che conosce l'obiettivo da raggiungere e deve poter calcolare, per ogni azione
+quanto l'agente si avvicina a tale obiettivo. Questa operazione è semplice se il calcolo si può fare in pochi passi, ma se si deve valutare lo storico
+delle azioni, in questo caso non lo è più. Esiste un'intera branca dell'IA che si occupa della Ricerca e Pianificazione.\\ 
+
+Il concetto di obiettivo, tuttavia, è limitante: in base ad un obiettivo si possono scartare gli stati che ci allontanano e gli stati che ci fanno avvicinare all'obiettivo, ma ancora è difficile \textbf{quantificare} la distanza dall'obiettivo.
+Esistono diversi parametri che possiamo utilizzare per quantificare la bontà di un'azione:
+\begin{itemize}
+    \item \textbf{Valore Atteso}: Un primo che viene usato per quantificare la bontà di un'opzione tra le tante è il valore atteso (il prodotto tra la vincita e la sua probabilità, prendendo come esempio quello della lotteria)
+    \item \textbf{Propensione/Avversione al rischio}: un altro parametro riguarda quanto è propenso al rischio l'agente; in base a quello si può prediligere la minima vincita con alta probabilità o massima vincita con bassa probabilità
+    \item \textbf{Utilità}: questo parametro permette di quantificare quanto è utile un premio rispetto ad un altro (es: 100\$ per un povero sono molto utili. Per un ricco, invece, sono poco utili).
+\end{itemize}
+
+
+\subsubsection{Agente basato su Utilità}
+Un agente basato su Utilità è un agente con modello le cui decisioni vengono prese non per raggiungere un obiettivo, ma per massimizzare il grado di "contentezza" dell'agente stesso.
+Per apprezzare meglio il concetto di Utilità e come questo abbia avuto importanti ripercussioni in ambito IA è necessario introdurre una serie di formalismi.
+
+\subsection{Relazione di Preferenza}
+\subsubsection{Definizioni}
+\begin{itemize}
+    \item $\displaystyle S = \{s_1, s_2, \dots\}$ insieme degli stati possibili
+    \item $\displaystyle s_i \succeq s_j $ è detta \textbf{preferenza debole} di $s_i$ a $s_j$
+    \item $\displaystyle s_i \succ s_j$ è detta \textbf{preferenza (stretta)} di $s_i$ a $s_j$
+    \item $\displaystyle s_i \thicksim  s_j$ è detta \textbf{indifferenza} di $s_i$ a $s_j$
+\end{itemize}
+
+Grazie alla probabilità e alle definizioni precedenti è possibile definire il concetto di \textbf{Lotteria} $l$ (che può essere vista anche come una funzione di massa):
+\begin{equation}
+    l = [p_1:s_1, p_2:s_2, \dots]
+\end{equation}
+dove $s_i$ è il possibile esito della lotteria, $p_i:s_i$ è la probabilità che si verifichi $s_i$.
+Inoltre è necessario che $\sum_{i} p_i = 1$
+
+\subsubsection{Proprietà}
+Affinchè una relazione sia di preferenza deve rispettare le seguenti proprietà
+\begin{itemize}
+    \item \textbf{Completezza}: è necessario che ogni preferenza sia comparabile
+        \begin{equation} \label{prop: C}
+            s_1 \succ s_2 \vee s_1 \succeq s_2 \vee s_1 \thicksim s_2 \quad \forall s_1, s_2 
+        \end{equation}
+    \item \textbf{Transitività}: Dati $s_1 \succ s_2 \mbox{ e } s_2 \succ s_3$ allora:
+        \begin{equation} \label{prop: T}
+            s_1 \succ s_3 
+        \end{equation}
+    \item \textbf{Sostituibilità}: Dati 2 stati $s_a$ e $s_b$ indifferenti, le lotterie, che contengono sia il primo stato che il secondo stato
+    con la stessa probabilità $q$, devono essere altrettanto indifferenti
+    \begin{equation} \label{prop: S}
+        [q:s_a,p_1:s_1, \dots] \thicksim [q:s_b, p_1:s_1, \dots] \quad \mbox{se } s_a \thicksim s_b
+    \end{equation}
+    Inoltre è necessario che $q + \sum_i p_i = 1$
+    \item  \textbf{Decomponibilità (Not Fun In Gambling)}: giocare alle varie lotterie in una qualsiasi sequenza non deve influenzare le probabilità di vincita.
+    In parole povere, le varie sottolotterie di una lotteria devono essere indipendenti tra loro. Formalizzando:\\
+    Detta $p_i^e$ la probabilità con cui la lotteria $e$ seleziona lo stato $s_i$, allora date 2 lotterie $l_1,l_2$ se $l_1 \thicksim l_2$ allora
+    \begin{equation} \label{prop: D}
+        p_i^{l_1} = p_i^{l_2}
+    \end{equation} 
+
+    \item \textbf{Monotonicità}: Dati stati preferibili e delle probabilità, la lotteria preferibile è quella che assegna la probabilità maggiore allo stato più preferibile, ossia:\\
+    Se $ s_1 \succ s_2 $ e $p > q$ allora:
+    \begin{equation} \label{prop: M}
+        [p:s_1,(1-p):s_2] \succ [q:s_1,(1-q):s_2]
+    \end{equation}
+
+    \item \textbf{Continuità}: Dati 3 stati, uno più preferibile dell'altro, esisterà sempre un valore tra 0 e 1 che renda la lotteria, tra il più preferibile e il meno preferibile, indifferente allo stato "intermedio", ossia:\\
+    Dati $s_1 \succ s_2 \succ s_3$, $\exists p \in [0,1]$ tale che:
+    \begin{equation} \label{prop: CC}
+        s_2 \thicksim [p: s_1, (1-p): s_3]
+    \end{equation}
+\end{itemize}
+
+
+\subsection{Teorema di Neumann-Morgenstein}
+Data una relazione di preferenza che rispetta le proprietà \eqref{prop: C},\eqref{prop: T},\eqref{prop: S},\eqref{prop: D},\eqref{prop: M},\eqref{prop: CC} 
+allora $\exists u: \mathcal{L} \longrightarrow [0,1]$ (dove $\mathcal{L}$ è l'insieme delle possibili lotterie) tale che:
+\begin{equation}
+        s_1 \succ s_2 \Longleftrightarrow u(s_1) > u(s_2)
+\end{equation}
+\begin{equation}
+    u([p_1:s_1, \dots]) = \displaystyle \sum_i p_i u(s_i)
+\end{equation}
+La $u$ viene detta \textit{funzione di utilità} mentre $u(s_i)$ è detta \textit{utilità dello stato i}.
+In parole povere, il teorema afferma che, data una relazione di preferenza che rispetta quelle proprietà, è possibile definire
+una funzione che associa ad ogni stato un'utilità, dunque se uno stato è preferibile ad un altro, la sua utilità sarà maggiore; inoltre l'utilità di una lotteria è definibile come il valore atteso della funzione utilità. Dunque, per raggiungere lo stato di massima felicità, l'agente deve massimizzare una funzione (che è appunto $u$).
+Dunque, grazie a questo importante teorema, siamo riusciti a ricondurre una forma di ragionamento nella massimizzazione di una funzione (che è un problema facilmente attaccabile)

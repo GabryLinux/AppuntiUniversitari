@@ -1,0 +1,96 @@
+\contentsline {section}{}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Numeri Complessi}{3}{section.1}%
+\contentsline {paragraph}{Definizione.}{3}{section*.2}%
+\contentsline {subsection}{\numberline {1.1}Rappresentazioni}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Coordinate Rettangolari}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Coordinate Polari}{3}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Conversioni}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Polare a Rettangolare}{3}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Rettangolare a Polare}{3}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Complesso Coniugato}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Definizione}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Proprietà}{4}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Operazioni nel campo dei complessi}{5}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Somme tra numeri complessi}{5}{subsubsection.1.4.1}%
+\contentsline {paragraph}{Forma algebrica.}{5}{section*.3}%
+\contentsline {paragraph}{Forma Esponenziale.}{5}{section*.4}%
+\contentsline {subsubsection}{\numberline {1.4.2}Scalatura}{5}{subsubsection.1.4.2}%
+\contentsline {paragraph}{Forma algebrica.}{5}{section*.5}%
+\contentsline {paragraph}{Forma Esponenziale.}{5}{section*.6}%
+\contentsline {subsubsection}{\numberline {1.4.3}Prodotto tra complessi}{5}{subsubsection.1.4.3}%
+\contentsline {paragraph}{Forma algebrica.}{5}{section*.7}%
+\contentsline {paragraph}{Forma Esponenziale.}{5}{section*.8}%
+\contentsline {subsubsection}{\numberline {1.4.4}Inverso di un complesso}{5}{subsubsection.1.4.4}%
+\contentsline {paragraph}{Forma algebrica.}{5}{section*.9}%
+\contentsline {paragraph}{Forma Esponenziale.}{5}{section*.10}%
+\contentsline {subsubsection}{\numberline {1.4.5}Divisione tra numeri complessi}{6}{subsubsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.6}Elevamento a potenza}{6}{subsubsection.1.4.6}%
+\contentsline {paragraph}{Forma algebrica.}{6}{section*.11}%
+\contentsline {paragraph}{Forma Esponenziale.}{6}{section*.12}%
+\contentsline {subsubsection}{\numberline {1.4.7}Estrazione di una radice n-esima}{6}{subsubsection.1.4.7}%
+\contentsline {paragraph}{Forma algebrica.}{6}{section*.13}%
+\contentsline {paragraph}{Forma Esponenziale.}{6}{section*.14}%
+\contentsline {subsubsection}{\numberline {1.4.8}Funzione complessa di variabile reale}{6}{subsubsection.1.4.8}%
+\contentsline {paragraph}{Rappresentazione.}{6}{section*.16}%
+\contentsline {section}{\numberline {2}Segnali}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Classificazione dei segnali}{8}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Rispetto alla dimensionalità}{8}{subsubsection.2.1.1}%
+\contentsline {paragraph}{Dominio.}{8}{section*.17}%
+\contentsline {paragraph}{Codominio.}{8}{section*.18}%
+\contentsline {subsubsection}{\numberline {2.1.2}Rispetto alla Continuità}{8}{subsubsection.2.1.2}%
+\contentsline {paragraph}{Dominio.}{8}{section*.19}%
+\contentsline {paragraph}{Codominio.}{9}{section*.20}%
+\contentsline {paragraph}{Esempi.}{9}{section*.21}%
+\contentsline {subsection}{\numberline {2.2}Tipi di segnali}{9}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Segnali Continui}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Operazioni Sui Segnali Continui}{10}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Traslazione}{10}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Scalatura della variabile dipendente}{10}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Segnali Notevoli}{11}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Funzione Rettangolo}{11}{subsubsection.3.2.1}%
+\contentsline {paragraph}{Formula Generalizzata. }{11}{section*.22}%
+\contentsline {subsubsection}{\numberline {3.2.2}Gradino Unitario}{11}{subsubsection.3.2.2}%
+\contentsline {paragraph}{Formula Generalizzata.}{11}{section*.23}%
+\contentsline {subsubsection}{\numberline {3.2.3}Delta di Dirac (o Impulso Ideale)}{12}{subsubsection.3.2.3}%
+\contentsline {paragraph}{Rappresentazione Tradizionale.}{12}{section*.24}%
+\contentsline {paragraph}{Formula Generalizzata. }{12}{section*.25}%
+\contentsline {subsubsection}{\numberline {3.2.4}Proprietà della Delta}{13}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Segnali Periodici}{13}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Fasore}{14}{subsubsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.3}Proprietà dei Segnali}{15}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Durata}{15}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Area}{15}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Valor Medio (o Media Temporale)}{15}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Energia}{15}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Potenza Istantanea}{15}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Potenza Media}{15}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.7}Segnale Energia e Potenza}{16}{subsubsection.3.3.7}%
+\contentsline {section}{\numberline {4}Segnali Discreti}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Operazione sui Segnali Discreti}{17}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Traslazione}{17}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Decimazione/UpSampling}{17}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Interpolazione/DownSampling}{17}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Segnali Notevoli}{18}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Rettangolo Discreto}{18}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Gradino Unitario}{18}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Impulso Discreto}{18}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Proprietà dell'Impulso Discreto}{18}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Segnali Periodici Discreti}{19}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Fasore Discreto}{19}{subsubsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.3}Proprietà dei Segnali Discreti}{20}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Durata}{20}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Area}{20}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Valor Medio}{20}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Potenza Istantanea}{20}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Energia}{20}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Potenza Media}{20}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}Segnali Potenza ed Energia}{20}{subsubsection.4.3.7}%
+\contentsline {section}{\numberline {5}Sistemi}{21}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Sistemi Continui}{21}{subsection.5.1}%
+\contentsline {paragraph}{Esempi. }{21}{section*.26}%
+\contentsline {subsection}{\numberline {5.2}Proprietà dei Sistemi Tempo-Continui}{22}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Non Dispersività}{22}{subsubsection.5.2.1}%
+\contentsline {paragraph}{Esempio:}{22}{section*.27}%
+\contentsline {subsubsection}{\numberline {5.2.2}Causalità}{22}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Stabilità BIBO (Bounded Input, Bounded Output)}{22}{subsubsection.5.2.3}%
+\contentsline {paragraph}{Esempi:}{22}{section*.28}%

@@ -1,0 +1,74 @@
+\subsection{Operazioni nel campo dei complessi}
+\subsubsection{Somme tra numeri complessi}
+\paragraph{Forma algebrica.} Dati $z_1 = x_1 + jy_1$ e $z_2 = x_2 + jy_2$ la somma sarà:
+\begin{equation}
+    z_1 + z_2 = (x_1 + x_2) + j(y_1 + y_2)
+\end{equation}
+\paragraph{Forma Esponenziale.} La somma è banale
+
+\subsubsection{Scalatura}
+\paragraph{Forma algebrica.} Dati $z = x + jy$ e $a \in \mathbb{R}$ la scalatura sarà:
+\begin{equation}
+    az = ax + jay
+\end{equation}
+\paragraph{Forma Esponenziale.} Dati $z = \rho e^{j\theta}$ e $a \in \mathbb{R}$ la scalatura sarà:
+\begin{equation}
+    az = a\rho e^{j\theta}
+\end{equation}
+
+
+\subsubsection{Prodotto tra complessi}
+\paragraph{Forma algebrica.} Dati $z_1 = x_1 + jy_1$ e $z_2 = x_2 + jy_2$ il prodotto sarà:
+\begin{equation}
+    z_1 \cdot z_2 = (x_1x_2 + y_1y_2) + j(x_1y_2 + x_2y_1)
+\end{equation}
+\paragraph{Forma Esponenziale.} Dati $z_1 = \rho_1 e^{j\theta_1}$ e $z_2 = \rho_2 e^{j\theta_2}$ il prodotto sarà:
+\begin{equation}
+    z_1 \cdot z_2 = \rho_1 \rho_2 e^{j(\theta_1 + \theta_2)}
+\end{equation}
+
+\subsubsection{Inverso di un complesso}
+\paragraph{Forma algebrica.} Dato $z = x + jy$ l'inverso sarà:
+\begin{equation}
+    \frac{1}{z} = \frac{\overline{z}}{\rho^2} = \frac{x - jy}{x^2 + y^2}
+\end{equation}
+Spiegazione della formula: un certo $w = z^{-1}$ con $z \in \mathbb{C}$ se il loro prodotto genera un numero con parte reale unitaria e parte immaginaria nulla.
+Sappiamo che $z\cdot \overline{z} = x^2 + y^2 = \left\lvert z\right\rvert = \rho^2$. Quindi basta dividere il coniugato di z con il modulo quadro($\rho^2$) e si ha l'inverso.
+\paragraph{Forma Esponenziale.} Dati $z = \rho e^{j\theta}$ il prodotto sarà:
+\begin{equation}
+    \frac{1}{z} = \frac{1}{\rho} e^{-j\theta}
+\end{equation}
+
+\subsubsection{Divisione tra numeri complessi}
+Dati $z_1 \in \mathbb{C}$ e $z_2 \in \mathbb{C}$ possiamo riscrivere la divisione tra i 2 numeri come prodotto tra il primo e l'inverso del secondo, e ciò vale per entrambe le forme:
+\begin{equation}
+    \frac{z_1}{z_2} = z_1 \cdot \frac{1}{z_2}
+\end{equation}
+
+
+\subsubsection{Elevamento a potenza}
+\paragraph{Forma algebrica.} L'elevamento ha potenza della forma algebrica non è particolarmente interessante.
+\paragraph{Forma Esponenziale.} Dati $z = \rho e^{j\theta}$ e $n \in \mathbb{Z}$ l'elevamento a potenza sarà $z ^ n = \underbrace{z\cdot z\cdot \ldots \cdot z}_{\mbox{n volte}}$ ossia:
+\begin{equation}
+    z^n = \rho^ne^{jn\theta}
+\end{equation}
+
+
+\subsubsection{Estrazione di una radice n-esima}
+Dato un $z \in \mathbb{C}$ e $y \in \mathbb{C}$, $y$ è radice n-esima di z se e solo se $y^n = z$. 
+La grande differenza con in numeri reali è che, nel campo complesso, esistono esattamente $n$ y distinte di radici che soddisfano l'equazione $y^n - z = 0$ per il teorema fondamentale dell'algebra.  
+\paragraph{Forma algebrica.} La radice n-esima della forma algebrica non è particolarmente interessante.
+\paragraph{Forma Esponenziale.} Dati $z = \rho e^{j\theta}$ e $n \in \mathbb{N}$ la radice n-esima sarà:
+\begin{equation}
+    \sqrt[\leftroot{-2}\uproot{2}n]{z} = \sqrt[\leftroot{-2}\uproot{2}n]{\rho}e^{j\left(\frac{\theta + 2\pi i}{n}\right)} \tag*{\small Con i = 0,1,\dots, n-1 \normalsize}
+\end{equation}
+
+\subsubsection{Funzione complessa di variabile reale}
+Definita come
+\begin{equation*}
+    f : \mathbb{R} \longrightarrow \mathbb{C}
+\end{equation*}
+Oppure come $z = f(x)$ con $z \in \mathbb{C}$ e $x \in \mathbb{R}$, è una funzione che mappa ad ogni reale un immaginario.
+\paragraph{Rappresentazione.}Graficamente una funzione complessa di variabile reale può essere rappresentata in un grafico a 3 dimensioni con un asse per la x (variabile indipendente) e gli altri 2 assi sono $\mathbb{I}m[z]$ e $\mathbb{R}e[z]$.
+Dal momento che sono difficili da rappresentare, si ricorre ad una semplificazione: il grafico tridimensionale si sdoppia in un grafico che mappa ad ogni $x$ la parte Reale di z ed un altro grafico che mappa ad ogni x la parte Immaginaria di z.
+Se si lavora in coordinate polari, è possibile invece rappresentare il grafico che mappa ad ogni x il modulo del complesso corrispondente e un altro grafico che mappa ad ogni x la fase del complesso corrispondente. La particolarità di questi ultimi 2 grafici è che il primo grafico è sempre rappresentato sopra l'asse x (il modulo non può mai essere negativo) e il secondo grafico è sempre rappresentato tra $-\pi$ e $\pi$ dal momento che poi la fase si ripete.

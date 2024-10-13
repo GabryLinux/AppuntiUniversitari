@@ -1,0 +1,69 @@
+\section{Segnali}
+In termini totalmente astratti, un segnale è un veicolo di informazione. 
+L'informazione, a sua volta, possiamo definirla come tutto ciò che aggiunge conoscenza.
+Calato nel contesto del corso, un segnale può essere visto come una funzione
+\begin{equation*}
+    \begin{cases}
+        y = f(x)\\
+        f : A \longrightarrow B
+    \end{cases}
+\end{equation*}
+Dove $x \in A$ è la variabile indipendente, $y \in B$ la variabile dipendente con $A$ e $B$ insiemi qualsiasi.
+\subsection{Classificazione dei segnali}
+\subsubsection{Rispetto alla dimensionalità}
+Un segnale può essere classificato rispetto alla dimensionalità del dominio o del codominio.
+\paragraph{Dominio.} Un segnale rispetto alla dimensionalità del dominio può essere:
+\begin{itemize}
+    \item \textbf{Monodimensionale} se $A \subseteq \mathbb{R}$
+    \item \textbf{n-Dimensionale} se $A \subseteq \mathbb{R}^n$ con $n > 1$
+\end{itemize}
+\paragraph{Codominio.} Un segnale rispetto alla dimensionalità del codominio può essere:
+\begin{itemize}
+    \item \textbf{Scalare} se $B \subseteq \mathbb{R}$
+    \item \textbf{Vettoriale} se $B \subseteq \mathbb{R}^n$ con $n > 1$
+\end{itemize}
+
+\subsubsection{Rispetto alla Continuità}
+Un segnale può essere classificato rispetto alla continuità di dominio o codominio.
+\paragraph{Dominio.} Un segnale rispetto alla continuità del dominio può essere:
+\begin{itemize}
+    \item \textbf{Continuo} se $A \subseteq \mathbb{R}^n$, cioè se $A$ coincide o è sottoinsieme di un insieme denso, continuo.
+    \item \textbf{Discreto} se $A$ coincide o è sottinsieme di un insieme discreto (come $\mathbb{Z}$ o $\mathbb{N}$)
+\end{itemize}
+\paragraph{Codominio.} Un segnale rispetto alla continuità del codominio può essere:
+\begin{itemize}
+    \item \textbf{Ad Ampiezze Continue} se $B \subseteq \mathbb{R}^n$, cioè se $B$ coincide o è sottoinsieme di un insieme denso, continuo.
+    \item \textbf{Ad Ampiezze Discrete} se $B$ coincide o è sottinsieme di un insieme discreto (come $\mathbb{Z}$ o $\mathbb{N}$)
+\end{itemize}
+Nel caso in cui la variabile dipendente sia il tempo, i segnali vengono detti \textbf{tempo-contuinui} o \textbf{tempo-discreti}.
+
+\paragraph{Esempi.}
+Il \textit{suono} può essere visto come la pressione dell'aria in funzione del tempo, ossia come:
+\begin{equation*}
+    p = f(t)
+\end{equation*}
+Dove $p \in \mathbb{R}$, $t \in \mathbb{R}$. Dunque il suono è un segnale \textbf{monodimensionale} e \textbf{scalare}, \textbf{continuo} e \textbf{ad ampiezze continue}\\
+
+Un'\textit{immagine in bianco e nero} può essere vista come una funzione che associa ad ogni punto del piano la \textit{Luminanza}:
+\begin{equation*}
+    L = f(x,y)
+\end{equation*}
+Dove $L \in \mathbb{R}$ e $\langle x,y \rangle \in \mathbb{R}^2 $. Dunque un'immagine a scala di grigi è un segnale \textbf{bidimensionale} e \textbf{scalare}, \textbf{continuo} e \textbf{ad ampiezze continue}\\
+
+Un'\textit{immagine a colori} può essere vista come una funzione che associa ad ogni punto del piano una tripletta di valori (interpretabili in base allo spazio colore scelto). Consideriamo lo spazio RGB:
+\begin{equation*}
+    \langle R,G,B \rangle = f(x,y)
+\end{equation*}
+Dove $\langle R,G,B \rangle \in \mathbb{R}^3$ e $\langle x,y \rangle \in \mathbb{R}^2 $. Dunque un'immagine a colori è un segnale \textbf{bidimensionale} e \textbf{vettoriale}, \textbf{continuo} e \textbf{ad ampiezze continue}
+
+\subsection{Tipi di segnali}
+In base alle caratteristiche di un segnale, possiamo definire alcuni tipi di segnali:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Segnale & Dominio Continuo & Dominio Discreto \\ \hline
+        Codominio Continuo &  Analogico &  Campionato \\ \hline
+        Codominio Discreto &  Quantizzato &  Digitale \\ \hline
+    \end{tabular}
+    \end{table}
