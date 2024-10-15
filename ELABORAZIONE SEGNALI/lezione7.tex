@@ -1,0 +1,70 @@
+\subsubsection{Omogeneità}
+Dato un sistema $S[\cdot] : y(t) = s[x(t)]$, $S$ è detto \textit{omogeneo} se e solo se vale questa proprietà:\\
+Dato come input $a\cdot x(t)$ con $a \in \mathbb{R}$ allora:
+\begin{equation}
+    S[a\cdot x(t)] = a\cdot y(t)
+\end{equation}
+
+\subsubsection{Additività}
+Dato un sistema $S[\cdot] : y(t) = s\left[x(t)\right]$, $S$ è detto \textit{additivo} se e solo se vale questa proprietà:\\
+Dato come input $x(t) = \sum_{i = 1}^{N} x_i(t)$ allora:
+\begin{equation}
+    S[x(t)] = S\left[\sum_{i = 1}^{N} x_i(t)\right] = \sum_{i = 1}^{N} y_i(t)
+\end{equation}
+
+\subsubsection{Linearità}
+Un sistema $S[\cdot] : y(t) = s\left[x(t)\right]$ è detto \textit{lineare} se è sia omogeneo che additivo con gli stessi pesi, ossia se:\\
+Dato $x(t) = \sum_{i = 1}^{N} a_i x_i(t)$ allora:
+\begin{equation}
+    S[x(t)] = S\left[\sum_{i = 1}^{N} a_i x_i(t)\right] = \sum_{i = 1}^{N} a_i y_i(t)
+\end{equation}
+Questa proprietà è dovuta, nei segnali, al \textit{Principio di sovrapposizione degli Effetti}, ossia:\\
+\textit{La risposta di un sistema ad una combinazione lineare degli ingressi è uguale alla combinazione lineare con gli stessi
+coefficienti delle risposte ad ogni singolo ingresso}
+
+\paragraph{Esempi.}
+\begin{itemize}
+    \item \textbf{Integratore definito nel tempo}: grazie alla proprietà di linearità dell'integrale, questo sistema è lineare:
+    \begin{equation}
+        y(t) = \int_{t -T}^{t} \sum_{i = 1}^{N} a_i x_i(\tau) d\tau = \sum_{i = 1}^{N}  \int_{t -T}^{t}  a_i x_i(\tau) d\tau = \sum_{i = 1}^{N} a_i y_i(t)
+    \end{equation}
+\end{itemize}
+
+
+\subsubsection{Tempo-Invarianza}
+Dato un sistema $S[\cdot] : y(t) = S[x(t)]$ tempo-continuo, S è tempo-invariante se e solo se:\\
+\begin{equation}
+    se S[x(t - t_0)] = y(t - t_0) \mbox{   } \forall t_0 \in \mathbb{R}
+\end{equation}
+Questa proprietà afferma che il sistema non dipende da un eventuale ritardo(o anticipo) del segnale.
+
+
+\section{Sistemi Lineari e Tempo Invarianti (LTI)}
+Sia la linearità che la tempo invarianza sono così importanti che dedicheremo un intero capitolo ai sistemi LTI (o Lineari e Tempo-Invarianti), dal momento
+che tali proprietà implicano altre proprietà altrettanto interessanti, come quella legata alla risposta all'impulso.
+Riprendiamo la proprietà \eqref{eq: camp} della delta di Dirac e un segnale $x(t)$. Consideriamo ora il sistema
+\begin{equation*}
+    S\left[\int_{\mathbb{R}}x(\tau)\delta(t - \tau) d\tau\right]
+\end{equation*}
+Se $S[\cdot]$ è lineare possiamo considerare $x(\tau)$ come coefficiente e ottenere:
+\begin{equation}
+    \int_{\mathbb{R}}x(\tau) S\left[\delta(t - \tau) \right]d\tau
+\end{equation}
+Possiamo definire la \textit{risposta all'impulso da parte del sistema} come $h(t) := S[\delta(t)]$.
+Se S è anche tempo-invariante, allora
+\begin{equation}
+    h(t - t_0) = S[\delta(t - t_0)]
+\end{equation}
+Possiamo riscrivere l'equazione di partenza se $S[\cdot]$ è lineare e tempo-invariante come:
+\begin{equation}
+    x(t) = \int_{\mathbb{R}}x(\tau)h(t - \tau) d\tau
+\end{equation}
+
+\subsection{Prodotto/Integrale di Convoluzione}
+Definiamo:
+\begin{equation}
+    x(t) \ast h(t) = \int_{-\infty}^{+\infty} x(\tau)h(t - \tau) d\tau
+\end{equation}
+E si dice \textit{x(t) convoluto con h(t)}; è un'operazione molto importante in segnali, tanto da avere una definizione.
+L'importanza di $h(t)$ noi la possiamo apprezzare quando dobbiamo studiare un segnale ignoto: passando al sistema un impulso, 
+e osservando l'output, tale output sarà proprio x(t) convoluto con h(t) (se il sistema è lineare e tempo invariante).

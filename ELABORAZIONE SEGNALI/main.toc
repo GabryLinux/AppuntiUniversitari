@@ -94,3 +94,10 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Causalità}{22}{subsubsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.3}Stabilità BIBO (Bounded Input, Bounded Output)}{22}{subsubsection.5.2.3}%
 \contentsline {paragraph}{Esempi:}{22}{section*.28}%
+\contentsline {subsubsection}{\numberline {5.2.4}Omogeneità}{22}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Additività}{23}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Linearità}{23}{subsubsection.5.2.6}%
+\contentsline {paragraph}{Esempi.}{23}{section*.29}%
+\contentsline {subsubsection}{\numberline {5.2.7}Tempo-Invarianza}{23}{subsubsection.5.2.7}%
+\contentsline {section}{\numberline {6}Sistemi Lineari e Tempo Invarianti (LTI)}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Prodotto/Integrale di Convoluzione}{24}{subsection.6.1}%
