@@ -1,0 +1,54 @@
+\subsubsection{Terminologia}
+Ai fini di spiegare il funzionamento del Focal Search è necessario introdurre un po' di notazione:
+\begin{itemize}
+    \item \textbf{F} la frontiera (la stessa di A*)
+    \item $n_{\mbox{best}} = \arg \min_{n \in F} f(n)$ è il nodo in frontiera che minimizza la f (non necessariamente l'ottimo $n^*$)
+    \item $\omega \geq 1$ è un parametro che impostiamo noi, in funzione del quale possiamo definire il limite di subottimalità della soluzione
+    \item \textbf{OPT} è il costo del percorso minimo
+    \item $\mbox{FOCAL} \subseteq F$ la lista focale, che è una sottolista definita nella seguente maniera:
+    \begin{equation*}
+        \mbox{FOCAL} = \{n \in F | f(n) \leq \omega f(n_{best})\}
+    \end{equation*}
+\end{itemize}
+Sulla basta di ciò possiamo definire anche la \textbf{regola di espansione}:\\
+\begin{equation*}
+    n_mbox{next} = \arg \min_{n \in \mbox{FOCAL}} \hat{h}_F (n)
+\end{equation*}
+Tale regola impone l'espansione del nodo che è più vicina alla soluzione, ossia che richiede meno passi computazionali per arrivare alla soluzione;
+dal momento che ci stiamo facendo guidare dall'euristica di costo computazionale $\hat{h}_F (n)$ e non dall'euristica di costo $h(n)$, sicuramente l'ottimalità viene perduta
+ma tale subottimalità può essere quantificata in funzione di $\omega$
+
+\subsubsection{Descrizione Algoritmo}
+Il focal search procede nella stessa maniera di A* con l'unica differenza che i nodi da espandere non sono tutti quelli in frontiera,
+ma quelli in lista focale; in particolare definiamo Il nodo selezionato per l'espansione $e$ (nodo che minimizza l'euristica di costo computazionale).
+Possiamo dunque notare che:
+\begin{enumerate}
+    \item  $f(n^*) \leq \mbox{OPT}$ per definizione, dal momento che l'euristica di costo dev'essere SEMPRE ammissibile (quindi deve sottostimare).
+    \item $f(n_{\mbox{best}}) \leq f(n^*)$ perchè, per definizione, $n_{\mbox{best}}$ deve minimizzare la funzione di costo $f$
+    \item $f(e) \leq \omega f(n_{\mbox{best}})$ questo perchè $e \in \mbox{FOCAL}$ e quindi per definizione ha questa proprietà 
+\end{enumerate}
+Unendo tutte queste osservazioni, possiamo affermare che:
+\begin{equation}
+    f(e) = g(e) \leq \omega f(n_{\mbox{best}}) \leq \omega f(n^*) \leq \omega \mbox{OPT}
+\end{equation}
+Allora deduciamo che
+\begin{equation}
+    g(e) \leq \omega \mbox{OPT}
+\end{equation}
+Ossia $g(e)$ è al massimo omega volte il costo dell'ottimo; questa proprietà è davvero interessante perchè ci permette
+di impostare $\omega$ in base al problema e avere il giusto trade-off prestazioni/subottimalità. Per qquesto motivo
+il focal search è un algoritmo \textbf{BSS (Bounded Suboptimal Search)} perchè la subottimalità è limitata
+in questo caso da $\omega$; è possibile esprimere $\omega = 1 + \epsilon$ con $\epsilon$ la percentuale
+di subottimalità massima attesa.
+
+\subsubsection{Limiti di Focal: Trashing}
+Un grande problema del focal search è che, quando all'inizio cominciamo a valutare le $f(n)$ e a realizzare la lista focale,
+è possibile che un $n_{\mbox{best}}$ rimanga in lista focale con basso $f(n)$ (poichè ancora il costo computato $g(n)$ è basso),
+ma l'euristica di costo computazionale $\hat{h}_F(n)$ è molto alta (poichè ci troviamo all'inizio, quindi molto distanti dal goal).
+A causa di ciò, eventuali nodi figli espansi non entreranno in lista focale perchè avranno una $f(n) > \omega f(n_{\mbox{best}})$ per cui vi entreranno
+solo dopo molto tempo.\\
+Per questo motivo la regola di espansione del focal search è stata rivista: piuttosto che usare $f(n)$ per realizzare la lista focale,
+vengono prese in considerazione un'euristica $h$ ammissibile e un'euristica $\hat{h}$ inammissibile. Solo dopo viene valutata la $f(n)$.
+Questo approccio è detto \textbf{EES (Explicit Extimation Search)}
+ 
+

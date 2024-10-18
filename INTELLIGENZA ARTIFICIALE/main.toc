@@ -57,3 +57,6 @@
 \contentsline {subsubsection}{\numberline {4.10.1}Problema Rilassato}{20}{subsubsection.4.10.1}%
 \contentsline {subsubsection}{\numberline {4.10.2}Limiti di A*}{20}{subsubsection.4.10.2}%
 \contentsline {subsection}{\numberline {4.11}Focal Search}{20}{subsection.4.11}%
+\contentsline {subsubsection}{\numberline {4.11.1}Terminologia}{20}{subsubsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.2}Descrizione Algoritmo}{21}{subsubsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.3}Limiti di Focal: Trashing}{22}{subsubsection.4.11.3}%

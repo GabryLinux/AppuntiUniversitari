@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  13 OCT 2024 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  18 OCT 2024 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,7 +669,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 ...ttimalità di A*}{19}{subsubsection.4.9.4}
+l.53 ...ttimalità di A*}{18}{subsubsection.4.9.4}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -767,19 +767,35 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 32.
 
-[18] [19]) [20] (main.aux)
+[18] [19]) (lesson7.tex [20]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Overfull \hbox (6.68333pt too wide) in paragraph at lines 26--27
+[]$\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[]\OT1/cmr/m/n/10 ) \OM
+S/cmsy/m/n/10 ^^T []$ \OT1/cmr/m/n/10 per definizione, dal mo-mento che l'euris
+tica di costo dev'essere
+ []
+
+[21]) [22] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0A4C7C7DFAC68F59F80AE129C976C33C;7259.
+(rerunfilecheck)             Checksum: 8BF6AEB9AAFA6A8C5F6D7CE741C557DB;7771.
  ) 
 Here is how much of TeX's memory you used:
- 20365 strings out of 475248
- 378959 string characters out of 5757812
+ 20384 strings out of 475248
+ 379471 string characters out of 5757812
  1934785 words of memory out of 5000000
- 41438 multiletter control sequences out of 15000+600000
+ 41444 multiletter control sequences out of 15000+600000
  566678 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,387b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -805,9 +821,9 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Gabry/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
 s/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on main.pdf (21 pages, 315828 bytes).
+Output written on main.pdf (23 pages, 327025 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 
