@@ -101,3 +101,15 @@
 \contentsline {subsubsection}{\numberline {5.2.7}Tempo-Invarianza}{23}{subsubsection.5.2.7}%
 \contentsline {section}{\numberline {6}Sistemi Lineari e Tempo Invarianti (LTI)}{23}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Prodotto/Integrale di Convoluzione}{24}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Proprietà}{24}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Proprietà dei Sistemi LTI Continui}{26}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Causalità}{26}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Stabilità BIBO}{26}{subsubsection.6.2.2}%
+\contentsline {paragraph}{Teorema.}{27}{section*.30}%
+\contentsline {paragraph}{Ipotesi. }{27}{section*.31}%
+\contentsline {paragraph}{Dimostrazione. }{27}{section*.32}%
+\contentsline {subsubsection}{\numberline {6.2.3}Risposta in frequenza}{28}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Proprietà Sistemi LTI Discreti}{28}{subsection.6.3}%
+\contentsline {paragraph}{Causalità.}{28}{section*.33}%
+\contentsline {paragraph}{Stabilità BIBO.}{28}{section*.34}%
+\contentsline {paragraph}{Linearità.}{28}{section*.35}%

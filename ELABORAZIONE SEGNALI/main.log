@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  15 OCT 2024 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  21 OCT 2024 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,19 +706,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[23]) [24] (main.aux)
+[23]) (lesson8.tex [24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
+
+ []
+
+[27]
+Overfull \hbox (4.31836pt too wide) in paragraph at lines 154--155
+ []\OT1/cmr/bx/n/10 Stabilit^^Ra BIBO.[] \OT1/cmr/m/n/10 Ha la medes-ima for-mu
+-lazione dei sis-temi LTI Con-tinui [] 
+ []
+
+) [28] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4307CA227F9E3880A53CE181145B7617;12501.
+(rerunfilecheck)             Checksum: F86CDDEBD979E4DD899ABE81E31056F7;13519.
  ) 
 Here is how much of TeX's memory you used:
- 20434 strings out of 475248
- 380778 string characters out of 5757812
+ 20483 strings out of 475248
+ 381572 string characters out of 5757812
  1934785 words of memory out of 5000000
- 41415 multiletter control sequences out of 15000+600000
+ 41432 multiletter control sequences out of 15000+600000
  563518 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,107p,509b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -743,11 +759,12 @@ ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Gabry/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Gabry/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:
 /Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/symbols/msbm7.pfb>
-Output written on main.pdf (25 pages, 341794 bytes).
+msam10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (29 pages, 371331 bytes).
 PDF statistics:
- 738 PDF objects out of 1000 (max. 8388607)
- 200 named destinations out of 1000 (max. 500000)
- 621 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 821 PDF objects out of 1000 (max. 8388607)
+ 229 named destinations out of 1000 (max. 500000)
+ 669 words of extra memory for PDF output out of 10000 (max. 10000000)
 
