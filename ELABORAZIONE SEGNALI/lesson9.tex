@@ -1,0 +1,103 @@
+\section{Sistemi Lineari e Tempo-Invarianti (LTI) Discreti}
+Consideriamo un sistema $S[\cdot] : y(n) = S[x(n)]$ con $n \in \mathbb{Z}$ Lineare e Tempo-Invariante; possiamo riscrivere $x(n)$
+come somma infinita tra i prodotti tra l'impulso ideale e il loro peso, ossia come:
+\begin{equation*}
+    x(n) = \sum_{i = -\infty}^{+\infty} x(i)\delta(n-i)
+\end{equation*}
+Allora:
+\begin{align*}
+    y(n) &= S[x(n)] \\ 
+         &= S\left[\sum_{i = -\infty}^{+\infty} x(i)\delta(n-i)\right] = \\
+         &=\sum_{i = -\infty}^{+\infty} x(i) \underbrace{S[\delta(n-i)]}_{h(n)}
+\end{align*}
+Dal momento che $S[\cdot]$ è anche Tempo-Invariante, allora:
+\begin{equation*}
+    h(n - n_0) = S\left[\delta(n - n_0)\right]
+\end{equation*}
+In definitiva, anche nel caso discreto, possiamo enunciare la proprietà fondamentale dei sistemi LTI, ossia che un qualsiasi sistema LTI
+può essere descritto come convoluzione tra l'ingresso e la risposta all'impulso del sistema:
+\begin{equation}
+    y(n) = S[x(n)] = x(n) \ast h(n)
+\end{equation}
+
+\subsection{Causalità}
+Un sistema $S[\cdot]$ LTI discreto è \textbf{Causale} se e solo se:
+\begin{equation}
+    h(n) = 0 \mbox{  } \forall n < 0, n \in \mathbb{Z}
+\end{equation}
+Dunque, come avevamo detto nel continuo,
+\begin{equation}
+    y(n) = x(n) \ast h(n) = \sum_{i = -\infty}^{n} x(i) h(n - i) = \sum_{i = 0}^{+\infty} h(i) x(n - i)
+\end{equation}
+Ossia un sistema LTI causale può essere scritto come la somma infinita del prodotto degli ingressi e degli impulsi dall'infinito passato al presente o come 
+somma infinita degli ingressi presenti e passati per l'impulso
+
+\subsection{Stabilità BIBO}
+Per definizione, un sistema LTI $S[\cdot]$ è stabile BIBO se e solo se:
+\begin{equation}
+    \forall x(n) : |x(n)| \leq M < \infty \longrightarrow |y(n)| \leq N < \infty
+\end{equation}
+Ma possiamo ricavare un'altra definizione:
+\begin{align*}
+    |y(n)| &= \left|\sum_{i=-\infty}^{+\infty}h(i)x(n-i)\right|\\
+    \left|\sum_{i=-\infty}^{+\infty}h(i)x(n-i)\right| &\leq \sum_{-\infty}^{+\infty} |h(i)||x(n - i)|\\
+    \sum_{i=-\infty}^{+\infty} |h(i)||x(n - i)| &\leq M \sum_{-\infty}^{+\infty} |h(i)|
+\end{align*}
+Allora $S[\cdot]$ è stabile BIBO se $\sum_{i=-\infty}^{+\infty} |h(i)| < \infty$, cioè se la risposta all'impulso è assolutamente sommabile\\
+\textbf{Ma è anche necessaria la condizione?}
+Dimostriamo per assurdo
+\paragraph{Ipotesi.}
+\begin{enumerate}
+    \item $y(n)$ è stabile
+    \item $x(n)$ è limitata, $x(n) = \mbox{sign}[h(-n)]$
+    \item $\sum_{i=-\infty}^{+\infty} |h(i)| = \infty$ 
+\end{enumerate}
+\paragraph{Dimostrazione.}
+Calcoliamo $y(n)$ per $n = 0$:
+\begin{align*}
+    y(0) &= \sum_{i=-\infty}^{+\infty} |h(i)||x( - i)| =\\
+     &= \sum_{i=-\infty}^{+\infty} |h(i)|\mbox{sign}[|h(i)|] =\\
+     &= \sum_{i=-\infty}^{+\infty} |h(i)|
+\end{align*}
+Per ipotesi (3) $= \sum_{i=-\infty}^{+\infty} |h(i)| = +\infty$ dunque y(t) non è stabile, ASSURDO! Allora $= \sum_{i=-\infty}^{+\infty} |h(i)| < +\infty$ 
+In definitiva possiamo affermare che:
+\begin{equation}
+    \mbox{Un sistema LTI è BIBO} \Longleftrightarrow  \sum_{i=-\infty}^{+\infty} |h(i)| < +\infty
+\end{equation}
+
+\subsection{Convoluzione Discreta}
+Definiamo \textit{a(n) convoluto con b(n)} la seguente operazione 
+\begin{equation}
+    c(n) = a(n) \ast b(n) = \sum_{i = -\infty}^{+\infty} a(i)b(n - i)
+\end{equation}
+
+\subsubsection{Proprietà}
+Enunciamo qui anche le proprietà di cui gode la convoluzione discreta:
+\paragraph{Commutativa:} La convoluzione è commutativa, allora vale che
+    \begin{equation*}
+        f(n) \ast g(n) = g(n) \ast f(n)
+    \end{equation*}
+    \paragraph{Dimostrazione.}
+    \begin{equation*}
+        f(n) \ast g(n) = \sum_{i = -\infty}^{+\infty} f(i)g(n - i) 
+    \end{equation*}
+    Effettuiamo un cambio di variabile: 
+    \begin{equation*}
+        \begin{cases}
+            m = n - i\\
+            i = n - m
+        \end{cases}
+    \end{equation*}
+    Riscriviamo:
+    \begin{align*}
+        \sum_{i = -\infty}^{+\infty} f(i)g(n - i) &= \sum_{n - m = -\infty}^{+\infty} f(n - m)g(m) = \\
+                                                  &= \sum_{m = +\infty}^{-\infty} f(n - m)g(m)= \\
+                                                  &= \sum_{m = -\infty}^{+\infty} g(m)f(n - m)= \\
+                                                  &= g(m) \ast f(m)
+    \end{align*}
+    In questo caso possiamo scambiare senza problemi gli estremi della sommatoria dal momento che non dobbiamo preoccuparci del segno (mentre
+    nell'integrale dovevamo considerare pure il $d\tau$ che dava un verso di integrazione).
+
+\paragraph{Associativa} Ha la stessa formulazione della Convoluzione Continua \eqref{prop: convComm}
+\paragraph{Distributiva (rispetto alla Somma)} La stessa formulazione della Convoluzione Continua \eqref{prop: ConvDistr}
+\paragraph{Convoluzione con $\delta(n)$} La stessa formulazione della Convoluzione Continua \eqref{prop: ConvDelta}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  21 OCT 2024 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  22 OCT 2024 12:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,19 +672,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 ....6}Potenza Media}{15}{subsubsection.3.3.6}
-                                                  % [1])
+l.66 ....6}Potenza Media}{16}{subsubsection.3.3.6}
+                                                  % [1] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] (lesson1.tex
-[3]) [4] (lesson2.tex [5]) [6] [7] (lesson3.tex
+ [3] (lesson1.tex
+[4]) [5] (lesson2.tex [6]) [7] [8] (lesson3.tex
 Overfull \hbox (26.32481pt too wide) in paragraph at lines 2--5
 \OT1/cmr/m/n/10 In ter-mini to-tal-mente as-tratti, un seg-nale ^^Re un ve-i-co
 lo di in-for-mazione. L'informazione,
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
@@ -694,8 +694,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-) [9] (lesson4.tex [10] [11] [12] [13]) [14] (lesson5.tex [15] [16] [17]
-[18]) [19] (lesson6.tex [20] [21]) (lezione7.tex [22]
+) [10] (lesson4.tex [11] [12] [13] [14]) [15] (lesson5.tex [16] [17] [18]
+[19]) [20] (lesson6.tex [21] [22]) (lezione7.tex [23]
 Overfull \hbox (30.72188pt too wide) in paragraph at lines 27--28
 []\OT1/cmr/bx/n/10 Integratore definito nel tempo\OT1/cmr/m/n/10 : gra-zie alla
  pro-priet^^Ra di lin-earit^^Ra dell'integrale,
@@ -706,38 +706,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[23]) (lesson8.tex [24] [25]
+[24]) (lesson8.tex [25] [26]
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-[26]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-[27]
+[28]
 Overfull \hbox (4.31836pt too wide) in paragraph at lines 154--155
  []\OT1/cmr/bx/n/10 Stabilit^^Ra BIBO.[] \OT1/cmr/m/n/10 Ha la medes-ima for-mu
 -lazione dei sis-temi LTI Con-tinui [] 
  []
 
-) [28] (main.aux)
+) (lesson9.tex
+Overfull \hbox (8.91548pt too wide) in paragraph at lines 160--1
+ []\OT1/cmr/bx/n/10 Tempo-Invarianza.[] \OT1/cmr/m/n/10 La medes-ima for-mu-laz
+ione dei sis-temi LTI Con-tinui []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--1
+
+ []
+
+[29] [30] [31]) [32] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F86CDDEBD979E4DD899ABE81E31056F7;13519.
+(rerunfilecheck)             Checksum: AA54526C743D6CFC66301969BFEA7672;14376.
  ) 
 Here is how much of TeX's memory you used:
- 20483 strings out of 475248
- 381572 string characters out of 5757812
+ 20524 strings out of 475248
+ 382148 string characters out of 5757812
  1934785 words of memory out of 5000000
- 41432 multiletter control sequences out of 15000+600000
+ 41444 multiletter control sequences out of 15000+600000
  563518 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,107p,509b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,107p,509b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Gabry\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -762,9 +773,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:
 msam10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (29 pages, 371331 bytes).
+Output written on main.pdf (33 pages, 386984 bytes).
 PDF statistics:
- 821 PDF objects out of 1000 (max. 8388607)
- 229 named destinations out of 1000 (max. 500000)
- 669 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 889 PDF objects out of 1000 (max. 8388607)
+ 255 named destinations out of 1000 (max. 500000)
+ 709 words of extra memory for PDF output out of 10000 (max. 10000000)
 

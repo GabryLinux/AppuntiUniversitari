@@ -27,14 +27,14 @@
         f(t) \ast [g(t) \ast h(t)] = [f(t) \ast g(t)] \ast h(t)
     \end{equation}
 
-    \item \textbf{Distributiva (rispetto alla somma)}: dati 3 segnali $f,g,h$:
+    \item \textbf{Distributiva (rispetto alla somma)}: dati 3 segnali $f,g,h$: \label{prop: ConvDistr}
     \begin{equation}
         f(t) \ast [g(t) + h(t)] = f(t) \ast g(t) + f(t) \ast h(t) 
     \end{equation}
 
-    \item \textbf{Durata della Convoluzione}: dati 2 segnali $f,g$ con durata rispettivamente $D_1,D_2$ allora la durata di $f(t) \ast g(t)$ è $D_1 + D_2$
+    \item \textbf{Durata della Convoluzione}: \label{prop: ConvDurata} dati 2 segnali $f,g$ con durata rispettivamente $D_1,D_2$ allora la durata di $f(t) \ast g(t)$ è $D_1 + D_2$
     
-    \item \textbf{Convoluzione con $\delta(t)$}: dato un segnale $f(t)$ allora:
+    \item \textbf{Convoluzione con $\delta(t)$}: \label{prop: ConvDelta} dato un segnale $f(t)$ allora:
     \begin{equation}
         f(t) \ast \delta(t - t_0) = f(t - t_0)
     \end{equation}
@@ -145,7 +145,7 @@ cioè la risposta di un fasore è ancora un fasore di frequenza $f$ ma moltiplic
 
 
 
-\subsection{Proprietà Sistemi LTI Discreti}
+\subsection{Proprietà Sistemi Discreti}
 Un sistema $S[\cdot]:y(t) = S[x(t)]$ è detto discreto se e solo se $x,y$ sono segnali discreti; possiamo enunciare per tali sistemi le stesse proprietà dei sistemi LTI continui:
 \paragraph{Causalità.}
 Ha la medesima formulazione dei sistemi LTI Continui \eqref{prop: causalita} 
@@ -155,3 +155,6 @@ Ha la medesima formulazione dei sistemi LTI Continui \eqref{prop: BIBO}
 
 \paragraph{Linearità.}
 Ha la medesima formulazione dei sistemi LTI Continui \eqref{prop: linearita} 
+
+\paragraph{Tempo-Invarianza.} 
+La medesima formulazione dei sistemi LTI Continui \eqref{prop: TI} 
