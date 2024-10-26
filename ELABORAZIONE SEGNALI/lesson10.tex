@@ -1,0 +1,79 @@
+\section{Analisi Armonica}
+I segnali visti finora sono stati presentati come funzioni descritte da un'espressione analitica; alcuni studiosi, tra cui Fourier,
+si accorsero che tali funzioni potevano essere scomposte in somme di altre funzioni (in particolare di fasori, seni e coseni), ossia
+è possibile vedere un segnale come \textbf{combinazione lineare} di segnali elementari. Uno strumento che permette di trasformare
+un segnale in una combinazione lineare di segnali elementari è lo \textbf{sviluppo in serie di Fourier}.
+
+\subsection{Sviluppo In Serie Di Fourier}
+Data una funzione \textit{periodica} $f(t) : f(t) = f(t + kT)$  $\forall t \in \mathbb{R}, k \in \mathbb{Z}$ e \textit{regolare}
+(ossia che rispetta le condizioni di Dirichlet), allora $f(t)$ piò essere riscritta come una combinazioni lineare di seni e 
+coseni con i propri pesi e le cui frequenze sono multiple di $\frac{1}{T}$ (con $T$ il periodo di $f$).\\
+
+Consideriamo ora i vari multipli:
+\begin{itemize}
+    \item $n = 0 \longrightarrow f_0 = 0$ è la cosiddetta \textit{componente continua} (un valore costante).
+    \item $n = 1 \longrightarrow f_1 = \frac{1}{T}$ viene detta la \textit{frequenza fondamentale}.
+    \item $\forall |n| > 1 \longrightarrow f_n = \frac{n}{T}$ viene detta \textit{armonica n-esima}.
+\end{itemize}
+
+Gli sviluppi in serie di fourier si presentano in forma \textbf{Trigonometrica} ed \textbf{Esponenziale}
+
+\subsubsection{Forma Esponenziale}
+\paragraph{Equazione di Sintesi.}Nella forma esponenziale possiamo esprimere la funzione $f(t)$ come combinazione lineare di fasori \eqref{eq: fasore} $p_n(t)$ a
+frequenza $f_n = \frac{1}{T}$ con $T$ il periodo di $f$; è detta \textit{di sintesi} perchè otteniamo $f$ dalla combinazione di fasori
+\begin{equation}
+    f(t) = \sum_{n = -\infty}^{+\infty} c_n e^{j2\pi \frac{n}{T} t}  \tag{$t \in \mathbb{R}$}
+\end{equation}
+
+\paragraph{Equazione di Analisi.} Al contrario della sintesi, noi vogliamo \textit{scomporre} $f$ per ottenere i fasori che la combinano:
+\begin{equation}
+    c_n = \frac{1}{T} \int_{T} f(t)e^{-j2\pi \frac{n}{T}t} dt \tag{$n \in \mathbb{Z}$}
+\end{equation}
+Dove $\int_{T}$ è un integrale \textit{di durata T}, ossia che può andare da $0$ a $T$, o da $-T/2$ a $T/2$
+
+\subsubsection{Forma Trigonometrica}
+Anche se storicamente è stato al contrario, possiamo derivare a partire dalla forma esponenziale, la forma trigonometrica dello sviluppo.
+\paragraph{I Equazione di Sintesi}\begin{equation*}
+    f(t) = \sum_{n = -\infty}^{+\infty} c_n e^{j2\pi \frac{n}{T} t} = c_0 + \sum_{n = -\infty}^{+\infty}[ c_n e^{j2\pi \frac{n}{T} t} + c_{-n} e^{-j2\pi \frac{n}{T} t}] \tag{separo i $c_n$}
+\end{equation*}
+Consideriamo ora $c_{-n}$
+\begin{align*}
+    c_{-n} =& \frac{1}{T} \int_{T} f(t)e^{-j2\pi \frac{n}{T}t} dt = \\
+    =& \frac{1}{T} \int_{T} f(t)\overline{e^{j2\pi \frac{n}{T}t}} dt = \\
+    =& \overline{c_n}
+\end{align*}
+Possiamo vedere il complesso $-j$ come il coniugato del complesso di partenza, dunque:
+\begin{align*}
+    f(t) =& c_0 + \sum_{n = -\infty}^{+\infty}[ c_n e^{j2\pi \frac{n}{T} t} + \overline{c_{n}} e^{-j2\pi \frac{n}{T}t }] =\\
+         =& c_0 + \sum_{n = -\infty}^{+\infty}[ c_n e^{j2\pi \frac{n}{T} t} + \overline{c_{n} e^{j2\pi \frac{n}{T}t} }] = \\
+         =& c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e [c_n e^{j2\pi \frac{n}{T}t}] \tag{proprietà \ref{prop: coniugato}}
+\end{align*}
+Possiamo dunque notare che, a partire dalla scomposizione di una funzione reale in fasori (complessi) otteniamo ancora qualcosa di completamente reale.
+Poniamo ora $c_n = \rho_n e^j \theta_n$, ossia in forma polare:
+\begin{align*}
+    f(t) &= c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e [\rho_n e^j \theta_n e^{j2\pi \frac{n}{T}t}] =\\
+         &= c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e [\rho_n e^{j2\pi \frac{n}{T}t +\theta_n }] =
+\end{align*}
+Dal momento che $\mathbb{R}e[e^{j\theta}] = \cos(\theta)$ allora:
+\begin{equation}
+    f(t) = c_0 + 2 \int_{n = 1}^{+\infty} \rho_n \cos\left(2\pi \frac{n}{T}t +\theta_n\right)
+\end{equation}
+
+\paragraph{II Equazione di Sintesi.} Ora poniamo $c_n = a_n - jb_n$:
+\begin{align*}
+    f(t) =& c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e \left[c_n e^{j2\pi \frac{n}{T}t}\right] =\\
+         =& c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e \left[(a_n - jb_n) e^{j2\pi \frac{n}{T}t}\right] =\\
+         =& c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e \left[a_n e^{j2\pi \frac{n}{T}t} - jb_n e^{j2\pi \frac{n}{T}t}\right] =\\
+\end{align*}
+Riscriviamo ora $j$ come $j = e^{j \frac{\pi}{2}}$:
+\begin{equation*}
+    f(t) = c_o + \sum_{n = -\infty}^{+\infty} 2\mathbb{R}e \left[a_n e^{j2\pi \frac{n}{T}t} - b_n e^{j2\pi \frac{n}{T}t + \frac{\pi}{2}}\right] =
+\end{equation*}
+Sapendo che, ancora una volta, $\mathbb{R}e[e^{j\theta}] = \cos(\theta)$ allora:
+\begin{equation*}
+    f(t) = c_o + 2\sum_{n = -\infty}^{+\infty} \left[a_n \cos\left(2\pi \frac{n}{T}t\right) - b_n \cos\left(2\pi \frac{n}{T}t + \frac{\pi}{2}\right)\right]
+\end{equation*}
+Dal momento che $\cos\left(\theta + \frac{\pi}{2}\right) = -\sin(\theta)$ allora:
+\begin{equation}
+    f(t) = c_o + 2\sum_{n = -\infty}^{+\infty} \left[a_n \cos\left(2\pi \frac{n}{T}t\right) + b_n \sin\left(2\pi \frac{n}{T}t\right)\right]
+\end{equation}
