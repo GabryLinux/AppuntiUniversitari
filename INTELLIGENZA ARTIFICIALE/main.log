@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  26 OCT 2024 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  26 OCT 2024 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,19 +950,28 @@ Overfull \hbox (0.91719pt too wide) in paragraph at lines 10--11
 one an-che le strate-
  []
 
-[23] [24]) [25] (main.aux)
+[23] [24] [25]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 115.
+
+) [26] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C3549EB3F94D64B2F26B3CD237FB5228;8751.
+(rerunfilecheck)             Checksum: EC8983344351C5246C351DD2D118BC91;9343.
  ) 
 Here is how much of TeX's memory you used:
- 27040 strings out of 475248
- 548372 string characters out of 5757812
+ 27054 strings out of 475248
+ 548567 string characters out of 5757812
  1934785 words of memory out of 5000000
- 47981 multiletter control sequences out of 15000+600000
+ 47986 multiletter control sequences out of 15000+600000
  566678 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,107p,409b,895s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -988,9 +997,9 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Gabry/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
 s/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on main.pdf (26 pages, 352258 bytes).
+Output written on main.pdf (27 pages, 358732 bytes).
 PDF statistics:
- 611 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 597 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 642 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
+ 629 words of extra memory for PDF output out of 10000 (max. 10000000)
 
