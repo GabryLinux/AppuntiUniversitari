@@ -3,7 +3,27 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{amssymb}
 \usepackage{tikz}
-
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\tcbset{
+    documentation note/.style={
+        colback=yellow!10!white,          % Sfondo giallo chiaro
+        colframe=yellow!50!black,         % Bordo giallo più scuro
+        coltitle=black,                   % Colore del titolo
+        fonttitle=\bfseries,              % Titolo in grassetto
+        boxrule=0.5mm,                    % Spessore del bordo
+        left=10mm,                        % Spazio a sinistra per l'icona
+        sharp corners,                    % Angoli definiti
+        enhanced,                         % Abilita opzioni avanzate
+        width=\linewidth,                 % Larghezza del box
+        overlay={                         % Inserimento punto esclamativo centrato
+            \node[anchor=west, font=\bfseries\Huge, xshift=3mm, yshift=0.0mm] at ([yshift=-0.7\ht\strutbox]frame.west) {\textcolor{red}{\textbf{!}}};
+            % Orecchietta in basso a destra
+            %\path[draw=yellow!50!black, fill=yellow!30] (frame.south east) ++(-3mm,2mm) -- (frame.south east) -- ++(-3mm,0mm) -- cycle;
+            \path[draw=yellow!50!black, fill=yellow!30] (frame.south east) ++(-3mm,2mm) -- (frame.south east) -- ++(-3mm,0mm) -- ++(-1mm, -1mm) -- cycle; % Orecchietta inclinata
+        }
+    }
+}
 \makeatletter
 \renewcommand{\eqref}[1]{%
   \hyperref[#1]{\textup{\tagform@{\ref*{#1}}}}%
@@ -35,4 +55,6 @@
 \input{lesson5.tex}
 \input{lesson6.tex}
 \input{lesson7.tex}
+\newpage
+\input{lesson8.tex}
 \end{document}

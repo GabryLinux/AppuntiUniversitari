@@ -1,0 +1,118 @@
+\section{Adversarial Search}
+Gli algoritmi di Search finora presentati hanno sempre tenuto conto di un ambiente Single-Agent in cui un obiettivo
+si raggiungeva trovando un percorso in un grafo. Tutto cambia se invece consideriamo un ambiente Multi-Agent, in cui 
+più agenti cercano di ottimizzare la propria utilità e ogni azione influenza tutti gli agenti. Tuttavia è sempre possibile
+modellare un ambiente Multi-Agente, ossia un \textbf{gioco}, come un \textbf{Problema di Decisione}.\\
+In particolare in un gioco:
+\begin{itemize}
+    \item Ogni agente deve ottimizzare una propria funzione di utilità
+    \item Ogni azione influenza le azioni di tutti gli altri agenti
+    \item Nella strategia da adottare bisogna tenere in considerazione anche le strategie adottate dagli avversari
+\end{itemize}
+Un'altra differenza che possiamo riscontrare con i problemi di Search è che, alla fine del gioco, non si raggiunge un goal
+ma si vince una \textit{ricompensa}, o \textit{payoff}, e ciò dipende dal risultato del gioco.
+
+\subsection{Caratteristiche di un gioco}
+In teoria dei giochi, un gioco può essere caratterizzato da:
+\begin{itemize}
+    \item \textbf{Numero di giocatori}: a 2 (caso più semplice) oppure a $n$ giocatori (caso più difficile)
+    \item \textbf{Tipi di Agenti}: \textit{razionali} (cioè che in ogni occasione scelgono sempre di ottimizzare la propria utilità) o \textit{$\epsilon-$razionali} (ossia che scelgono di trovare una soluzione peggiore al massimo $\epsilon$)
+    \item \textbf{Struttura Sequenziale}: a \textit{turni} o \textit{ad azioni sequenziali} (in realtà è stato dimostrato che una struttura a turni è una generalizzazione della struttura ad azioni sequenziali)
+    \item \textbf{Esito delle azioni}: \textit{deterministico} o \textit{stocastico}
+    \item \textbf{Struttura dei Payoff}: \textit{a Somma Costante} oppure \textit{a Somma Generica}
+    \item \textbf{Ad Informazione}: \textit{completa}, se si conoscono tutti gli obiettivi e azioni degli altri agenti, altrimenti \textit{incompleta}
+    \item \textbf{Memoria del Gioco}: \textit{perfetta} se ogni agente conosce TUTTE le mosse compiute dagli altri agenti anche in precedenza, altrimenti \textit{imperfetta}
+\end{itemize}
+Dal momento che i giochi possono essere molto complessi e le interazioni tra gli agenti non facili da studiare, sono nati 2 rami di teoria dei giochi che studiano i comportamenti
+degli agenti in modo diverso:
+\begin{itemize}
+    \item \textbf{Teoria dei Giochi Competitiva}: studia i comportamenti degli agenti individualmente, come se ogni agente considerasse solo il proprio tornaconto
+    \item \textbf{Teoria dei Giochi Cooperativa}: studia le dinamiche delle formazioni delle coalizioni.
+\end{itemize}
+
+\begin{tcolorbox}[documentation note, title={Nota Importante}]
+   In questo corso considereremo giochi: a 2 giocatori, ad agenti razionali, a turni, deterministico, ad informazione perfetta e a somma zero (ossia costante).
+\end{tcolorbox}
+
+\subsubsection{Formalizzazione di un Gioco}
+Descrivo qui la notazione usata per descrivere i giochi e i relativi algoritmi all'interno di questo corso:
+\begin{itemize}
+    \item \textbf{Insieme di Stati}: $S = \{s_1,s_2, \dots, s_n\}$
+    \item \textbf{Stato Iniziale}: $s_k \in S$
+    \item \textbf{Agenti}: $I = \{i_1, i_2\}$
+    \item \textbf{Azioni Possibili}: $A=\{a_1, a_2, \dots, a_n\}$
+    \item \textbf{Turno}: è l'insieme delle azioni possibili $A(s_k)$ di un giocatore $I(s_k)$ con $s_k \in S$
+    \item \textbf{Modello di Transizione}: $f(s_k, a)$ con $a = A(I(s_k))$ l'azione effettuata in un turno e $s_k$ lo stato precedente
+    \item \textbf{Stato Terminale}: $s_t \in S$ è stato terminale se e solo se verifica un predicato $T$ che determina la fine di un gioco, ossia se $T(s_t) = 1$
+    \item \textbf{Payoff}: $u_i(s_t)$ è il payoff del giocatore $i$ nello stato terminale $s_t$
+\end{itemize}
+
+\subsubsection{Gioco A Somma Zero}
+Per presentare il primo algoritmo di risoluzione di un gioco , prenderemo in considerazione un gioco a somma zero:\\
+Dato un gioco a 2 agenti, tale si definisce \textit{a somma zero} se e solo se:
+\begin{equation}
+    u_i(s_t) + u_2(s_t) = 0 \mbox{    } \forall s_t \in S
+\end{equation}
+Dove $s_t$ è un qualunque stato terminale.
+Considerare un gioco a 2 agenti a somma zero permette di semplificare molto i calcoli dal momento che è possibile riscrivere l'utilità di un agente in funzione dell'utilità dell'altro agente.
+In particolare, massimizzare il proprio payoff significa minimizzare il payoff avversario dal momento che l'avversario perde tanto quanto vinco, ossia:
+\begin{equation}
+    \max\{u_2\} = \max\{-u_1\} = -\min\{u_1\}
+\end{equation}
+
+\subsubsection{Strategie}
+Quello che abbiamo finora descritto sono le \textit{regole} del gioco; un'altra importante parte dei giochi riguarda le \textit{strategie} adottate dagli agenti per 
+massimizzare il payoff. Le strategie si dividono in 2 grandi categorie:
+\begin{itemize}
+    \item \textbf{Strategia Pura}: se la strategia $\sigma_i$, del giocatore $i$, sceglie, secondo un criterio, un'azione possibile in uno stato del gioco appartenente a $A(s_k)$, ossia:
+    \begin{equation}
+        \sigma_i : \{s_k \in S | I(s_k) = i\} \longrightarrow A(s_k)
+    \end{equation}
+    \item \textbf{Strategia Mista}: se la strategia $\sigma_i$, del giocatore $i$, sceglie un'azione possibile in uno stato del gioco appartenente a $A(s_k)$ secondo uno
+    spazio di probabilità $\Pi(A(s_k))$, ossia:
+    \begin{equation}
+        \sigma_i : \{s_k \in S | I(s_k) = i\} \longrightarrow \Pi(A(s_k))
+    \end{equation}
+\end{itemize}
+
+\subsubsection{Albero di Gioco}
+Sebbene un problema di ricerca e un gioco siano sostanzialmente differenti, è ancora possibile modellare un gioco a mo' di albero, detto appunto albero di gioco, 
+ed applicare un algoritmo di ricerca tra quelli presentati precedentemente per trovare la strategia ottima dell'agente. In questo albero, ogni nodo è detto \textit{nodo
+di decisione} e i nodi foglia sono il nodo terminale del gioco con annesso payoff ai vari giocatori. Una strategia è un percorso all'interno dell'albero, ossia una sequenza di mosse
+che porta ad uno stato terminale.
+
+\subsection{Minimax}
+Minimax è un algoritmo \textbf{Corretto e Completo} che trova sempre la strategia ottima per massimizzare i payoff di un agente e lo fa esplorando l'albero di gioco.
+Lavora con l'assunzione che l'agente avversario sia \textbf{razionale}.
+Quest'algoritmo:
+\begin{itemize}
+    \item è basato su DFS \eqref{alg: dfs}
+    \item è basato su Backtracking
+    \item effettua il \textbf{backup/riporto} dei valori al nodo padre 
+\end{itemize}
+\subsubsection{Descrizione Gioco}
+Il gioco risolto da questa prima implementazione di Minimax è la seguente:
+\begin{itemize}
+    \item \textbf{Agenti} $I = \{\mbox{MAX},\mbox{MIN}\}$
+    \item \textbf{Gioco a Somma Zero}
+    \item Max avrà sempre utilità non negativa e le conseguenze di MIN saranno sempre negative
+\end{itemize}
+
+\subsubsection{Descrizione Algoritmo}
+\begin{enumerate}
+    \item Si effettua una DFS sull'albero di gioco
+    \item Ogni volta che si esplora totalmente un sottoalbero:
+        \begin{itemize}
+            \item se il nodo padre di tale sottoalbero è di \textbf{MAX}, allora riporto al padre il valore \textbf{maggiore} tra quelli riportati dai figli
+            \item se il nodo padre di tale sottoalbero è di \textbf{MIN}, allora riporto al padre il valore \textbf{minore} tra quelli riportati dai figli
+        \end{itemize}
+    \item Arrivati al nodo radice si trova il \textit{Valore di Gioco}.
+    \item Si trova la strategia (ossia il percorso) che genera al payoff uguale al valore di gioco.
+\end{enumerate}
+Bisogna tenere a mente che tale algoritmo lavora sempre con l'assunzione che l'agente avversario sia razionale, perchè se non lo è,
+l'algoritmo non garantisce di trovare il payoff ottimo; tuttavia ci dà una garanzia: il payoff sarà SEMPRE almeno il valore di gioco.
+
+\subsubsection{Minimax a $n$ agenti}
+La strategia adottata da Minimax può essere estesa a più agenti, tuttavia dovremmo fare alcuni cambiamenti: non ha più senso trattare 
+giochi a somma zero (poichè a più giocatori non ci dà alcun vantaggio nei calcoli); inoltre il payoff di un gioco non può essere
+più espresso da uno scalare ma da un vettore di payoff, detto profilo del payoff, di dimensione pari al numero di giocatori.
