@@ -1,0 +1,73 @@
+\subsection{Ottimizzazioni di Minimax}
+\subsubsection{$\alpha-\beta$ Pruning}
+Sebbene l'algoritmo Minimax appena presentato sia corretto e completo, è evidente la sua inefficienza per 2 motivi:
+\begin{itemize}
+    \item L'algoritmo deve sempre attraversare tutto l'albero per ottenere il \textit{valore di gioco}
+    \item In caso di alberi di grandi dimensioni, la complessità cresce notevolmente
+\end{itemize}
+Così come abbiamo fatto per gli algoritmi di ricerca, è possibile ottimizzare Minimax potando alcuni sottoalberi e risparmiando
+dunque tempo di computazione (NB: nonostante ciò, la complessità dell'algoritmo rimane esponenziale).
+
+
+\paragraph{Algoritmo.}Per potare i vari sottoalberi, l'algoritmo deve assegnare ad ogni nodo dell'albero una coppia di valori $\left[\alpha, \beta\right]$:
+\begin{itemize}
+    \item $\alpha$ rappresenta il \textbf{minimo valore garantito} per il giocatore \textbf{MAX} ad un certo nodo dell'albero
+    \item $\beta$ rappresenta il \textbf{massimo valore garantito} per il giocatore \textbf{MIN} ad un certo nodo dell'albero
+\end{itemize}
+Durante \textbf{l'esplorazione} dell'albero:
+\begin{itemize}
+    \item Quando un nodo viene esplorato per la \textbf{prima volta}, l'algoritmo gli assegna i valori $\left[-\infty,+\infty\right]$, poi:
+    \begin{itemize}
+        \item Se il nodo da esplorare è un nodo MAX, viene aggiornato il suo valore di $\alpha$ con il valore più alto dei suoi sottoalberi
+        \item Se il nodo da esplorare è un nodo MIN, viene aggiornato il suo valore di $\beta$ con il valore più basso dei suoi sottoalberi
+    \end{itemize}
+    \item Quando un nodo viene \textbf{completamente esplorato} allora vale che: $\alpha = \beta$.
+    \item Invece, se si scopre che il nodo \textbf{appena esplorato} presenta un valore $v$ che è:
+    \begin{itemize}
+        \item $v < \alpha$ se il padre è un nodo \textbf{MAX}
+        \item $v > \beta$ se il padre è un nodo \textbf{MIN}
+    \end{itemize}
+    Allora tutti gli altri sottoalberi del nodo padre vengono \textbf{potati} e non esplorati.
+\end{itemize}
+
+
+\paragraph{Analisi}
+L'efficacia del pruning, dunque, dipende molto dallo scoprire le \textit{"killer moves"}, ossia dei valori $\alpha-\beta$ stringenti per la potatura dei sottalberi. 
+Se i valori più stringenti si trovano solo alla fine dell'esplorazione, il pruning non è più apprezzabile e la computazione risparmiata è minima.
+Valutiamo, in particolare, la complessità nei 2 casi:
+\begin{itemize}
+    \item \textbf{Caso Pessimo}: i valori stringenti $\alpha-\beta$ di un nodo vengono scoperti negli ultimi sottoalberi, per cui non vi è alcuna potatura (stessa complessità di una DFS $O(b^d)$ (vedi \ref{alg: dfs}))
+    \item \textbf{Caso Ottimo}: Per ogni nodo MAX, tutti i suoi alberi vengono esplorati, mentre per ogni nodo MIN, il primo sottoalbero fornisce già i valori $\alpha-\beta$ per il pruning di tutti gli altri sottoalberi,
+    dunque, è possibile dimostrare, che la complessità è $O(b^{d/2})$, ossia che nello stesso tempo, un MINIMAX con pruning esplora il quadrato dei nodi di un semplice MINIMAX
+\end{itemize}
+Rimane dunque evidente il fatto che per la maggior parte dei giochi è \textbf{impossibile} esplorare l'albero di gioco e trovare sempre, 
+in tempo ragionevole, il valore di gioco; anzi, se lo fosse, il gioco non è più interessante (come il tris). Inoltre Minimax risulta essere poco utile quando il tempo per decidere
+una mossa risulta essere molto limitato.
+\paragraph{Esiti di una partita.} In generale possiamo dire che una partita tra 2 intelligenze artificiali A e B può concludersi in uno dei seguenti modi:
+\begin{itemize}
+    \item A si arrende
+    \item B si arrende
+    \item A e B patteggiano
+\end{itemize} 
+
+\subsubsection{Funzioni di Valutazione e CUTOFF}
+Un problema sicuramente noto del pruning $\alpha-\beta$ è che per trovare un valore $\alpha$ o $\beta$, l'algoritmo deve arrivare fino ad una foglia
+dell'albero, cosa assolutamente impossibile per alberi di gioco davvero grandi (come gli scacchi o il go). Un'intuizione che propose Shannon
+verso la fine degli anni '50 fu quella di interrompere la valutazione di un nodo (se contiene troppi sottoalberi) e farlo diventare un nodo foglia
+il cui valore è una stima della bontà del nodo calcolada da una \textbf{Funzione di Valutazione}, ossia un'euristica $v(s)$ con $s$ il nodo attuale.
+La decisione di continuare ad esplorare un nodo non terminale tramite Minimax o approssimarlo tramite Funzione di valutazione viene fatta da un predicato 
+(una funzione booleana), ossia CUT$(s,d)$ con $s$ il nodo attuale e $d$ la profondità massima di ricerca:
+\begin{itemize}
+    \item se CUT$(s,d) = $ TRUE, allora approssimo il valore del nodo con l'euristica $v(s)$
+    \item altrimenti continuo ad esplorarlo tramite MINIMAX
+\end{itemize}
+Man mano che scendo nell'albero, il valore $d$ decrementa fino ad arrivare a $0$.
+Una forma di euristica che è possibile realizzare per un gioco, determina la bontà di un nodo dalla combinazione lineare o non lineare, con pesi arbitrari, delle \textit{caratteristiche}
+di un nodo (per esempio, negli scacchi, una caratteristica di uno stato potrebbe essere la "presenza della regina", con peso 10, la "presenza di entrambi gli alfieri", con peso 6, la "posizione dei pedoni", ecc...) (Pag. 237).
+
+\paragraph{Iterative Deepening.} Una possibile implementazione di CUT è tramite la funzione di \textit{approfondimento iterativo} della DFS e consiste nell'incrementare $d$
+ad ogni nuovo sottoalbero esplorato, cioè consiste nell'aumentare il \textit{budget di esplorazione} e a scommettere sempre di più su un ramo scendendo via via sempre più in profondità
+
+\paragraph{Quiescient Search.} Un altro approccio utilizzabile per CUT risiede nella dei nodi \textbf{Quiescienti} e di quelli \textbf{Non Quiescenti}.
+Un nodo è quiescente se non è \textit{interessante}, ossia una qualunque mossa non stravolge gli esiti del match; con questo approccio dunque, tutti gli stati potenzialmente quiescienti vengono approssimati,
+mentre quelli più interessanti vengono esplorati con MINIMAX.

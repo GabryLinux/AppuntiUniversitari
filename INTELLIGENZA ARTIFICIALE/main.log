@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.30)  26 OCT 2024 16:56
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  28 OCT 2024 23:19
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
@@ -11,14 +11,14 @@ Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
+\c@part=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
+\c@figure=\count187
+\c@table=\count188
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
@@ -43,14 +43,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count193
+\inf@bad=\count189
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count194
-\leftroot@=\count195
+\uproot@=\count190
+\leftroot@=\count191
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count196
-\DOTSCASE@=\count197
+\classnum@=\count192
+\DOTSCASE@=\count193
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -63,20 +63,20 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen143
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count198
+\macc@depth=\count194
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count199
+\c@MaxMatrixCols=\count195
 \dotsspace@=\muskip16
-\c@parentequation=\count266
-\dspbrk@lvl=\count267
+\c@parentequation=\count196
+\dspbrk@lvl=\count197
 \tag@help=\toks18
-\row@=\count268
-\column@=\count269
-\maxfields@=\count270
+\row@=\count198
+\column@=\count199
+\maxfields@=\count266
 \andhelp@=\toks19
 \eqnshift@=\dimen144
 \alignsep@=\dimen145
@@ -111,7 +111,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
@@ -150,30 +150,26 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count271
+\c@section@level=\count267
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count272
+\etb@tempcnta=\count268
 )
 \@linkdim=\dimen150
-\Hy@linkcounter=\count273
-\Hy@pagecounter=\count274
+\Hy@linkcounter=\count269
+\Hy@pagecounter=\count270
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count275
+\Hy@SavedSpaceFactor=\count271
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Hyper figures OFF on input line 4167.
 Package hyperref Info: Link nesting OFF on input line 4172.
@@ -182,7 +178,7 @@ Package hyperref Info: Plain pages OFF on input line 4182.
 Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count276
+\c@Hy@tempcnt=\count272
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
@@ -199,7 +195,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count277
+\Fld@menulength=\count273
 \Field@Width=\dimen152
 \Fld@charsize=\dimen153
 Package hyperref Info: Hyper figures OFF on input line 6051.
@@ -214,26 +210,34 @@ Package hyperref Info: PDF/A mode OFF on input line 6081.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count278
-\c@Item=\count279
-\c@Hfootnote=\count280
+\Hy@abspage=\count274
+\c@Item=\count275
+\c@Hfootnote=\count276
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2023-07-08 v7.01b Hyperref driver for pdfTeX
+Package hyperref Info: Driver (autodetected): hxetex.
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2023-07-08 v7.01b Hyperref driver for XeTeX
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count277
+\HyField@AnnotCount=\count278
+\Fld@listcount=\count279
+\c@bookmark@seq@number=\count280
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count281
-\c@bookmark@seq@number=\count282
-
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
-echeck.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
 ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
@@ -267,7 +271,7 @@ y
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box53
+\pgfutil@abb=\box54
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -291,10 +295,10 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: xetex.def on input line 107.
 
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen156
 \Gin@req@width=\dimen157
@@ -326,34 +330,40 @@ libraryfiltered.code.tex
 \pgf@yd=\dimen167
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count283
-\c@pgf@countb=\count284
-\c@pgf@countc=\count285
-\c@pgf@countd=\count286
+\c@pgf@counta=\count281
+\c@pgf@countb=\count282
+\c@pgf@countc=\count283
+\c@pgf@countd=\count284
 \t@pgf@toka=\toks27
 \t@pgf@tokb=\toks28
 \t@pgf@tokc=\toks29
-\pgf@sys@id@count=\count287
+\pgf@sys@id@count=\count285
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Driver file for pgf: pgfsys-xetex.def
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-pdftex.def
-File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+s-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 s-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count286
 )))
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count288
-\pgfsyssoftpath@bigbuffer@items=\count289
+\pgfsyssoftpath@smallbuffer@items=\count287
+\pgfsyssoftpath@bigbuffer@items=\count288
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -365,10 +375,9 @@ Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Driver file: xetex.def on input line 227.
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
 Package xcolor Info: Model `RGB' extended on input line 1369.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
@@ -388,8 +397,8 @@ code.tex)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen168
-\pgfmath@count=\count290
-\pgfmath@box=\box54
+\pgfmath@count=\count289
+\pgfmath@box=\box55
 \pgfmath@toks=\toks30
 \pgfmath@stack@operand=\toks31
 \pgfmath@stack@operation=\toks32
@@ -416,7 +425,7 @@ ions.integerarithmetics.code.tex)
 code.tex)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count291
+\c@pgfmathroundto@lastzeros=\count290
 ))
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
@@ -453,10 +462,10 @@ File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box55
-\pgf@hbox=\box56
-\pgf@layerbox@main=\box57
-\pgf@picture@serial@count=\count292
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count291
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
@@ -491,8 +500,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 eshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen192
-\pgf@sys@shading@range@num=\count293
-\pgf@shadingcount=\count294
+\pgf@sys@shading@range@num=\count292
+\pgf@shadingcount=\count293
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -501,7 +510,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box58
+\pgfexternal@startupbox=\box59
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -522,7 +531,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box59
+\pgfnodeparttextbox=\box60
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -562,7 +571,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count295
+\pgf@plot@mark@count=\count294
 \pgfplotmarksize=\dimen197
 )
 \tikz@lastx=\dimen198
@@ -573,23 +582,23 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen259
 \tikzleveldistance=\dimen260
 \tikzsiblingdistance=\dimen261
-\tikz@figbox=\box60
-\tikz@figbox@bg=\box61
-\tikz@tempbox=\box62
-\tikz@tempbox@bg=\box63
-\tikztreelevel=\count296
-\tikznumberofchildren=\count297
-\tikznumberofcurrentchild=\count298
-\tikz@fig@count=\count299
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count295
+\tikznumberofchildren=\count296
+\tikznumberofcurrentchild=\count297
+\tikz@fig@count=\count298
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count300
-\pgfmatrixcurrentcolumn=\count301
-\pgf@matrix@numberofcolumns=\count302
+\pgfmatrixcurrentrow=\count299
+\pgfmatrixcurrentcolumn=\count300
+\pgf@matrix@numberofcolumns=\count301
 )
-\tikz@expandcount=\count303
+\tikz@expandcount=\count302
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -610,25 +619,25 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 ty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box64
-\tcb@upperbox=\box65
-\tcb@lowerbox=\box66
-\tcb@phantombox=\box67
-\c@tcbbreakpart=\count304
-\c@tcblayer=\count305
-\c@tcolorbox@number=\count306
-\tcb@temp=\box68
+\tcb@titlebox=\box65
+\tcb@upperbox=\box66
+\tcb@lowerbox=\box67
+\tcb@phantombox=\box68
+\c@tcbbreakpart=\count303
+\c@tcblayer=\count304
+\c@tcolorbox@number=\count305
 \tcb@temp=\box69
 \tcb@temp=\box70
 \tcb@temp=\box71
+\tcb@temp=\box72
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.cod
 e.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.1.0'
-\c@tcbrastercolumn=\count307
-\c@tcbrasterrow=\count308
-\c@tcbrasternum=\count309
-\c@tcbraster=\count310
+\c@tcbrastercolumn=\count306
+\c@tcbrasterrow=\count307
+\c@tcbrasternum=\count308
+\c@tcbraster=\count309
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
 .tex
@@ -645,7 +654,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfil
 l.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box72
+\l__tikzfill_img_box=\box73
 ))
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
 w.code.tex
@@ -656,11 +665,12 @@ code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.1.0'
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
-Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box73
-\tcb@totalupperbox=\box74
-\tcb@totallowerbox=\box75
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box74
+\tcb@totalupperbox=\box75
+\tcb@totallowerbox=\box76
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code
 .tex
@@ -676,7 +686,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '6.1.0'
 \tcbfitdim=\dimen262
 \tcb@lowerfitdim=\dimen263
 \tcb@upperfitdim=\dimen264
-\tcb@cur@hbadness=\count311
+\tcb@cur@hbadness=\count310
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsut
 f8.code.tex
@@ -686,24 +696,24 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.1.0'
 ode.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.1.0'
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count312
-\lst@gtempboxa=\box76
+\lst@mode=\count311
+\lst@gtempboxa=\box77
 \lst@token=\toks37
-\lst@length=\count313
+\lst@length=\count312
 \lst@currlwidth=\dimen265
-\lst@column=\count314
-\lst@pos=\count315
+\lst@column=\count313
+\lst@pos=\count314
 \lst@lostspace=\dimen266
 \lst@width=\dimen267
-\lst@newlines=\count316
-\lst@lineno=\count317
+\lst@newlines=\count315
+\lst@lineno=\count316
 \lst@maxwidth=\dimen268
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count318
-\lst@skipnumbers=\count319
-\lst@framebox=\box77
+\c@lstnumber=\count317
+\lst@skipnumbers=\count318
+\lst@framebox=\box78
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -719,19 +729,13 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.1.0'
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.1.0'
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2023/04/15 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ))
-\c@tcblisting=\count320
+\c@tcblisting=\count319
 ))
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listingsut
-f8.sty
-Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
-
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
-ty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. 
+Library `listings` is loaded instead. on input line 29.
 )
-)))
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbexternal.c
 ode.tex
 Library (tcolorbox): 'tcbexternal.code.tex' version '6.1.0'
@@ -756,11 +760,14 @@ File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 e.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.1.0'
 )
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count321
-\l__pdf_internal_box=\box78
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+\g__graphics_track_int=\count320
+\l__pdf_internal_box=\box79
+\g__pdf_backend_object_int=\count321
+\g__pdf_backend_annotation_int=\count322
+\g__pdf_backend_link_int=\count323
 ) (main.aux)
 \openout1 = `main.aux'.
 
@@ -773,6 +780,14 @@ LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+2.
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -783,45 +798,17 @@ LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 Package hyperref Info: Link coloring OFF on input line 32.
- (main.out) (main.out)
+
+(main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
+\c@lstlisting=\count324
+ [1
 
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
-\scratchdimen=\dimen269
-\scratchbox=\box79
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count325
-\MPscratchDim=\dimen270
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks39
-)
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-\c@lstlisting=\count328
- (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks40
-\inpenc@posthook=\toks41
-) [1
-
-{C:/Users/Gabry/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc
+] (main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -830,64 +817,59 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.53 ...ttimalità di A*}{19}{subsubsection.4.9.4}
-                                                  % [1])
+[1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
  [2] (lesson1.tex
-Underfull \hbox (badness 4556) in paragraph at lines 12--12
-[]\OT1/cmr/m/n/10 Un pro-gramma che usa de-
+Underfull \hbox (badness 4569) in paragraph at lines 12--12
+[]\TU/lmr/m/n/10 Un programma che usa de-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--13
-[]\OT1/cmr/m/n/10 Un pro-gramma che prende
+[]\TU/lmr/m/n/10 Un programma che prende
  []
 
 
-Overfull \hbox (14.86208pt too wide) in paragraph at lines 9--15
+Overfull \hbox (14.86757pt too wide) in paragraph at lines 9--15
  [][] 
  []
 
 
-Overfull \hbox (10.27888pt too wide) in paragraph at lines 19--20
- []\OT1/cmr/bx/n/10 Pensare Razional-mente.[] \OT1/cmr/m/n/10 Con-siste nel for
--mal-iz-zare tutta la conoscenza tramite
+Overfull \hbox (10.24336pt too wide) in paragraph at lines 19--20
+ []\TU/lmr/bx/n/10 Pensare Razionalmente.[] \TU/lmr/m/n/10 Consiste nel formali
+zzare tutta la conoscenza tramite
  []
 
 
-Overfull \hbox (21.67361pt too wide) in paragraph at lines 20--21
- []\OT1/cmr/bx/n/10 Agire Umana-mente.[] \OT1/cmr/m/n/10 Con-siste nell'emulare
- il com-por-ta-mento umano (sbagliando,
+Overfull \hbox (21.66336pt too wide) in paragraph at lines 20--21
+ []\TU/lmr/bx/n/10 Agire Umanamente.[] \TU/lmr/m/n/10 Consiste nell’emulare il 
+comportamento umano (sbagliando,
  []
 
 [3]
-Overfull \hbox (16.15897pt too wide) in paragraph at lines 42--44
-[]\OT1/cmr/bx/n/10 interpretazione del lin-guag-gio nat-u-rale \OT1/cmr/m/n/10 
-per co-mu-ni-care con l'esaminatore
+Overfull \hbox (16.12006pt too wide) in paragraph at lines 42--44
+[]\TU/lmr/bx/n/10 interpretazione del linguaggio naturale \TU/lmr/m/n/10 per co
+municare con l’esaminatore
  []
 
 ) [4] (lesson2.tex
-Overfull \hbox (6.05614pt too wide) in paragraph at lines 13--16
-\OT1/cmr/m/n/10 pos-si-bili dal mo-mento che queste in-tel-li-genze non ave-van
-o al-cuna conoscenza
+Overfull \hbox (6.03003pt too wide) in paragraph at lines 13--16
+\TU/lmr/m/n/10 possibili dal momento che queste intelligenze non avevano alcuna
+ conoscenza
  []
 
 
-Overfull \hbox (15.96677pt too wide) in paragraph at lines 16--19
-[]\OT1/cmr/bx/n/10 Esplosione com-bi-na-to-ria\OT1/cmr/m/n/10 : al-cuni prob-le
-mi veni-vano risolti dall'IA provando
+Overfull \hbox (15.99725pt too wide) in paragraph at lines 16--19
+[]\TU/lmr/bx/n/10 Esplosione combinatoria\TU/lmr/m/n/10 : alcuni problemi veniv
+ano risolti dall’IA provando
  []
 
 
-Overfull \hbox (3.91728pt too wide) in paragraph at lines 19--21
-\OT1/cmr/m/n/10 us-ato risul-tava davvero dif-fi-cile da im-ple-mentare per far
- fronte all'incertezza
+Overfull \hbox (3.92pt too wide) in paragraph at lines 19--21
+\TU/lmr/m/n/10 usato risultava davvero difficile da implementare per far fronte
+ all’incertezza
  []
 
 [5] [6]) [7] (lesson3.tex
@@ -896,15 +878,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--20
  []
 
 
-Overfull \hbox (8.78142pt too wide) in paragraph at lines 25--26
-[]\OT1/cmr/bx/n/10 Propensione/Avversione al ris-chio\OT1/cmr/m/n/10 : un al-tr
-o parametro riguarda quanto
+Overfull \hbox (7.5317pt too wide) in paragraph at lines 25--26
+[]\TU/lmr/bx/n/10 Propensione/Avversione al rischio\TU/lmr/m/n/10 : un altro pa
+rametro riguarda quanto
  []
 
 [8] [9]) [10] (lesson4.tex
-Overfull \hbox (19.03706pt too wide) in paragraph at lines 8--9
-[]\OT1/cmr/bx/n/10 Completamente Os-serv-abile \OT1/cmr/m/n/10 per poter conosc
-ere lo stato in-iziale dell'agente 
+Overfull \hbox (19.01337pt too wide) in paragraph at lines 8--9
+[]\TU/lmr/bx/n/10 Completamente Osservabile \TU/lmr/m/n/10 per poter conoscere 
+lo stato iniziale dell’agente 
  []
 
 [11] [12]
@@ -913,9 +895,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--66
  []
 
 [13] [14]
-Overfull \hbox (0.91881pt too wide) in paragraph at lines 159--162
-[]\OT1/cmr/bx/n/10 Complessit^^Ra Tem-po-rale/S-paziale\OT1/cmr/m/n/10 : an-che
- se ab-bi-amo in-trodotto queste
+Overfull \hbox (0.89838pt too wide) in paragraph at lines 159--162
+[]\TU/lmr/bx/n/10 Complessità Temporale/Spaziale\TU/lmr/m/n/10 : anche se abbia
+mo introdotto queste
  []
 
 ) [15] (lesson5.tex
@@ -938,16 +920,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
  []
 
 
-Overfull \hbox (6.68333pt too wide) in paragraph at lines 26--27
+Overfull \hbox (6.66489pt too wide) in paragraph at lines 26--27
 []$\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[]\OT1/cmr/m/n/10 ) \OM
-S/cmsy/m/n/10 ^^T []$ \OT1/cmr/m/n/10 per definizione, dal mo-mento che l'euris
-tica di costo dev'essere
+S/cmsy/m/n/10 ^^T []$ \TU/lmr/m/n/10 per definizione, dal momento che l’euristi
+ca di costo dev’essere
  []
 
 [21]) [22] (lesson8.tex
-Overfull \hbox (0.91719pt too wide) in paragraph at lines 10--11
-[]\OT1/cmr/m/n/10 Nella strate-gia da adottare bisogna tenere in con-sid-er-azi
-one an-che le strate-
+Overfull \hbox (0.90001pt too wide) in paragraph at lines 10--11
+[]\TU/lmr/m/n/10 Nella strategia da adottare bisogna tenere in considerazione a
+nche le strate-
  []
 
 [23] [24] [25]
@@ -959,47 +941,38 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 115.
 
-) [26] (main.aux)
+) (lesson9.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+[26] [27]) [28] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EC8983344351C5246C351DD2D118BC91;9343.
+(rerunfilecheck)             Checksum: AC2AD4A401FB7ED4782551ADD38BA53A;9888.
  ) 
 Here is how much of TeX's memory you used:
- 27054 strings out of 475248
- 548567 string characters out of 5757812
- 1934785 words of memory out of 5000000
- 47986 multiletter control sequences out of 15000+600000
- 566678 words of font info for 68 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 102i,15n,107p,409b,895s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Gabry\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Gabry/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Gabry/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Gabry/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Gabry/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
-s/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r17.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr6.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Gabry/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Gabry/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Gabry/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Gabry/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
-s/Gabry/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on main.pdf (27 pages, 358732 bytes).
-PDF statistics:
- 642 PDF objects out of 1000 (max. 8388607)
- 140 named destinations out of 1000 (max. 500000)
- 629 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26261 strings out of 410379
+ 525217 string characters out of 5788050
+ 1927416 words of memory out of 5000000
+ 47172 multiletter control sequences out of 15000+600000
+ 563348 words of font info for 72 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 102i,15n,107p,418b,881s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+Output written on main.pdf (29 pages).
