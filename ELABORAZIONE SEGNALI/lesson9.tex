@@ -5,20 +5,22 @@ come somma infinita tra i prodotti tra l'impulso ideale e il loro peso, ossia co
     x(n) = \sum_{i = -\infty}^{+\infty} x(i)\delta(n-i)
 \end{equation*}
 Allora:
-\begin{align*}
-    y(n) &= S[x(n)] \\ 
-         &= S\left[\sum_{i = -\infty}^{+\infty} x(i)\delta(n-i)\right] = \\
-         &=\sum_{i = -\infty}^{+\infty} x(i) \underbrace{S[\delta(n-i)]}_{h(n)}
-\end{align*}
+\begin{gather*}
+    y(n) = S[x(n)] = \\ 
+         = S\left[\sum_{i = -\infty}^{+\infty} x(i)\delta(n-i)\right] = \\
+         =\sum_{i = -\infty}^{+\infty} x(i) \underbrace{S[\delta(n-i)]}_{h(n)}
+\end{gather*}
 Dal momento che $S[\cdot]$ è anche Tempo-Invariante, allora:
 \begin{equation*}
     h(n - n_0) = S\left[\delta(n - n_0)\right]
 \end{equation*}
-In definitiva, anche nel caso discreto, possiamo enunciare la proprietà fondamentale dei sistemi LTI, ossia che un qualsiasi sistema LTI
-può essere descritto come convoluzione tra l'ingresso e la risposta all'impulso del sistema:
-\begin{equation}
-    y(n) = S[x(n)] = x(n) \ast h(n)
-\end{equation}
+\begin{highlightedeq}
+    In definitiva, anche nel caso discreto, possiamo enunciare la proprietà fondamentale dei sistemi LTI, ossia che un qualsiasi sistema LTI
+    può essere descritto come convoluzione tra l'ingresso e la risposta all'impulso del sistema:
+    \begin{equation}
+        y(n) = S[x(n)] = x(n) \ast h(n)
+    \end{equation}
+\end{highlightedeq}
 
 \subsection{Causalità}
 Un sistema $S[\cdot]$ LTI discreto è \textbf{Causale} se e solo se:

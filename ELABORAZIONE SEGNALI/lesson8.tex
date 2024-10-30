@@ -131,10 +131,13 @@ Dal momento che il sistema è LTI allora:
     = \int_{-\infty}^{+\infty} h(\tau)e^{j2\pi ft}e^{-j2\pi\tau} d\tau =\\
     = e^{j2\pi ft} \int_{-\infty}^{+\infty} h(\tau) e^{-j2\pi\tau} d\tau 
 \end{align*}
-Possiamo vedere $\int_{-\infty}^{+\infty} h(\tau) e^{-j2\pi\tau} d\tau$ come una sorta di convoluzione in 0, che noi chiamiamo $H(f)$ e definiamo \textbf{Risposta in Frequenza}. Possiamo riscrivere l'equazione come:
-\begin{equation}
-    y(t) = H(f)x_f(t)
-\end{equation}
+\begin{highlightedeq}
+    Possiamo vedere $\int_{-\infty}^{+\infty} h(\tau) e^{-j2\pi\tau} d\tau$ come una sorta di convoluzione in 0, che noi chiamiamo $H(f)$ 
+    e definiamo \textbf{Risposta in Frequenza}. Possiamo riscrivere l'equazione come:
+    \begin{equation}
+        y(t) = H(f)x_f(t)
+    \end{equation}
+\end{highlightedeq}
 Da $H(f)$ possiamo definire:
 \begin{itemize}
     \item \textbf{Risposta in Ampiezza}: $|H(f)|$

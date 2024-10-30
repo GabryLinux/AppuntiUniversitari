@@ -113,7 +113,7 @@
 \contentsline {paragraph}{Causalità.}{29}{section*.33}%
 \contentsline {paragraph}{Stabilità BIBO.}{29}{section*.34}%
 \contentsline {paragraph}{Linearità.}{29}{section*.35}%
-\contentsline {paragraph}{Tempo-Invarianza.}{29}{section*.36}%
+\contentsline {paragraph}{Tempo-Invarianza.}{30}{section*.36}%
 \contentsline {section}{\numberline {7}Sistemi Lineari e Tempo-Invarianti (LTI) Discreti}{30}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Causalità}{30}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Stabilità BIBO}{31}{subsection.7.2}%
@@ -125,12 +125,17 @@
 \contentsline {paragraph}{Dimostrazione.}{32}{section*.40}%
 \contentsline {paragraph}{Associativa}{32}{section*.41}%
 \contentsline {paragraph}{Distributiva (rispetto alla Somma)}{32}{section*.42}%
-\contentsline {paragraph}{Convoluzione con $\delta (n)$}{33}{section*.43}%
+\contentsline {paragraph}{Convoluzione con $\delta (n)$}{32}{section*.43}%
 \contentsline {section}{\numberline {8}Analisi Armonica}{33}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Sviluppo In Serie Di Fourier}{33}{subsection.8.1}%
+\contentsline {paragraph}{Teorema.}{33}{section*.44}%
 \contentsline {subsubsection}{\numberline {8.1.1}Forma Esponenziale}{33}{subsubsection.8.1.1}%
-\contentsline {paragraph}{Equazione di Sintesi.}{33}{section*.44}%
-\contentsline {paragraph}{Equazione di Analisi.}{33}{section*.46}%
+\contentsline {paragraph}{Equazione di Sintesi.}{33}{section*.45}%
+\contentsline {paragraph}{Equazione di Analisi.}{33}{section*.47}%
 \contentsline {subsubsection}{\numberline {8.1.2}Forma Trigonometrica}{34}{subsubsection.8.1.2}%
-\contentsline {paragraph}{I Equazione di Sintesi}{34}{section*.48}%
-\contentsline {paragraph}{II Equazione di Sintesi.}{35}{section*.52}%
+\contentsline {paragraph}{I Equazione di Sintesi}{34}{section*.49}%
+\contentsline {paragraph}{II Equazione di Sintesi.}{35}{section*.53}%
+\contentsline {paragraph}{Esempi.}{36}{section*.54}%
+\contentsline {subsection}{\numberline {8.2}Trasformata di Fourier}{36}{subsection.8.2}%
+\contentsline {paragraph}{Antitrasformata di Fourier.}{37}{section*.58}%
+\contentsline {paragraph}{Trasformata di Fourier.}{37}{section*.59}%

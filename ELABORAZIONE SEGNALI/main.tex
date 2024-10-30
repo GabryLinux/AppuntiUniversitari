@@ -3,7 +3,11 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{cancel}
+\usepackage{tcolorbox}  
 \usepackage[hidelinks]{hyperref}
+\usepackage{eso-pic} 
+\usepackage{svg}
+\usepackage{mathrsfs}
 
 \begin{document}
 \begin{titlepage}
@@ -16,6 +20,33 @@
         \large 2024/2025
     \end{center}
 \end{titlepage}
+
+
+\newtcolorbox{highlightedeq}[1][]{
+  colback=yellow!20,     % Colore di sfondo (giallo chiaro)
+  colframe=yellow!50!black, % Colore del bordo (giallo scuro)
+  width=\textwidth,      % Larghezza del box
+  boxrule=0.0pt,         % Spessore del bordo
+  sharp corners,         % Angoli non arrotondati
+  #1
+}
+
+\newtcolorbox{startingBox}[1][\today]{
+  overlay={
+    \node[anchor=east] at (frame.west|-0,0) {\textsf{\small #1}}; % Posizionamento della data a sinistra del box
+  },
+  colback=yellow!20,          % Colore di sfondo (giallo chiaro)
+  colframe=yellow!50!black,   % Colore del bordo
+  width=\textwidth,           % Larghezza del box
+  boxrule=0.5pt,              % Spessore del bordo
+  sharp corners,              % Angoli non arrotondati
+  left=2cm                     % Spazio extra a sinistra per il contenuto
+}
+\newcommand\AtUpperLeft[1]{%
+  \AddToShipoutPictureBG*{%
+    \put(50,\paperheight - 105){#1 \includesvg{src/book.svg}}%   % Posiziona l'elemento 20 punti a destra e allineato alla cima
+  }%
+}
 \newpage
 \addcontentsline{toc}{section}{}
 \tableofcontents
@@ -34,5 +65,6 @@
 \input{lezione7.tex}
 \input{lesson8.tex}
 \input{lesson9.tex}
+\newpage
 \input{lesson10.tex}
 \end{document}
