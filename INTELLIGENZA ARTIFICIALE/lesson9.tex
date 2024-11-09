@@ -61,13 +61,80 @@ La decisione di continuare ad esplorare un nodo non terminale tramite Minimax o 
     \item se CUT$(s,d) = $ TRUE, allora approssimo il valore del nodo con l'euristica $v(s)$
     \item altrimenti continuo ad esplorarlo tramite MINIMAX
 \end{itemize}
-Man mano che scendo nell'albero, il valore $d$ decrementa fino ad arrivare a $0$.
-Una forma di euristica che è possibile realizzare per un gioco determina la bontà di un nodo attraverso la combinazione (lineare o non) delle \textit{caratteristiche}
-di uno stato (per esempio, negli scacchi, una caratteristica di uno stato potrebbe essere la "presenza della regina", con peso 10, la "presenza di un alfiere", con peso 6, la "posizione dei pedoni", ecc...) (Pag. 237).
+Man mano che scendo nell'albero, il valore $d$ decrementa fino ad arrivare a $0$.\\
+Per quanto riguarda \textbf{l'euristica} $v(s)$ esistono 2 principali approcci:
+\paragraph{Euristiche basate sull'esperienza.} 
+Un modo per determinare la stima $v(s)$ del nodo $s$ è \textbf{apprendendo} i vari pesi delle feature da un dataset di partite
+e, dunque, combinare con questi pesi le varie feature; il dataset di partite può essere generato facendo simulare 
+alla macchina milioni di partite e, a partire dall'esito di una serie di mosse, quantificare l'importanza di ogni feature per vincere il gioco. (Problema di regressione)
 
+\paragraph{Combinazione Lineare.}
+Quando non si ha a disposizione un grande dataset di partite o le risorse computazionali per analizzarlo, è possibile affidarsi ad un vettore
+di pesi $\left<\omega_1, \omega_2, \ldots, \omega_n\right>$ delle $n$ feature dato da un esperto.
+Tali tecniche, tuttavia, funzionano solo se:
+\begin{itemize}
+    \item l'euristica è \textbf{efficiente}
+    \item è possibile determinare \textbf{a mano} le varie feature
+\end{itemize}
+Si stanno però facendo molti studi per permettere ad una macchina di apprendere anche quali feature considerare (e non solo i pesi)
+nella descrizione di uno stato tramite il \textbf{deep learning}.
+Per quanto riguarda le funzioni di \textbf{CUT} esistono alcuni approcci utilizzabili:
 \paragraph{Iterative Deepening.} Una possibile implementazione di CUT è tramite la funzione di \textit{approfondimento iterativo} della DFS e consiste nell'incrementare $d$
 ad ogni nuovo sottoalbero esplorato, cioè consiste nell'aumentare il \textit{budget di esplorazione} e a scommettere sempre di più su un ramo, scendendo via via più in profondità
 
 \paragraph{Quiescient Search.} Un altro approccio utilizzabile per CUT risiede nel riconoscimento dei nodi \textbf{Quiescienti} e di quelli \textbf{Non Quiescenti}.
 Un nodo è quiescente se non è \textit{interessante}, ossia una qualunque mossa non stravolge gli esiti del match; con questo approccio dunque, tutti gli stati potenzialmente quiescienti vengono approssimati,
 mentre quelli più interessanti vengono esplorati con MINIMAX.
+
+
+\subsubsection{Tabella delle Trasposizioni}
+Molto spesso, esplorando l'albero di gioco, è possibile che certe mosse siano state già esplorate, o per simmetria, o perchè
+ci si è arrivati tramite un ordine diverso di mosse. Nel caso \textbf{peggiore}, esistono $m!^n$ stati diversi, dove
+$m$ sono il numero di mosse per generare gli stati, $n$ sono i giocatori, ma nella stragrande maggioranza dei giochi
+gli stati non saranno tutti diversi. Per evitare di ricalcolare ogni volta la strategia per mosse già considerate in precedenza
+è possibile salvare le mosse in una \textbf{Tabella delle Trasposizioni}:\\
+La tabella delle trasposizioni è una \textbf{HashTable} che conserva, per ogni stato $\overline{s}$ esplorato:
+\begin{itemize}
+    \item il valore $\overline{v}$ del nodo
+    \item la mossa $\overline{a}$ che ha generato $\overline{s}$
+    \item la profondità $\overline{d}$ a cui è arrivato l'algoritmo per esplorare $\overline{s}$ e rappresenta la forza con cui
+    l'algoritmo ha esplorato quello stato.
+\end{itemize}
+Il valore $\overline{v}$ può essere:
+\begin{itemize}
+    \item Il valore MINIMAX effettivo se tutto il sottoalbero di $\overline{s}$ è stato esplorato
+    \item Un $\alpha/ \beta$ bound altrimenti
+\end{itemize}
+
+\paragraph{Funzionamento.} Ragioniamo ora sull'algoritmo che sfrutta \textbf{Iterative Deepening},\textbf{ Pruning }$\alpha,\beta$ e \textbf{Transposition Table}:\\
+Consideriamo la funzione di \textit{decisione} $D(s_k, d_\text{MAX}, \text{TT})$ dove:
+\begin{itemize}
+    \item $s_k$ è lo stato k-esimo
+    \item $d_\text{MAX}$ è la massima profondità di esplorazione
+    \item TT è la tabella di trasposizione
+\end{itemize}
+Per ogni stato $s$ selezionato dalla DFS:
+\begin{itemize}
+    \item se $s \notin \mbox{TT}$ allora si aggiunge in TT il record $\left< \overline{s} \leftarrow s, \overline{a} \leftarrow a, \overline{d} \leftarrow d \right>$
+    \item altrimenti:
+        \begin{itemize}
+            \item se $\overline{d} \geq d_\text{MAX}$ allora interrompo l'esplorazione del nodo e lo stimo con l'euristica $v$
+            \item se $\overline{d} < d_\text{MAX}$ allora lo espando
+        \end{itemize}
+\end{itemize}
+La scelta di espandere un nodo già esplorato in precedenza con valore di profondità maggiore serve per migliorare la stima,
+ generare bound più forti e dunque aumentare la possibilità di potatura.
+
+Nonostante tutte le ottimizzazioni presentate, è possibile dimostrare che andando sempre più in profondità nell'albero, il tempo
+risparmiato dalla Tabella di trasposizione diventa trascurabile.
+
+\subsubsection{Forward Pruning (PROBCUT)}
+Quando l'albero di gioco è troppo profondo, riuscire ad esplorare anche un ramo può risultare troppo costoso, per cui la funzione di 
+valutazione può intervenire non solo in \textit{orizzontale} ma anche in \textit{verticale}: tramite alcune condizioni, per esempio
+in caso di posizioni particolarmente svantaggiose, è possibile troncare completamente la ricerca in profondità e stimare il valore del nodo.
+Chiaramente troncare così la ricerca non garantisce sempre di trovare l'ottimo perchè c'è una probabilità di troncare il ramo
+con il valore MINIMAX più alto, nonostante ciò viene utilizzato quando la risorsa tempo diventà molto più importante della precisione
+delle mosse. Questo algoritmo è il fratello del Beam Search, ossia il \textbf{PROBCUT}.
+
+\newpage
+

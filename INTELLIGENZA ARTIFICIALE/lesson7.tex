@@ -12,7 +12,7 @@ Ai fini di spiegare il funzionamento del Focal Search è necessario introdurre u
 \end{itemize}
 Sulla basta di ciò possiamo definire anche la \textbf{regola di espansione}:\\
 \begin{equation*}
-    n_mbox{next} = \arg \min_{n \in \mbox{FOCAL}} \hat{h}_F (n)
+    n_{\mbox{next}} = \arg \min_{n \in \mbox{FOCAL}} \hat{h}_F (n)
 \end{equation*}
 Tale regola impone l'espansione del nodo che è più vicina alla soluzione, ossia che richiede meno passi computazionali per arrivare alla soluzione;
 dal momento che ci stiamo facendo guidare dall'euristica di costo computazionale $\hat{h}_F (n)$ e non dall'euristica di costo $h(n)$, sicuramente l'ottimalità viene perduta

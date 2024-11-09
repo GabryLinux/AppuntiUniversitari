@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  29 OCT 2024 09:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  9 NOV 2024 15:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -958,21 +958,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
-[26] [27]) [28] (main.aux)
+[26] [27] [28] [29] [30]) (lesson10.tex [31] [32] [33] [34]) [35] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 62069880F7C385496E67B86184E8FC80;9888.
+(rerunfilecheck)             Checksum: 43346C9EEE817F60FF9C59AA3409407A;11428.
  ) 
 Here is how much of TeX's memory you used:
- 26261 strings out of 410379
- 525217 string characters out of 5788050
+ 26280 strings out of 410379
+ 525619 string characters out of 5788050
  1927416 words of memory out of 5000000
- 47172 multiletter control sequences out of 15000+600000
- 563348 words of font info for 72 fonts, out of 8000000 for 9000
+ 47186 multiletter control sequences out of 15000+600000
+ 563356 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,15n,107p,418b,881s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (29 pages).
+Output written on main.pdf (36 pages).
