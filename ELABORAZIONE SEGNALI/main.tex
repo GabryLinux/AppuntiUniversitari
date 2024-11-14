@@ -8,6 +8,10 @@
 \usepackage{eso-pic} 
 \usepackage{svg}
 \usepackage{mathrsfs}
+\usepackage{marginnote}
+\usepackage{pgfplots}
+\usepackage{comment}
+\pgfplotsset{compat=1.18}
 
 \begin{document}
 \begin{titlepage}
@@ -21,6 +25,7 @@
     \end{center}
 \end{titlepage}
 
+\newcommand{\fourier}{{\mathscr{F}}}
 
 \newtcolorbox{highlightedeq}[1][]{
   colback=yellow!20,     % Colore di sfondo (giallo chiaro)
@@ -47,6 +52,14 @@
     \put(50,\paperheight - 105){#1 \includesvg{src/book.svg}}%   % Posiziona l'elemento 20 punti a destra e allineato alla cima
   }%
 }
+
+\newcommand{\lezione}[2]{{\reversemarginpar \raggedbottom \marginnote{
+  \includesvg[height=1.5em, keepaspectratio]{src/book.svg}
+  \parbox{1.5cm}{  
+  \footnotesize { #1 \\#2 }
+  }
+  
+}}}
 \newpage
 \addcontentsline{toc}{section}{}
 \tableofcontents
@@ -67,4 +80,10 @@
 \input{lesson9.tex}
 \newpage
 \input{lesson10.tex}
+\input{lesson11.tex}
+\input{lesson12.tex}
+\newpage
+\input{Lesson13.tex}
+\newpage
+\input{lesson14.tex}
 \end{document}

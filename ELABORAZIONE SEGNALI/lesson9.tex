@@ -1,4 +1,5 @@
 \section{Sistemi Lineari e Tempo-Invarianti (LTI) Discreti}
+\lezione{Lezione 9}{28/10/2024}
 Consideriamo un sistema $S[\cdot] : y(n) = S[x(n)]$ con $n \in \mathbb{Z}$ Lineare e Tempo-Invariante; possiamo riscrivere $x(n)$
 come somma infinita tra i prodotti tra l'impulso ideale e il loro peso, ossia come:
 \begin{equation*}
@@ -17,7 +18,7 @@ Dal momento che $S[\cdot]$ è anche Tempo-Invariante, allora:
 \begin{highlightedeq}
     In definitiva, anche nel caso discreto, possiamo enunciare la proprietà fondamentale dei sistemi LTI, ossia che un qualsiasi sistema LTI
     può essere descritto come convoluzione tra l'ingresso e la risposta all'impulso del sistema:
-    \begin{equation}
+    \begin{equation} \label{prop: fondLTI}
         y(n) = S[x(n)] = x(n) \ast h(n)
     \end{equation}
 \end{highlightedeq}

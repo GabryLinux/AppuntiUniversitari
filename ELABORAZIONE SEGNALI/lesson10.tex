@@ -1,6 +1,7 @@
-\AtUpperLeft{\raisebox{-1cm}{\textsf{\small \today}}}
 
-\section{Analisi Armonica}
+
+\section{Analisi In Frequenza}
+\lezione{Lezione 10}{29/10/2024}
 I segnali visti finora sono stati presentati come funzioni descritte da un'espressione analitica; alcuni studiosi, tra cui Fourier,
 si accorsero che tali funzioni potevano essere scomposte in somme di altre funzioni (in particolare di fasori, seni e coseni), ossia
 è possibile vedere un segnale come \textbf{combinazione lineare} di segnali elementari. Uno strumento che permette di trasformare
@@ -149,12 +150,12 @@ Dobbiamo osservare che:
 \begin{align*}
     f(t) &= \lim_{\Delta f \to 0} \sum_{n = -\infty}^{+\infty} F(f_n) e^{j2 \pi j f_n t} df =\\
          &= \int_{-\infty}^{+\infty} F(f) e^{j2 \pi j f t} df =\\
-         &= \mathscr{F}^{-1}\{F(f)\}
+         &= \fourier^{-1}\{F(f)\}
 \end{align*}
 E viene detta \textbf{Formula di Sintesi} o \textbf{Antitrasformata di Fourier}
 \paragraph{Trasformata di Fourier.}Mentre $F(f)$, anche detta \textbf{Trasformata di Fourier} o \textbf{Formula di Analisi}, è:
 \begin{equation}
-    F(f) = \int_{-\infty}^{+\infty} f(t) e^{-j2 \pi f t} dt = \mathscr{F}\{f(t)\}
+    F(f) = \int_{-\infty}^{+\infty} f(t) e^{-j2 \pi f t} dt = \fourier\{f(t)\}
 \end{equation}
 
 
@@ -173,11 +174,11 @@ E viene detta \textbf{Formula di Sintesi} o \textbf{Antitrasformata di Fourier}
         
         % Fourier transform arrow, closer to center
         \draw[->, thick] (-1.2, 0.2) -- (1.2, 0.2);
-        \node at (0, 0.4) {\small $\mathscr{F}$};
+        \node at (0, 0.4) {\small $\fourier$};
         
         % Inverse Fourier transform arrow, closer to center
         \draw[<-, thick] (-1.2, -0.2) -- (1.2, -0.2);
-        \node at (0, -0.4) {\small $\mathscr{F}^{-1}$};
+        \node at (0, -0.4) {\small $\fourier^{-1}$};
     \end{tikzpicture}
     \end{center}
     Con $f : \mathbb{R} \rightarrow \mathbb{C}$ e $F : \mathbb{R} \rightarrow \mathbb{C}$. Sebbene quasi sempre lo spettro di una

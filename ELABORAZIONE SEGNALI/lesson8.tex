@@ -1,46 +1,46 @@
 \subsubsection{Proprietà}
-\begin{itemize}
-    \item \textbf{Commutativa:}dati 2 segnali $f,g$
-    \begin{equation} \label{prop: convComm}
-        f(t) \ast g(t) = g(t) \ast f(t)
-    \end{equation}
-    Tale proprietà è facile da dimostrare:\\
-    Consideriamo la convoluzione $f(t) \ast g(t) = \int_{-\infty}^{+\infty} f(\tau)g(t - \tau) d\tau$. Effettuiamo ora un cambio di variabile:
-    \begin{equation*}
-        \begin{cases}
-            x = t - \tau\\
-            \tau = t - x\\
-            dx = -d\tau
-        \end{cases}
-    \end{equation*}
-    Sostituiamo ora le $\tau$ per avere un integrale in $x$ (NB: gli estremi di integrazione si invertono dal momento che $x$ è un "ribaltamento" di $\tau$):
-    \begin{align*}
-        \int_{-\infty}^{+\infty} f(\tau)g(t - \tau) d\tau= \\
-        \int_{+\infty}^{-\infty} f(t - x)g(x) (-dx) = \\
-        \int_{-\infty}^{+\infty} g(x)f(t - x) dx = \\
-        g(t) \ast f(t)
-    \end{align*}
-    Alla fine ho risolto il $-dx$ semplicemente invertendo ancora gli estremi di integrazione. Il significato di questa proprietà è importante:
-    se è vero che è possibile studiare un sistema LTI rispetto alla sua risposta all'impulso, è vero anche il contrario, è possibile studiare un sistema rispetto ad un segnale $x(t)$
-    \item \textbf{Associativa}: dati 3 segnali $f,g,h$ allora:
-    \begin{equation}
-        f(t) \ast [g(t) \ast h(t)] = [f(t) \ast g(t)] \ast h(t)
-    \end{equation}
+\lezione{Lezione 8}{21/10/2024}
+\paragraph{Commutativa.}Dati 2 segnali $f,g$
+\begin{equation} \label{prop: convComm}
+    f(t) \ast g(t) = g(t) \ast f(t)
+\end{equation}
+Tale proprietà è facile da dimostrare:\\
+Consideriamo la convoluzione $f(t) \ast g(t) = \int_{-\infty}^{+\infty} f(\tau)g(t - \tau) d\tau$. Effettuiamo ora un cambio di variabile:
+\begin{equation*}
+    \begin{cases}
+        x = t - \tau\\
+        \tau = t - x\\
+        dx = -d\tau
+    \end{cases}
+\end{equation*}
+Sostituiamo ora le $\tau$ per avere un integrale in $x$ (NB: gli estremi di integrazione si invertono dal momento che $x$ è un "ribaltamento" di $\tau$):
+\begin{align*}
+    \int_{-\infty}^{+\infty} f(\tau)g(t - \tau) d\tau= \\
+    \int_{+\infty}^{-\infty} f(t - x)g(x) (-dx) = \\
+    \int_{-\infty}^{+\infty} g(x)f(t - x) dx = \\
+    g(t) \ast f(t)
+\end{align*}
+Alla fine ho risolto il $-dx$ semplicemente invertendo ancora gli estremi di integrazione. Il significato di questa proprietà è importante:
+se è vero che è possibile studiare un sistema LTI rispetto alla sua risposta all'impulso, è vero anche il contrario, è possibile studiare un sistema rispetto ad un segnale $x(t)$.
 
-    \item \textbf{Distributiva (rispetto alla somma)}: dati 3 segnali $f,g,h$: \label{prop: ConvDistr}
-    \begin{equation}
-        f(t) \ast [g(t) + h(t)] = f(t) \ast g(t) + f(t) \ast h(t) 
-    \end{equation}
+\paragraph{Associativa.}Dati 3 segnali $f,g,h$ allora:
+\begin{equation}
+    f(t) \ast [g(t) \ast h(t)] = [f(t) \ast g(t)] \ast h(t)
+\end{equation}
 
-    \item \textbf{Durata della Convoluzione}: \label{prop: ConvDurata} dati 2 segnali $f,g$ con durata rispettivamente $D_1,D_2$ allora la durata di $f(t) \ast g(t)$ è $D_1 + D_2$
-    
-    \item \textbf{Convoluzione con $\delta(t)$}: \label{prop: ConvDelta} dato un segnale $f(t)$ allora:
-    \begin{equation}
-        f(t) \ast \delta(t - t_0) = f(t - t_0)
-    \end{equation}
-    Possiamo infatti dire che $\delta(t)$ è l'operatore neutro dell'operazione di convoluzione, questo perchè il delta è una funzione che avviene tutta in un istante e quindi non altera la funzione di partenza; una sua eventuale traslazione, trasla la funzione $f(t)$.
-    La dimostrazione è banale perchè si basa sulla proprietà del campionamento della delta \eqref{eq: camp}
-\end{itemize}
+\paragraph{Distributiva (rispetto alla somma).}Dati 3 segnali $f,g,h$:
+\begin{equation} \label{prop: ConvDistr}
+    f(t) \ast [g(t) + h(t)] = f(t) \ast g(t) + f(t) \ast h(t) 
+\end{equation}
+
+\paragraph{Durata della Convoluzione.}Dati 2 segnali $f,g$ con durata rispettivamente $D_1,D_2$ allora la durata di $f(t) \ast g(t)$ è $D_1 + D_2$.
+
+\paragraph{Convoluzione con $\delta(t)$} Dato un segnale $f(t)$ allora:
+\begin{equation} \label{prop: ConvDelta}
+    f(t) \ast \delta(t - t_0) = f(t - t_0)
+\end{equation}
+Possiamo infatti dire che $\delta(t)$ è l'operatore neutro dell'operazione di convoluzione, questo perchè il delta è una funzione che avviene tutta in un istante e quindi non altera la funzione di partenza; una sua eventuale traslazione, trasla la funzione $f(t)$. La dimostrazione è banale perchè si basa sulla proprietà del campionamento della delta \eqref{eq: camp}.
+
 
 
 \newpage
@@ -121,7 +121,7 @@ Un sistema è BIBO se e solo se:
 
 \subsubsection{Risposta in frequenza}
 Consideriamo la risposta del sistema rispetto al fasore di frequenza $f$:
-\begin{equation*}
+\begin{equation*} \label{prop: rispInFreq}
     x_f(t) = e^{j2\pi ft}
 \end{equation*}
 Dal momento che il sistema è LTI allora:

@@ -26,14 +26,15 @@ per le varie azioni possibili sarà limitato. Sarà necessario quindi distribuir
 in modo da non escludere alcuna possibilità e dunque perdere l'ottimalità. 
 \paragraph{Approccio Naive.}Si potrebbe scegliere di equidistribuire le simulazioni a tutte le azioni, pure a quelle
 meno promettenti. In questo modo, alla fine, si sceglie la mossa $a^* = \arg \max_i \{\omega_i\}$.\\
+
 Quest'approccio funziona, ma si può fare di meglio: quando devo esplorare tutte le azioni? Quando scommetto di più sull'azione
 migliore? Questo viene detto \textbf{Dilemma Exploration/Exploitation} e possiamo formularlo con il problema \textbf{Multi-Armed Bandit Problem} che recita cosi:
 \begin{quote}
-    Un bandito si trova in un casinò per arricchirsi. Per farlo deve investire le sue risorse su $K$ slot machines e, per
+   \textit{ Un bandito si trova in un casinò per arricchirsi. Per farlo deve investire le sue risorse su $K$ slot machines e, per
     massimizzare i guadagni, deve scommettere il più possibile sulla slot machines con valore atteso più alto. Purtroppo però
     i valori attesi di tutte le slot machines sono ignoti all'inizio, per questo il bandito dovrà alternare fasi di \textbf{esplorazione}
     in cui cerca di stimare il valore atteso di tutte le slot machines, e fasi di \textbf{exploitation}, in cui scommette tanto sulla macchina
-    che sembra più promettente. 
+    che sembra più promettente. }
 \end{quote}
 Esistono diverse soluzioni a questo problema, tra cui:
 \paragraph{Upper Confidence Bound.}Questa soluzione consiste nel scegliere la slot machine $i$ che \textbf{massimizza}

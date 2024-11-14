@@ -1,0 +1,139 @@
+\subsubsection{Trasformate Notevoli}
+\newcommand{\fCouple}{\overset{\fourier}{\longleftrightarrow}}
+\newcommand{\fAnticouple}{\overset{\fourier^{-1}}{\longleftrightarrow}}
+\paragraph{Rettangolo.}\lezione{Lezione 11}{4/11/2024} La trasformata sicuramente più importante è quella del rettangolo:
+
+\begin{align*}
+    S(f) &= \int_{-\infty}^{+\infty} \text{rect}(t)e^{-j2\pi ft} dt \\
+         &= \int_{-\frac{1}{2}}^{\frac{1}{2}} e^{-j2\pi ft}dt =\\
+         &= -\frac{1}{2j \pi f}\left(e^{j\pi f} - e^{-j\pi f}\right) = \\
+         &= -\frac{1}{j \pi f}\left( \frac{e^{j\pi f} - e^{-j\pi f}}{2j}\right) = \\
+         &= \frac{\cancel{j}}{ \pi f}\left( \frac{e^{j\pi f} - e^{-j\pi f}}{2\cancel{j}}\right) = \\
+         &= \frac{1}{\pi f} \sin(\pi f) \tag{per eq di Eulero} =\\
+         &= \text{sinc}(t)
+\end{align*}
+
+\paragraph{Delta di Dirac}
+La trasformata di Fourier della Delta è molto particolare:
+\begin{align*}
+    S(f) &= \int_{-\infty}^{+\infty} \delta(t) e^{-j2\pi ft}dt =\\
+         &= e^{-j2\pi f0} \tag{per il campionamento \eqref{prop: camp}} = 1\\
+\end{align*}
+Possiamo interpretare questo risultato dicendo che lo spettro della delta è costituita da infiniti seni di frequenze che 
+vanno da $-\infty$ a $+\infty$ tutti di modulo unitario
+\paragraph{Delta di Dirac Traslata}
+Anche la trasformata della Delta Traslata di $t_0$ è interessante:
+\begin{align*}
+    S(f) &= \int_{-\infty}^{+\infty} \delta(t - t_0) e^{-j2\pi ft}dt =\\
+         &= e^{-j2\pi f t_0} \tag{per il campionamento \eqref{prop: camp}}
+\end{align*}
+
+\subsection{Trasformata di Fourier di Segnali Reali}
+Consideriamo $s(t) \in \mathbb{R}$, $\forall t \in \mathbb{R}$:
+\begin{align*}
+    S(f) &= \int_{-\infty}^{+\infty} s(t) e^{-j2 \pi f t} dt=\\
+         &= \int_{-\infty}^{+\infty} f(t) \left[\cos(-j2 \pi f t) + j \sin(-j2 \pi f t)\right] dt\\
+         &= \int_{-\infty}^{+\infty} f(t)\cos(-j2 \pi f t)dt + j \int_{-\infty}^{+\infty} f(t)\sin(-j2 \pi f t)dt =\\
+         &= \underbrace{\int_{-\infty}^{+\infty} f(t)\cos(j2 \pi f t)dt}_{\in \mathbb{R}} - j \underbrace{\int_{-\infty}^{+\infty} f(t)\sin(-j2 \pi f t)dt}_{\in \mathbb{R}} =\\ \tag{per simmetrie}
+         &= \mathbb{R}e\left[S(f)\right] -j\mathbb{I}m\left[S(f)\right] 
+\end{align*}
+\subsubsection{Proprietà Trasformata di Segnali Reali}
+\paragraph{Simmetria Hermitiana.} Consideriamo ora $S(-f)$:
+    \begin{align*}
+        \mathbb{R}e[S(-f)] &= \int_{-\infty}^{+\infty} f(t)\cos(-j2 \pi f t)dt =\\
+                           &= \int_{-\infty}^{+\infty} f(t)\cos(j2 \pi f t)dt = \mathbb{R}e[S(f)] \tag{simmetria pari}
+    \end{align*}
+    \begin{align*}
+        \mathbb{I}m[S(-f)] &= \int_{-\infty}^{+\infty} f(t)\sin(-j2 \pi f t)dt =\\
+                           &= -\int_{-\infty}^{+\infty} f(t)\sin(j2 \pi f t)dt = -\mathbb{I}m[S(f)] \tag{simmetria dispari}
+    \end{align*}
+Un'altra simmetria simile la possiamo notare per \textbf{modulo} e \textbf{fase} di $S(f)$:
+\begin{itemize}
+    \item $|S(f)| = |S(-f)|$
+    \item $\angle S(f) = -\angle S(-f)$
+\end{itemize}
+Da ciò possiamo notare che la trasformata della frequenza opposta ha lo stesso modulo della trasformata di partenza ma fase opposta;
+questa è proprio la definizione di \textbf{coniugato} e definisce la \textbf{Simmetria Hermitiana}:
+\begin{equation}
+    S(-f) = \overline{S(f)} \tag{se $s(t) \in \mathbb{R}$}
+\end{equation}
+Normalmente un grafico di un segnale si rappresenta in forma \textbf{bilatera}, considerando sia i tempi negativi sia positivi.
+Da questi calcoli abbiamo dimostrato che la trasformata di un qualsiasi segnale reale è sempre simmetrico rispetto alle ordinate
+per cui molto spesso la trasformata viene rappresentata in forma \textbf{monolatera}, cioè solo per $t > 0$.
+\paragraph{Linearità.}
+La trasformata di Fourier è un operatore lineare:
+\begin{equation}
+    \fourier\left[ax(t) + by(t)\right] = a\fourier\left[x(t)\right] + b\fourier\left[y(t)\right]
+\end{equation}
+\paragraph{Dimostrazione. }
+\begin{align*}
+    \fourier\left[ax(t) + by(t)\right] &= \int_{-\infty}^{+\infty} \left[ax(t) + by(t)\right] e^{-j2\pi ft}dt=\\
+                                           &= \int_{-\infty}^{+\infty} ax(t)e^{-j2\pi ft} + by(t)e^{-j2\pi ft}dt= \\
+                                           &= a\int_{-\infty}^{+\infty} x(t)e^{-j2\pi ft} + b\int_{-\infty}^{+\infty}y(t)e^{-j2\pi ft}dt=\\
+                                           &= a\fourier\left[x(t)\right] + b\fourier\left[y(t)\right]
+\end{align*}
+\paragraph{Dualità.}
+Dato un segnale $s(t)$ tale che $\fourier[s(t)] = S(f)$, allora:
+\begin{equation}
+    \fourier[S(t)] = s(-f)
+\end{equation}
+\paragraph{Dimostrazione.}
+\begin{align*}
+    \fourier[S(t)] &= \int_{-\infty}^{+\infty} S(t) e^{-j2\pi ft} dt =\\
+                   &= \int_{-\infty}^{+\infty} S(t) e^{j2\pi (-f)t}dt = s(-f) 
+\end{align*}
+Ossia otteniamo la formula di sintesi.
+
+\paragraph{Traslazione dei Tempi.}
+Dato un segnale $s(t)$ tale che $\fourier[s(t)] = S(f)$, allora:
+\begin{equation}\label{prop: traslTempi}
+    \fourier[s(t - t_0)] = S(f)e^{-j2 \pi ft_0}
+\end{equation}
+\paragraph{Dimostrazione.}
+Iniziamo a considerare:
+\begin{equation*}
+    \fourier[s(t - t_0)] = \int_{-\infty}^{+\infty} s(t - t_0) e^{-j2\pi ft} dt
+\end{equation*}
+Effettuiamo ora questo scambio di variabili $\begin{cases}
+    t' = t - t_0\\
+    dt' = dt
+\end{cases}$
+\begin{align*}
+    &= \int_{-\infty}^{+\infty} s(t') e^{-j2\pi f(t' + t_0)} dt' =\\
+    &= \int_{-\infty}^{+\infty} s(t') e^{-j2\pi ft'}\underbrace{e^{-j2\pi ft_0}}_{costante} dt' =\\
+    &= e^{-j2\pi ft_0}\int_{-\infty}^{+\infty} s(t') e^{-j2\pi ft'} dt' =\\
+    &= S(f)e^{-j2 \pi ft_0}
+\end{align*}
+
+\paragraph{Traslazione nelle Frequenze.}
+Dato $\fourier[s(t - t_0)] = \int_{-\infty}^{+\infty} s(t - t_0) e^{-j2\pi ft} dt$ allora si dimostra per dualità che:
+\begin{equation}
+    \fourier[s(t)e^{-j2\pi ft_0}] = S(f + f_0)
+\end{equation}
+
+\paragraph{Modulazione d'Ampiezza}
+Dato $S(f) = \fourier[s(t)]$ e il segnale modulato $s_m(t) = s(t) \cos(2\pi f_c t)$ allora
+\begin{align*}
+    \fourier\{s(t) \cos(2\pi f_ct)\} &=  \int_{-\infty}^{+\infty}s(t) \frac{e^{j2\pi f_ct}+e^{-j2\pi f_ct}}{2} dt=\\
+                        &=  \int_{-\infty}^{+\infty}s(t) \frac{1}{2} (e^{j2\pi f_ct}+e^{-j2\pi f_ct}) dt=\\
+                        &=  \int_{-\infty}^{+\infty}\frac{1}{2} (s(t)e^{j2\pi f_ct}+s(t)e^{-j2\pi f_ct}) dt=\\
+                        &=  \frac{1}{2} (S(f + f_0) + S(f - f_0))
+\end{align*}
+
+\paragraph{Banda di un Segnale}
+Data una coppia $s(t) \fCouple S(f)$ si definisce \textbf{Banda di un Segnale} $B$ il supporto delle frequenze,ossia
+l'insieme delle frequenze per le quali il modulo non è nullo:
+\begin{equation}
+    B = \{f \in \mathbb{R} : |S(f)| \neq 0\}
+\end{equation}
+
+\paragraph{Bandwidth} 
+La Bandwidth o \textbf{Larghezza di Banda} $BW$ rappresenta \textbf{l'estensione} di B, ossia:
+\begin{equation}
+    BW = f_2 - f_1
+\end{equation}
+Dove $f_2, f_1$ sono le frequenze estremità della Banda. 
+NB: Dal momento che la trasformata di un segnale reale è, per la simmetria Hermitiana, simmetrica rispetto alle y,
+allora la $BW$ viene definito sullo \textbf{Spettro Monolatero}. Possiamo definire una nuova classificazione dei segnali:
+\paragraph{Segnali In Banda Base.}Sono segnali che contengono l'origine nella Banda.
+\paragraph{Segnali In Banda Passante.}Sono segnali che non contengono l'origine nella Banda.

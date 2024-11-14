@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  30 OCT 2024 11:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  14 NOV 2024 13:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -696,111 +696,382 @@ PDF mode.
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/marginnote\marginnote.s
+ty
+Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count308
+)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
+ision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.cod
+e.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
+.code.tex
+\t@pgfplots@toka=\toks37
+\t@pgfplots@tokb=\toks38
+\t@pgfplots@tokc=\toks39
+\pgfplots@tmpa=\dimen264
+\c@pgfplots@coordindex=\count309
+\c@pgfplots@scanlineindex=\count310
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
+sysgeneric.code.tex))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplot
+slibrary.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
+ib\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
+ib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sutil.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsliststructure.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsliststructureext.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count311
+)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsmatrix.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstableshared.code.tex
+\c@pgfplotstable@counta=\count312
+\t@pgfplotstable@a=\toks43
+)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsdeque.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sbinary.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sbinary.data.code.tex))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sutil.verb.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
+arypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count313
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
+rypgfplots.surfshading.pgfsys-xetex.def
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
+rypgfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count314
+))))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+scolormap.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+scolor.code.tex))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstac
+kedplots.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplot
+handlers.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
+plothandler.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
+plotimage.code.tex)))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.sca
+ling.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoor
+dprocessing.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.err
+orbars.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.mar
+kers.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotstick
+s.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.pat
+hs.code.tex)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen265
+\pgfdecoratedremainingdistance=\dimen266
+\pgfdecoratedinputsegmentcompleteddistance=\dimen267
+\pgfdecoratedinputsegmentremainingdistance=\dimen268
+\pgf@decorate@distancetomove=\dimen269
+\pgf@decorate@repeatstate=\count315
+\pgfdecorationsegmentamplitude=\dimen270
+\pgfdecorationsegmentlength=\dimen271
+)
+\tikz@lib@dec@box=\box74
+)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count316
+\pgfplots@xmin@reg=\dimen272
+\pgfplots@xmax@reg=\dimen273
+\pgfplots@ymin@reg=\dimen274
+\pgfplots@ymax@reg=\dimen275
+\pgfplots@zmin@reg=\dimen276
+\pgfplots@zmax@reg=\dimen277
+)
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
 ex.def
 File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
-\g__graphics_track_int=\count308
-\l__pdf_internal_box=\box74
-\g__pdf_backend_object_int=\count309
-\g__pdf_backend_annotation_int=\count310
-\g__pdf_backend_link_int=\count311
+\g__graphics_track_int=\count317
+\l__pdf_internal_box=\box75
+\g__pdf_backend_object_int=\count318
+\g__pdf_backend_annotation_int=\count319
+\g__pdf_backend_link_int=\count320
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-2.
+6.
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-Package hyperref Info: Link coloring OFF on input line 12.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+Package hyperref Info: Link coloring OFF on input line 16.
 
 (main.out) (main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
- [1
+ ()
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-] (main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+[1
+
+] (main.toc)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [1]
+Package marginnote Info: Using workaround for absolute page number on input lin
+e 66.
+ (lesson1.tex
+Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 2.
+
+Package marginnote Info: right page because not two side mode on input line 2.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 2.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 4.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-[1] [2])
-\tf@toc=\write5
-\openout5 = `main.toc'.
+Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
 
- [3] (lesson1.tex [4]) [5] (lesson2.tex [6]) [7] [8] (lesson3.tex
-Overfull \hbox (26.34203pt too wide) in paragraph at lines 2--5
+[2]) [3] (lesson2.tex
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 4.
+
+Package marginnote Info: right page because not two side mode on input line 4.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 4.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Package marginnote Info: xpos seems to be 453.18565pt on input line 4.
+ [4]) [5] [6]
+(lesson3.tex
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 2.
+
+Package marginnote Info: right page because not two side mode on input line 2.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 2.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
+
+Overfull \hbox (26.34203pt too wide) in paragraph at lines 3--6
 \TU/lmr/m/n/10 In termini totalmente astratti, un segnale è un veicolo di infor
 mazione. L’informazione,
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
-) [10] (lesson4.tex [11] [12] [13] [14]) [15] (lesson5.tex [16] [17] [18]
-[19]) [20] (lesson6.tex [21] [22]) (lezione7.tex [23]
-Overfull \hbox (30.73508pt too wide) in paragraph at lines 27--28
+) [8] (lesson4.tex
+Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 
+4.
+Package marginnote Info: right page because not two side mode on input line 4.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 4.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Package marginnote Info: xpos seems to be 134.26999pt on input line 4.
+ [9] [10] [11] [12])
+[13] (lesson5.tex
+Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 
+3.
+Package marginnote Info: right page because not two side mode on input line 3.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 3.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Package marginnote Info: xpos seems to be 134.26999pt on input line 3.
+ [14] [15] [16] [17])
+[18] (lesson6.tex
+Package marginnote Info: Margin note 21.1 is on absolute page 21 on input line 
+3.
+Package marginnote Info: right page because not two side mode on input line 3.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 3.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+\TU/lmr/m/n/8 14/10/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+
+ []
+
+Package marginnote Info: xpos seems to be 134.26999pt on input line 3.
+[19] [20]) (lezione7.tex
+Package marginnote Info: Margin note 23.1 is on absolute page 23 on input line 
+2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 2.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+\TU/lmr/m/n/8 15/10/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+
+ []
+
+Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
+[21]
+Overfull \hbox (30.73508pt too wide) in paragraph at lines 28--29
 []\TU/lmr/bx/n/10 Integratore definito nel tempo\TU/lmr/m/n/10 : grazie alla pr
 oprietà di linearità dell’integrale,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-[24]) (lesson8.tex [25] [26]
+[22]) (lesson8.tex
+Package marginnote Info: Margin note 25.1 is on absolute page 25 on input line 
+2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 2.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+\TU/lmr/m/n/8 21/10/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+
+ []
+
+Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
+[23]
+Overfull \hbox (2.73184pt too wide) in paragraph at lines 41--43
+\TU/lmr/m/n/10 Possiamo infatti dire che $\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$ \TU/lmr/m/n/10 è l’operatore neutro dell’o
+perazione di convoluzione,
+ []
+
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-[27]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-[28]) (lesson9.tex
+[26]) (lesson9.tex
 Overfull \hbox (8.88893pt too wide) in paragraph at lines 163--1
  []\TU/lmr/bx/n/10 Tempo-Invarianza.[] \TU/lmr/m/n/10 La medesima formulazione 
 dei sistemi LTI Continui []
@@ -811,59 +1082,173 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--1
 
  []
 
-[29] [30] [31]) [32] (lesson10.tex
-Overfull \hbox (5.04893pt too wide) in paragraph at lines 4--8
+Package marginnote Info: Margin note 29.1 is on absolute page 30 on input line 
+2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 2.
+(svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+\TU/lmr/m/n/8 28/10/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+
+ []
+
+Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
+[27] [28] [29]) [30] (lesson10.tex
+Package marginnote Info: Margin note 33.1 is on absolute page 33 on input line 
+4.
+Package marginnote Info: right page because not two side mode on input line 4.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 4.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+\TU/lmr/m/n/8 29/10/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+
+ []
+
+Package marginnote Info: xpos seems to be 134.26999pt on input line 4.
+
+Overfull \hbox (5.04893pt too wide) in paragraph at lines 5--9
 \TU/lmr/m/n/10 I segnali visti finora sono stati presentati come funzioni descr
 itte da un’espressione
  []
 
-Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
-line 40.
-(svg-inkscape/book_svg-tex.pdf_tex
-File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/book_svg-tex.pdf, page 1>
-) [33] [34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
+[31] [32] [33]
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
-[36]
-Overfull \hbox (4.6549pt too wide) in paragraph at lines 155--156
+[34]
+Overfull \hbox (4.6549pt too wide) in paragraph at lines 156--157
  []\TU/lmr/bx/n/10 Trasformata di Fourier.[] \TU/lmr/m/n/10 Mentre $\OML/cmm/m/
 it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )$\TU/lmr/m/n/10 , an
 che detta \TU/lmr/bx/n/10 Trasformata di Fourier
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-)
-Overfull \hbox (15.0pt too wide) in paragraph at lines 161--70
+) (lesson11.tex
+Overfull \hbox (15.0pt too wide) in paragraph at lines 162--1
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--70
+Underfull \hbox (badness 10000) in paragraph at lines 162--1
 
  []
 
-[37] [38] (main.aux)
+[35]
+Package marginnote Info: Margin note 38.1 is on absolute page 38 on input line 
+4.
+Package marginnote Info: right page because not two side mode on input line 4.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 4.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Package marginnote Info: xpos seems to be 134.26999pt on input line 4.
+ [36] [37] [38]
+Overfull \hbox (7.70279pt too wide) in paragraph at lines 115--116
+ []\TU/lmr/bx/n/10 Modulazione d’Ampiezza[] \TU/lmr/m/n/10 Dato $\OML/cmm/m/it/
+10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = \U/rsfs/m/n/10 F\OT1
+/cmr/m/n/10 [\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/
+10 )]$ \TU/lmr/m/n/10 e il segnale modulato $\OML/cmm/m/it/10 s[]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (22.70686pt too wide) in paragraph at lines 131--132
+ []\TU/lmr/bx/n/10 Bandwidth[] \TU/lmr/m/n/10 La Bandwidth o \TU/lmr/bx/n/10 La
+rghezza di Banda $\OML/cmm/m/it/10 BW$ \TU/lmr/m/n/10 rappresenta \TU/lmr/bx/n/
+10 l’estensione
+ []
+
+[39]) (lesson12.tex
+Package marginnote Info: Margin note 42.1 is on absolute page 42 on input line 
+5.
+Package marginnote Info: right page because not two side mode on input line 5.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 5.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+\TU/lmr/m/n/8 05/11/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+
+ []
+
+Package marginnote Info: xpos seems to be 365.9536pt on input line 5.
+[40] [41] [42] [43]) [44] (Lesson13.tex
+Package marginnote Info: Margin note 47.1 is on absolute page 47 on input line 
+3.
+Package marginnote Info: right page because not two side mode on input line 3.
+Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
+line 3.
+ (svg-inkscape/book_svg-tex.pdf_tex
+File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/book_svg-tex.pdf, page 1>
+)
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+\TU/lmr/m/n/8 11/11/2024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+
+ []
+
+Package marginnote Info: xpos seems to be 134.26999pt on input line 3.
+[45] [46]
+Overfull \hbox (3.51337pt too wide) in paragraph at lines 114--117
+\TU/lmr/m/n/10 viene detto \TU/lmr/bx/n/10 tempo caratteristico \TU/lmr/m/n/10 
+del sistema. La trasformata di questa risposta
+ []
+
+[47]) [48] (lesson14.tex [49]) [50] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D0B8E71A2DA4F51328DCB18E96DD74CC;15219.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 4A53293F9F5000C7FF38ACFA8BE1AE05;18124
+(rerunfilecheck)             After:  CB12C883891AE3EA80CBE746D84C4989;19002.
  ) 
 Here is how much of TeX's memory you used:
- 23199 strings out of 410379
- 442632 string characters out of 5788050
- 1927416 words of memory out of 5000000
- 44122 multiletter control sequences out of 15000+600000
- 565892 words of font info for 85 fonts, out of 8000000 for 9000
+ 33915 strings out of 410379
+ 797381 string characters out of 5788050
+ 1931416 words of memory out of 5000000
+ 54662 multiletter control sequences out of 15000+600000
+ 565900 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,15n,107p,494b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,20n,107p,722b,2178s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (39 pages).
+Output written on main.pdf (51 pages).
