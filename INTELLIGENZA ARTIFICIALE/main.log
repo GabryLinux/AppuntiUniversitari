@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  9 NOV 2024 15:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  17 NOV 2024 00:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -631,6 +631,23 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box71
 \tcb@temp=\box72
 )
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen262
+))
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.cod
 e.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.1.0'
@@ -683,9 +700,9 @@ Library (tcolorbox): 'tcbtheorems.code.tex' version '6.1.0'
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.co
 de.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.1.0'
-\tcbfitdim=\dimen262
-\tcb@lowerfitdim=\dimen263
-\tcb@upperfitdim=\dimen264
+\tcbfitdim=\dimen263
+\tcb@lowerfitdim=\dimen264
+\tcb@upperfitdim=\dimen265
 \tcb@cur@hbadness=\count310
 )
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsut
@@ -700,14 +717,14 @@ Library (tcolorbox): 'tcblistings.code.tex' version '6.1.0'
 \lst@gtempboxa=\box77
 \lst@token=\toks37
 \lst@length=\count312
-\lst@currlwidth=\dimen265
+\lst@currlwidth=\dimen266
 \lst@column=\count313
 \lst@pos=\count314
-\lst@lostspace=\dimen266
-\lst@width=\dimen267
+\lst@lostspace=\dimen267
+\lst@width=\dimen268
 \lst@newlines=\count315
 \lst@lineno=\count316
-\lst@maxwidth=\dimen268
+\lst@maxwidth=\dimen269
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
@@ -771,33 +788,33 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-2.
+4.
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-Package hyperref Info: Link coloring OFF on input line 32.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+Package hyperref Info: Link coloring OFF on input line 34.
 
 (main.out) (main.out)
 \@outlinefile=\write4
@@ -963,21 +980,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
-[31] [32] [33] [34]) [35] (main.aux)
+[31] [32] [33] [34]) (lesson11.tex
+Overfull \hbox (57.13158pt too wide) in paragraph at lines 35--36
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+[35] [36] [37]) (lesson12.tex
+Overfull \hbox (12.38pt too wide) in paragraph at lines 2--5
+\TU/lmr/m/n/10 Tutti i problemi finora affrontati ricadevano sempre entro la fa
+miglia dell\TU/lmr/bx/n/10 inferenza\TU/lmr/m/n/10 .
+ []
+
+[38] [39]) [40] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 43346C9EEE817F60FF9C59AA3409407A;11428.
+(rerunfilecheck)             Checksum: FD113CF0AA2A7A8626F9C2DBDE4D4642;13165.
  ) 
 Here is how much of TeX's memory you used:
- 26280 strings out of 410379
- 525619 string characters out of 5788050
+ 27677 strings out of 410379
+ 559875 string characters out of 5788050
  1927416 words of memory out of 5000000
- 47186 multiletter control sequences out of 15000+600000
+ 48565 multiletter control sequences out of 15000+600000
  563356 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,15n,107p,418b,881s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,107p,418b,883s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (36 pages).
+Output written on main.pdf (41 pages).
