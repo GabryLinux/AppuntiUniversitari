@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  17 NOV 2024 00:22
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  18 NOV 2024 20:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -838,7 +838,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] (lesson1.tex
+ [2] [3] (lesson1.tex
 Underfull \hbox (badness 4569) in paragraph at lines 12--12
 []\TU/lmr/m/n/10 Un programma che usa de-
  []
@@ -865,13 +865,13 @@ Overfull \hbox (21.66336pt too wide) in paragraph at lines 20--21
 comportamento umano (sbagliando,
  []
 
-[3]
+[4]
 Overfull \hbox (16.12006pt too wide) in paragraph at lines 42--44
 []\TU/lmr/bx/n/10 interpretazione del linguaggio naturale \TU/lmr/m/n/10 per co
 municare con l’esaminatore
  []
 
-) [4] (lesson2.tex
+) [5] (lesson2.tex
 Overfull \hbox (6.03003pt too wide) in paragraph at lines 13--16
 \TU/lmr/m/n/10 possibili dal momento che queste intelligenze non avevano alcuna
  conoscenza
@@ -889,7 +889,7 @@ Overfull \hbox (3.92pt too wide) in paragraph at lines 19--21
  all’incertezza
  []
 
-[5] [6]) [7] (lesson3.tex
+[6] [7]) [8] (lesson3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 17--20
 
  []
@@ -900,29 +900,29 @@ Overfull \hbox (7.5317pt too wide) in paragraph at lines 25--26
 rametro riguarda quanto
  []
 
-[8] [9]) [10] (lesson4.tex
+[9] [10]) [11] (lesson4.tex
 Overfull \hbox (19.01337pt too wide) in paragraph at lines 8--9
 []\TU/lmr/bx/n/10 Completamente Osservabile \TU/lmr/m/n/10 per poter conoscere 
 lo stato iniziale dell’agente 
  []
 
-[11] [12]
+[12] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
  []
 
-[13] [14]
+[14] [15]
 Overfull \hbox (0.89838pt too wide) in paragraph at lines 159--162
 []\TU/lmr/bx/n/10 Complessità Temporale/Spaziale\TU/lmr/m/n/10 : anche se abbia
 mo introdotto queste
  []
 
-) [15] (lesson5.tex
+) [16] (lesson5.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
-[16] [17]) (lesson6.tex
+[17] [18]) (lesson6.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 32.
@@ -931,7 +931,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 32.
 
-[18] [19]) (lesson7.tex [20]
+[19] [20]) (lesson7.tex [21]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
@@ -943,13 +943,13 @@ S/cmsy/m/n/10 ^^T []$ \TU/lmr/m/n/10 per definizione, dal momento che l’eurist
 ca di costo dev’essere
  []
 
-[21]) [22] (lesson8.tex
+[22]) [23] (lesson8.tex
 Overfull \hbox (0.90001pt too wide) in paragraph at lines 10--11
 []\TU/lmr/m/n/10 Nella strategia da adottare bisogna tenere in considerazione a
 nche le strate-
  []
 
-[23] [24] [25]
+[24] [25] [26]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 115.
@@ -975,12 +975,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
-[26] [27] [28] [29] [30]) (lesson10.tex
+[27] [28] [29] [30] [31]) (lesson10.tex
 Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
-[31] [32] [33] [34]) (lesson11.tex
+[32] [33] [34] [35]) (lesson11.tex
 Overfull \hbox (57.13158pt too wide) in paragraph at lines 35--36
 [][] 
  []
@@ -990,27 +990,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
-[35] [36] [37]) (lesson12.tex
+[36] [37] [38]) (lesson12.tex
+Overfull \hbox (0.3474pt too wide) in paragraph at lines 130--1
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--1
+
+ []
+
+
 Overfull \hbox (12.38pt too wide) in paragraph at lines 2--5
 \TU/lmr/m/n/10 Tutti i problemi finora affrontati ricadevano sempre entro la fa
 miglia dell\TU/lmr/bx/n/10 inferenza\TU/lmr/m/n/10 .
  []
 
-[38] [39]) [40] (main.aux)
+[39] [40]) (lesson13.tex [41]
+Overfull \hbox (14.62401pt too wide) in paragraph at lines 22--26
+\TU/lmr/m/n/10 Paradossalmente, considerare problemi in cui l’orizzonte è finit
+o, rende la risoluzione
+ []
+
+[42]) [43] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FD113CF0AA2A7A8626F9C2DBDE4D4642;13165.
+(rerunfilecheck)             Checksum: 4250C31844B7B490ED7729D0D6371C39;13621.
  ) 
 Here is how much of TeX's memory you used:
- 27677 strings out of 410379
- 559875 string characters out of 5788050
- 1927416 words of memory out of 5000000
- 48565 multiletter control sequences out of 15000+600000
+ 27685 strings out of 410379
+ 560030 string characters out of 5788050
+ 1928416 words of memory out of 5000000
+ 48570 multiletter control sequences out of 15000+600000
  563356 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,15n,107p,418b,883s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (41 pages).
+Output written on main.pdf (44 pages).

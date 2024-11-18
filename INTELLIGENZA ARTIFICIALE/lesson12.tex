@@ -1,0 +1,68 @@
+\section{Markov Decision Processes}
+Tutti i problemi finora affrontati ricadevano sempre entro la famiglia dell\textbf{inferenza}. D'ora in poi tratteremo l'altro
+ramo dell'IA, ossia l'\textbf{apprendimento}.
+La prima classe di problemi che affronteremo in questo ambito sono i \textbf{Markov Decision Processes}.
+\paragraph{Descrizione Generale.}
+\begin{itemize}
+    \item Gli agenti hanno come obiettivo il raggiungimento di uno \textbf{stato terminale} (può essere unico, multiplo o assente se l'agente dev'essere sempre attivo)
+    \item L'ambiente è \textbf{Stocastico} e \textbf{Single-Agent}
+    \item Esiste un \textbf{Orizzonte Temporale} entro cui agire
+\end{itemize}
+\paragraph{Formalizzazioni.}
+\begin{itemize}
+    \item \textbf{Insieme degli Stati}: $S : \{s_1, s_2, \dots\}$
+    \item \textbf{Stato Iniziale}: $s_i \in S$
+    \item \textbf{Stato Terminale}: $s_T \in S$
+    \item \textbf{Azioni possibili per lo stato s}: $A(s)$
+    \item \textbf{Modello di Transizione Stocastica}: dato $s \in S, a \in A(s), s' \in S$ con la transizione da $s$ a $s'$ con azione $a$,
+    il modello di transizione $f$ indica la probabilità di finire proprio sullo stato s', ossia:
+    \begin{equation}
+        f(s,a,s') =  \mathbb{P}(s' | s,a)
+    \end{equation} 
+    \item \textbf{Reward}: ad ogni transizione l'agente riceve un reward (il corrispondente di costo negli algoritmi di search) che 
+    dev'essere \textbf{additivo}
+    \item \textbf{Orizzone H}: ossia le epoche di decisione per un MDP; oltre quest'epoca, tutto non viene più considerato. Se $H = \infty$ allora
+    il processo termina se e solo se l'agente raggiunge uno stato terminale
+\end{itemize}
+\subsection{Markovianità}
+Dato un processo stocastico che genera una \textbf{sequenza aleatoria} $s_1, s_2, \dots, s_n$ (aleatoria perchè l'ambiente è stocastico),
+un processo si dice \textbf{Markoviano} se e solo se \textit{l'esito di un'azione dipende solo dallo stato corrente e non dagli stati precedenti}, ossia:
+\begin{equation}
+    \mathbb{P}(s_{t+1} | s_t,a_t,s_{t-1},a_{t-1},\dots, s_0, a_0) = \mathbb{P}(s_{t+1} | s_t,a_t)
+\end{equation}
+In parole povere, se un processo è markoviano, tutte le informazioni necessarie per potere scegliere la mossa migliore è già contenuta nello stato attuale stesso.
+Assumere che un processo sia markoviano, inoltre permette di facilitare di molto i calcoli non perdendo di generalità (questo perchè la markovianità è un'assunzione realistica in molti contesti).
+
+\subsection{Risoluzione di un MDP}
+In un problema MDP, quello che si cerca è la \textbf{policy} $\pi$:
+\begin{equation*}
+    \pi : S \rightarrow A
+\end{equation*}
+Questa è una funzione \textbf{deterministica} che mappa ad ogni stato un'azione. Il nostro obiettivo è, una volta risolto il problema,
+quello di rendere l'agente un \textbf{agente reflex} che sa già, ad ogni stato, le azioni da compiere. Naturalmente la difficoltà sta nel 
+trovare una policy che \textbf{ottimizzi} un parametro (ad esempio il reward).
+
+\subsection{Stimare la bontà di una policy}
+Rispetto ai problemi precedenti, stimare la bontà di una strategia o un percorso risultava essere piuttosto intuitiva. Qui le cose si complicano 
+per 2 motivi:
+\begin{itemize}
+    \item Le transizioni sono stocastiche, dunque i reward sono \textbf{incerti}
+    \item Viene imposto un \textbf{orizzonte temporale }$h$
+\end{itemize}
+La \textbf{policy ottima} deve dunque \textbf{massimizzare il valore atteso della somma dei reward}.
+\paragraph{Definizione}
+\begin{itemize}
+    \item Data una sequenza $s_1,\dots, s_n$ di stati generati da $\pi$
+    \item Dati un reward associato ad ogni stato $R_1,R_2,\dots, R_n$
+    \item Data $U(s_1,s_2,\dots,s_n) = R_1 + R_2 + \dots + R_n$
+\end{itemize} 
+La policy ottima $\pi^*$  deve generare il valore atteso della somma dei reward non peggiore di ogni altra policy:
+\begin{equation}
+    \pi^* = \arg \max_{\pi} \mathbb{E}_{\pi}\left[ U(s_0,s_1, \dots, s_n)\right]
+\end{equation}
+Possiamo dunque notare come i reward assegnati influenzino notevolmente la policy:
+\begin{itemize}
+    \item per $R < 0$, possiamo notare che la policy ottima induca l'agente a trovare lo stato terminale migliore nella maniera più efficiente
+    \item per $R \ll 0$ possiamo notare che la policy ottima induca l'agente a trovare un qualsiasi stato terminale nel minor numero di passi possibili
+    \item per $R > 0$ la policy ottima indurrà l'agente a non raggiungere mai lo stato terminale  
+\end{itemize}

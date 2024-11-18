@@ -1,0 +1,80 @@
+\subsection{Reward Scontati}
+Ponendo all'infinito l'orizzonte, l'unico modo che ha l'agente di terminare è quello di finire su uno stato terminale; dunque
+se la policy lo porta ad uno stato terminale, il valore atteso della somma dei reward è finita. Tuttavia, nel caso in cui ciò
+non accadesse, il valore atteso della somma dei reward risulta essere infinita (perchè transita in infiniti stati con altrettanti infiniti reward).
+Per cui dobbiamo introdurre una nuova definizione di somma di reward, ossia la \textbf{somma di reward scontati}:
+\begin{equation}
+    U(s_0,s_1,\dots) = \gamma^0R_0 + \gamma^1R_1 + \dots = \sum_{t = 0}^{H}\gamma^tR_t
+\end{equation}
+Dove $0\leq\gamma\leq 1$ e viene detto \textbf{fattore di sconto}. La combinazione sopra descritta ha la forma di un 
+\textbf{decadimento esponenziale} e scegliendo un apposito valore di $\gamma$ possiamo bilanciare l'importanza tra l'immediato
+futuro e il futuro più remoto:
+\begin{itemize}
+    \item per $\gamma \approx 1$ la somma dei reward si comporta esattamente come combinazione lineare con peso unitario dei reward che avevamo introdotto precedentemente, e dunque vengono preferite le scelte più vantaggiose nel futuro più lontano.
+    \item per $\gamma \approx 0$ la somma dei reward tiene in considerazione i termini più vicini temporalmente, per cui sono più importanti le scelte che influenzano l'immediato futuro.
+\end{itemize}
+Si può benissimo dimostrare che per $H = +\infty$ la serie converge:
+\begin{equation}
+    \sum_{t = 0}^{+\infty} y^tR_t = \frac{R_\text{MAX}}{1 - \gamma}
+\end{equation}
+
+\subsection{Policy Stazionaria}
+Paradossalmente, considerare problemi in cui l'orizzonte è finito, rende la risoluzione del problema molto complessa:
+questo perchè è necessario considerare non solo i reward per stimare la bontà di una policy, ma anche il budget di mosse rimaste.
+Dal momento che il \textbf{passato} conta nelle stime delle policy in problemi a orizzonti finiti, la \textbf{Markovianità si perde} poichè
+la policy non è più \textbf{stazionaria}, ossia, non considera solo il reward del nodo in un tempo qualsiasi. Proprio per tutti questi motivi, gli MDP che affronteremo hanno:
+\begin{itemize}
+    \item $H = \infty$
+    \item Somma di reward scontata
+\end{itemize}
+
+\subsection{Ricerca Policy Ottima}
+Arrivati a questo punto, dobbiamo calcolare in qualche modo $\pi^* : S \rightarrow A$ che masasimizza il \textbf{valore atteso
+della somma di reward scontati}; analizziamo ora 2 principali approcci:
+\paragraph{Programmazione Dinamica.}La Programmazione Dinamica è un approccio risolutivo che consiste nel suddividere un problema
+P in tanti sottoproblemi $P_1,P_2,\dots$ e risolverli separatamente. Dalle sottosoluzioni si ricava la soluzione al problema P di partenza.
+I problemi che possono essere risolti tramite prog. Dinamica devono rispettare il \textbf{principio di ottimalità di Bellman} ossia:
+\begin{quotation}
+    Nella soluzione ottima di P sono contenute le soluzioni dei sottoproblemi $P_1,P_2,\dots$ e viceversa
+\end{quotation}
+Non tutti i problemi rispettano questo principio, es:
+\begin{itemize}
+    \item Cammino Minimo su Grafo (rispetta)
+    \item Cammino Massimo su Grafo pesato (non rispetta)
+\end{itemize}
+Si può dimostrare (per fortuna) che MDP rispetta il principio di Bellman, allora esiste una procedura risolutiva realizzabile tramite Programmazione Dinamica.
+Per fare ciò dobbiamo introdurre 2 nuove metriche per determinare la bontà di $\pi^*$:
+\begin{itemize}
+    \item La \textbf{Value function} $V^*(s)$ di uno stato $s$: indica il valore atteso della somma scontata dei reward da s in avanti
+    seguendo la policy ottima $\pi^*$. Possiamo osservare che $V^*(s)$ è indipendente dal tempo dal momento che $\pi^*$ è stazionaria.
+    \item L'\textbf{Action value function} $Q^*(s,a)$: misura il reward che ottengo eseguendo $a$ (che non necessariamente dev'essere
+    prescritta dalla policy ottima) e ipotizzando che dal nodo successivo in poi seguo la policy ottima
+\end{itemize}
+Esiste una relazione tra le 2 funzioni:
+\begin{equation}
+    V^*(s) = \max_a Q^*(s,a)
+\end{equation}
+Conoscere $V^*(s)$ significa dunque conoscere la policy ottima, dunque significa risolvere il problema.\\
+Dalla definizione di $Q^*$ possiamo dedurre un'altra relazione tra la value function e l'action function, ossia:
+\begin{equation}
+    Q^*(s,a) = \gamma R(s) + V^*(s')
+\end{equation}
+Ora, diamo una definizione più precisa di $Q^*$:
+\begin{equation}
+    Q^*(s, a) = \sum_{s'} 
+\underbrace{\mathbb{P}(s' \mid s, a)}_{\substack{\text{è la probabilità} \\ \text{di transitare su } s'}} 
+[ 
+\underbrace{R(s, a, s')}_{\substack{\text{è il reward} \\ \text{immediato}}} 
++ 
+\underbrace{\gamma V^*(s')}_{\substack{\text{è lo sconto} \\ \text{del reward successivo}}} 
+]
+\end{equation}
+Da tutte queste equazioni possiamo ottenere l'equazione che le riassume tutte:
+\begin{equation}
+    V^*(s) = \max_a \sum_{s'}\mathbb{P}(s'|s,a)[R(s,a,s') + \gamma V^*(s')]
+\end{equation}
+E viene detta \textbf{Equazione di Bellman}.
+Possiamo vedere $V^*(s')$ come il sottoproblema da risolvere mentre il sottoproblema terminale è lo stato terminale e ha valore pari a 0.
+Un'altra considerazione che possiamo fare è che possiamo mettere a sistema tutte le $V^*(s)$ per ogni s ed ottenere un sistema.
+SI può dimostrare che la soluzione a questo sistema è automaticamente la soluzione ottima, dal momento che l'equazione di bellman ammette
+un'unica soluzione.
