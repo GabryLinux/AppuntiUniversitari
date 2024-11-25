@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  17 NOV 2024 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  25 NOV 2024 18:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -909,8 +909,8 @@ e 66.
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [3] (lesson1.tex
-Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 2.
+ [3] [4] (lesson1.tex
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 2.
 
 Package marginnote Info: right page because not two side mode on input line 2.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -920,9 +920,9 @@ File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/book_svg-tex.pdf, page 1>
 )
 Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
- [4]) [5]
+ [5]) [6]
 (lesson2.tex
-Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 4.
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 4.
 
 Package marginnote Info: right page because not two side mode on input line 4.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -932,8 +932,8 @@ File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/book_svg-tex.pdf, page 1>
 )
 Package marginnote Info: xpos seems to be 453.18565pt on input line 4.
- [6]) [7] [8] (lesson3.tex
-Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 
+ [7]) [8] [9] (lesson3.tex
+Package marginnote Info: Margin note 12.1 is on absolute page 12 on input line 
 2.
 Package marginnote Info: right page because not two side mode on input line 2.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -950,7 +950,7 @@ Overfull \hbox (26.34203pt too wide) in paragraph at lines 3--6
 mazione. L’informazione,
  []
 
-[9]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
@@ -960,8 +960,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
-) [10] (lesson4.tex
-Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 
+) [11] (lesson4.tex
+Package marginnote Info: Margin note 14.1 is on absolute page 14 on input line 
 4.
 Package marginnote Info: right page because not two side mode on input line 4.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -971,9 +971,9 @@ File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/book_svg-tex.pdf, page 1>
 )
 Package marginnote Info: xpos seems to be 134.26999pt on input line 4.
- [11] [12] [13] [14])
-[15] (lesson5.tex
-Package marginnote Info: Margin note 18.1 is on absolute page 18 on input line 
+ [12] [13] [14] [15])
+[16] (lesson5.tex
+Package marginnote Info: Margin note 19.1 is on absolute page 19 on input line 
 3.
 Package marginnote Info: right page because not two side mode on input line 3.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -983,9 +983,9 @@ File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/book_svg-tex.pdf, page 1>
 )
 Package marginnote Info: xpos seems to be 134.26999pt on input line 3.
- [16] [17] [18] [19])
-[20] (lesson6.tex
-Package marginnote Info: Margin note 23.1 is on absolute page 23 on input line 
+ [17] [18] [19] [20])
+[21] (lesson6.tex
+Package marginnote Info: Margin note 24.1 is on absolute page 24 on input line 
 3.
 Package marginnote Info: right page because not two side mode on input line 3.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1004,8 +1004,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
  []
 
 Package marginnote Info: xpos seems to be 134.26999pt on input line 3.
-[21] [22]) (lezione7.tex
-Package marginnote Info: Margin note 25.1 is on absolute page 25 on input line 
+[22] [23]) (lezione7.tex
+Package marginnote Info: Margin note 26.1 is on absolute page 26 on input line 
 2.
 Package marginnote Info: right page because not two side mode on input line 2.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1024,7 +1024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
  []
 
 Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
-[23]
+[24]
 Overfull \hbox (30.73508pt too wide) in paragraph at lines 28--29
 []\TU/lmr/bx/n/10 Integratore definito nel tempo\TU/lmr/m/n/10 : grazie alla pr
 oprietà di linearità dell’integrale,
@@ -1035,8 +1035,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-[24]) (lesson8.tex
-Package marginnote Info: Margin note 27.1 is on absolute page 27 on input line 
+[25]) (lesson8.tex
+Package marginnote Info: Margin note 28.1 is on absolute page 28 on input line 
 2.
 Package marginnote Info: right page because not two side mode on input line 2.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1055,24 +1055,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
  []
 
 Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
-[25]
+[26]
 Overfull \hbox (2.73184pt too wide) in paragraph at lines 41--43
 \TU/lmr/m/n/10 Possiamo infatti dire che $\OML/cmm/m/it/10 ^^N\OT1/cmr/m/n/10 (
 \OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$ \TU/lmr/m/n/10 è l’operatore neutro dell’o
 perazione di convoluzione,
  []
 
-[26]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-[28]) (lesson9.tex
+[29]) (lesson9.tex
 Overfull \hbox (8.88893pt too wide) in paragraph at lines 163--1
  []\TU/lmr/bx/n/10 Tempo-Invarianza.[] \TU/lmr/m/n/10 La medesima formulazione 
 dei sistemi LTI Continui []
@@ -1083,7 +1083,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--1
 
  []
 
-Package marginnote Info: Margin note 31.1 is on absolute page 32 on input line 
+Package marginnote Info: Margin note 32.1 is on absolute page 33 on input line 
 2.
 Package marginnote Info: right page because not two side mode on input line 2.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1102,8 +1102,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
  []
 
 Package marginnote Info: xpos seems to be 134.26999pt on input line 2.
-[29] [30] [31]) [32] (lesson10.tex
-Package marginnote Info: Margin note 35.1 is on absolute page 35 on input line 
+[30] [31] [32]) [33] (lesson10.tex
+Package marginnote Info: Margin note 36.1 is on absolute page 36 on input line 
 4.
 Package marginnote Info: right page because not two side mode on input line 4.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1128,12 +1128,12 @@ Overfull \hbox (5.04893pt too wide) in paragraph at lines 5--9
 itte da un’espressione
  []
 
-[33] [34] [35]
+[34] [35] [36]
 Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
-[36]
+[37]
 Overfull \hbox (4.6549pt too wide) in paragraph at lines 156--157
  []\TU/lmr/bx/n/10 Trasformata di Fourier.[] \TU/lmr/m/n/10 Mentre $\OML/cmm/m/
 it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )$\TU/lmr/m/n/10 , an
@@ -1155,8 +1155,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--1
 
  []
 
-[37]
-Package marginnote Info: Margin note 40.1 is on absolute page 40 on input line 
+[38]
+Package marginnote Info: Margin note 41.1 is on absolute page 41 on input line 
 4.
 Package marginnote Info: right page because not two side mode on input line 4.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1166,7 +1166,7 @@ File: ./svg-inkscape/book_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/book_svg-tex.pdf, page 1>
 )
 Package marginnote Info: xpos seems to be 134.26999pt on input line 4.
- [38] [39] [40]
+ [39] [40] [41]
 Overfull \hbox (7.70279pt too wide) in paragraph at lines 115--116
  []\TU/lmr/bx/n/10 Modulazione d’Ampiezza[] \TU/lmr/m/n/10 Dato $\OML/cmm/m/it/
 10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = \U/rsfs/m/n/10 F\OT1
@@ -1182,8 +1182,8 @@ rghezza di Banda $\OML/cmm/m/it/10 BW$ \TU/lmr/m/n/10 rappresenta \TU/lmr/bx/n/
 10 l’estensione
  []
 
-[41]) (lesson12.tex
-Package marginnote Info: Margin note 44.1 is on absolute page 44 on input line 
+[42]) (lesson12.tex
+Package marginnote Info: Margin note 45.1 is on absolute page 45 on input line 
 5.
 Package marginnote Info: right page because not two side mode on input line 5.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1202,8 +1202,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
  []
 
 Package marginnote Info: xpos seems to be 365.9536pt on input line 5.
-[42] [43] [44] [45]) [46] (Lesson13.tex
-Package marginnote Info: Margin note 49.1 is on absolute page 49 on input line 
+[43] [44] [45] [46]) [47] (Lesson13.tex
+Package marginnote Info: Margin note 50.1 is on absolute page 50 on input line 
 3.
 Package marginnote Info: right page because not two side mode on input line 3.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1222,14 +1222,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
  []
 
 Package marginnote Info: xpos seems to be 134.26999pt on input line 3.
-[47] [48]
+[48] [49]
 Overfull \hbox (3.51337pt too wide) in paragraph at lines 114--117
 \TU/lmr/m/n/10 viene detto \TU/lmr/bx/n/10 tempo caratteristico \TU/lmr/m/n/10 
 del sistema. La trasformata di questa risposta
  []
 
-[49]) [50] (lesson14.tex [51] [52]) (lesson15.tex
-Package marginnote Info: Margin note 55.1 is on absolute page 55 on input line 
+[50]) [51] (lesson14.tex [52] [53]) (lesson15.tex
+Package marginnote Info: Margin note 56.1 is on absolute page 56 on input line 
 1.
 Package marginnote Info: right page because not two side mode on input line 1.
 Package svg Info: Last page of `./svg-inkscape/book_svg-tex.pdf' is 1 on input 
@@ -1248,18 +1248,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
 
-Package marginnote Info: xpos seems to be 134.26999pt on input line 1.
+Package marginnote Info: xpos seems to be 137.59999pt on input line 1.
 
 Overfull \hbox (71.51118pt too wide) in paragraph at lines 20--49
 [] 
  []
 
-[53]
+[54]
 Overfull \hbox (52.52145pt too wide) in paragraph at lines 55--89
 [] 
  []
 
-[54]
+[55]
 Overfull \hbox (14.00974pt too wide) in paragraph at lines 111--113
 \TU/lmr/m/n/10 Riottenendo dunque $\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 f\OT1/cmr/m/n/10 )$\TU/lmr/m/n/10 , possiamo definire $\OML/cmm/m/it/10
@@ -1272,7 +1272,7 @@ Overfull \hbox (2.82353pt too wide) in paragraph at lines 126--156
 [] 
  []
 
-[55]
+[56]
 Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
@@ -1282,25 +1282,64 @@ Overfull \hbox (22.13501pt too wide) in paragraph at lines 191--192
  [] 
  []
 
-) [56] (main.aux)
+) (lesson16.tex [57] [58]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (45.94765pt too wide) in paragraph at lines 25--65
+[] 
+ []
+
+[59]
+Overfull \hbox (2.82265pt too wide) in paragraph at lines 90--120
+[] 
+ []
+
+) (lesson17.tex [60] [61] [62]) (lesson18.tex
+
+LaTeX Warning: Reference `eq: sampleSpectre' on page 63 undefined on input line
+ 5.
+
+[63] [64] [65]
+Overfull \hbox (8.2937pt too wide) in paragraph at lines 96--98
+\TU/lmr/m/n/10 Dove k definisce la k-esima frequenza di $\OML/cmm/m/it/10 ^^^$\
+TU/lmr/m/n/10 , dal momento che $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 0\OML/cmm
+/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; N \OMS/cmsy/m/n/10 ^^@
+ []
+
+[66]) [67] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E8A0BBCC73B33C5100817451EC851CE0;19826.
+(rerunfilecheck)             Checksum: 30012168BA25B757C97AE2FB34CE85E2;21954.
  ) 
 Here is how much of TeX's memory you used:
- 35332 strings out of 410379
- 826874 string characters out of 5788050
- 1940416 words of memory out of 5000000
- 56077 multiletter control sequences out of 15000+600000
+ 35420 strings out of 410379
+ 828332 string characters out of 5788050
+ 1942416 words of memory out of 5000000
+ 56156 multiletter control sequences out of 15000+600000
  565900 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,20n,107p,722b,2178s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (57 pages).
+Output written on main.pdf (68 pages).

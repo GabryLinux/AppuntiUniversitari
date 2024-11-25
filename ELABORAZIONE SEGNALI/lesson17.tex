@@ -1,0 +1,88 @@
+\subsubsection{Potenza Del Disturbo}
+Una volta individuata la forma e l'entità del disturbo, possiamo calcolare la potenza di questo segnale:
+\begin{equation*}
+    P_Q = \int_{-\infty}^{+\infty} e^2 f_{eq}(e)de
+\end{equation*}
+Abbiamo visto prima che, se gli intervalli $\Delta$ sono sufficientemente piccoli, possiamo assumere che $f_{eq}(e)$ sia una
+funzione di densità di probabilità uniforme, che ha questa forma:
+\begin{equation}
+    f_{eq}(e) = \begin{cases}
+        \frac{1}{\Delta} &\text{ se } -\frac{1}{\Delta} \leq e \leq \frac{1}{\Delta}\\
+        0                &\text{ altrimenti}
+    \end{cases}
+\end{equation}
+Allora possiamo riscrivere l'equazione precedente:
+\begin{align*}
+    P_Q &= \int_{-\frac{\Delta}{2}}^{+\frac{\Delta}{2}} \frac{1}{\Delta} e^2 de =\\
+        &= \frac{1}{\Delta} \int_{-\frac{\Delta}{2}}^{+\frac{\Delta}{2}} e^2 de =\\
+        &= \frac{1}{\Delta} \left( \frac{\Delta^3}{24} +  \frac{\Delta^3}{24}\right) =\\
+        &= \frac{\Delta^2}{12}
+\end{align*}
+Quello che abbiamo trovato è la \textbf{Potenza Media dell'errore di Quantizzazione}. 
+
+\paragraph{Signal Noise Ratio.}La potenza Media dell'errore, tuttavia,
+ci dice ben poco poichè tale valore dev'essere sempre confrontato con la potenza del segnale disturbato,
+per questo motivo ha più senso parlare del rapporto, anche detto \textbf{SIgnal Noise Ratio (SNR)}:
+\begin{equation}
+    \text{SNR} = \frac{P_\text{signal}}{P_\text{noise}}
+\end{equation}
+I possibili $P_\text{signal}$ che possiamo scegliere per calcolare quel rapporto sono la \textbf{Potenza di Picco} o la \textbf{Potenza Media}
+
+\paragraph{Potenza Di Picco.}Sappiamo che il valore $x$ del segnale da quantizzare è sempre limitato, ossia:
+\begin{equation*}
+    V_{MIN} \leq x < V_{MAX}
+\end{equation*}
+Dove $\{V_{MIN}; V_{MAX}\}$ è detta \textbf{Escursione del Segnale}. Considereremo, per semplicità, \textbf{segnali bipolari}
+ossia segnali in cui vale che $V_{MIN} = - V_{MAX}$. Possiamo esprimere questi 2 valori in termini di \textbf{Escursione Picco-Picco} $V_{pp}$:
+\begin{gather}
+    V_{pp} = V_{MAX} - V_{MIN}\\
+    V_{MAX} = \frac{V_{pp}}{2}\\
+    V_{MIN} = -\frac{V_{pp}}{2}\\
+\end{gather}
+Grazie a ciò, possiamo calcolarci la \textbf{potenza di picco} del segnale:
+\begin{equation}
+    P_{s,\text{picco}} = \left(\frac{V_{pp}}{2}\right)^2 = \frac{V^2_{pp}}{4}
+\end{equation}
+Sappiamo inoltre che per come abbiamo introdotto la quantizzazione, vale che:
+\begin{equation*}
+    \Delta = \frac{V_{pp}}{M} = \frac{V_{pp}}{2^n} \Rightarrow V_{pp} = 2^n\Delta
+\end{equation*}
+Allora possiamo scrivere il \textbf{Signal Noise Ratio di Picco}:
+\begin{align*}
+    SNR_{Q,\text{Peak}} &= \frac{\frac{V^2_{pp}}{4}}{\frac{\Delta^2}{12}} =\\
+                        &= \frac{\frac{\Delta^2 2^{2n}}{4}}{\frac{\Delta^2}{12}}=\\
+                        &= 3 \cdot 2^{2n}
+\end{align*}
+\paragraph{Potenza Media.}Oltre alla potenza di picco, possiamo esprimere la potenza del segnale in termini di \textbf{potenza media del segnale}:
+\begin{equation}
+    P_{s,\text{Media}} = f_{Picco} \cdot P_{s,\text{picco}}
+\end{equation}
+Dove $f_{Picco}$ è detto \textbf{fattore di picco}. Inoltre $0 \leq f_{Picco} \leq 1$.
+Grazie a ciò possiamo esprimere il \textbf{Signal Noise Ratio Medio}:
+\begin{align*}
+    SNR_{Q,\text{Medio}} &= f_{Picco} \cdot \frac{P_{s,\text{picco}}}{P_Q} =\\
+                         &= f_{Picco} \cdot SNR_{Q,\text{Peak}} =\\
+                         &=  f_{Picco} \cdot 3 \cdot 2^{2n}
+\end{align*}
+Riconducendo dunque il rapporto di potenza segnale rumore in funzione dei \textbf{bit di campionamento} possiamo intuire che più
+saranno i bit di campionamento, più il disturbo sarà minore, per questo motivo $n$ è anche detta \textbf{Risoluzione di Quantizzazione}. Inoltre, ogni bit in più di quantizzazione migliora il rapporto di un fattore 4.
+
+\subsubsection{Decibel}
+In generale, quando in fisica si ha a che fare con rapporto di potenze, ha più senso il confronto su scala logaritmica, per cui possiamo
+definire i \textbf{decibel} sia in riferimento alle ampiezze, sia in riferimento alle potenze.
+\begin{gather}
+    dB_A = 20 \lg_{10} \frac{A_1}{A_2} \\
+    dB_P = 10 \lg_{10} \frac{P_1}{P_2} 
+\end{gather}
+Le 2 formule sono state scelte in modo tale che il decibel per le ampiezze e per le potenze siano \textbf{invarianti} (parlare dell'una o dell'altra non fa differenza).
+
+\paragraph{SNR in Decibel}
+\begin{align*}
+    dB(SBR_{Q,P}) &= 10 \lg_{10} \frac{P_{s,p}}{P_Q}=\\
+                  &= 10 \lg_{10} 3 \cdot 2^{2n} =\\
+                  &= 4,77 + 6,02n
+\end{align*}
+\begin{align*}
+    dB(SBR_{Q,Media}) = dB(f_{picco}) + 4,77 + 6,02n
+\end{align*}
+Importante osservare che $dB(f_{picco}) < 0$ dal momento che $0 \leq f_{picco} \leq 1$ 

@@ -12,7 +12,7 @@ Possiamo dunque notare quest'importante coppia di Fourier:
 Da ciò possiamo notare come una serie di impulsi nei tempi corrisponde ad una serie di impulsi nelle frequenze.
 
 \paragraph{Spettro del Campionamento.}Da ciò possiamo dunque ricavarci lo spettro del segnale campionato:
-\begin{align*}
+\begin{align*} \label{eq: sampleSpectre}
     S_C(f) &= S(f) \ast \Delta_{T_S}(f) =\\
            &= S(f) \ast \{ \frac{1}{T_S} \sum_{n = -\infty}^{+\infty} \delta\left(f - \frac{n}{Ts}\right)\}=\\
            &= \frac{1}{T_S} \sum_{n = -\infty}^{+\infty}\{  S(f) \ast  \delta\left(f - \frac{n}{Ts}\right)\}=\\
@@ -86,14 +86,14 @@ solo una di queste repliche, possiamo ottenere il segnale di partenza.\\
     \node at (0,1.5) [align=center,blue] {Spettro \\ originale};
     
     \end{tikzpicture}
-\subsection{Teorema di Nyquist-Shannon}
+\subsubsection{Teorema di Nyquist-Shannon}
 \textit{Un segnale con banda limitata $W$ superiormente può essere ricostruito univocamente a partire dai suoi campioni se e solo se
  il campionamento avviene a frequenza maggiore di $2W$}, ossia:
  \begin{equation}
     f_S > 2W
  \end{equation}
 
-\subsection{Ricostruzione nel dominio delle frequenze}
+\subsubsection{Ricostruzione nel dominio delle frequenze}
 Usando il filtro passa-basso come avevo mostrato prima con $f_T = f_S/2 = f_N$ con $f_N$ la \textit{frequenza di Nyquist},
 possiamo ricostruire il segnale di partenza. Consideriamo il filtro:
 \begin{equation}
@@ -111,7 +111,7 @@ Allora:
 \end{align*}
 Riottenendo dunque $S(f)$, possiamo definire $H_R(f)$ come il \textbf{filtro di ricostruzione ideale}
 
-\subsection{Ricostruzione nel dominio dei tempi}
+\subsubsection{Ricostruzione nel dominio dei tempi}
 Per calcolare $s(t)$ basta antitrasformare quanto calcolato prima:
 \begin{equation}
     S(f) = S_C(f)H_R(f) \fAnticouple  s_C(t) \ast h_R(t)
@@ -163,7 +163,7 @@ Calcoliamo ora $s(t)$:
 \end{align*}
 Cioè il segnale ricostruito è dato dalla combinazione lineari di tanti seni cardinali.
 
-\subsection{Aliasing}
+\subsubsection{Aliasing}
 Nel caso in cui avessimo campionato il segnale con frequenza di campionamento $f_S < f_N$ si verifica questa situazione:\\
 \begin{center}
     \begin{tikzpicture}[scale=1.2]

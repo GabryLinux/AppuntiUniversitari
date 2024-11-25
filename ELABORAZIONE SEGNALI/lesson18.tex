@@ -1,0 +1,154 @@
+\newcommand{\DFT}{\xrightarrow{\text{DFT}}}
+\newcommand{\IDFT}{\xrightarrow{\text{DFT}^{-1}}}
+
+\subsection{Discrete Time Fourier Transform (DTFT)}
+Per mostrare il teorema di nyquist, eravamo riusciti, già in precedenza \eqref{eq: sampleSpectre}, a calcolare la trasformata di Fourier
+di un segnale campionato. Il limite di quella trasformata è che lo spettro del segnale campionato $S_C(f)$ continuava ad essere
+legato, in qualche modo, allo spettro del segnale di partenza $S(f)$. Per cui, è necessario un altro strumento che permetta di
+calcolare lo spettro di un segnale \textbf{tempo-discreto} $s(nT_S) \approx x(n)$ dove $n \in \mathbb{Z}$, in funzione dei campioni.\\
+Partendo dal segnale campionato $s_c(t) = \sum_{n = -\infty}^{+\infty} s(nT_S)\delta(t - nT_S)$ la \textbf{trasformata discreta} sarà:
+\begin{align*}
+    S_C(f) &= \int_{-\infty}^{+\infty}s_c(t)e^{-j2\pi ft}dt =\\
+           &= \int_{-\infty}^{+\infty} \sum_{n = -\infty}^{+\infty} s(nT_S)\delta(t - nT_S) e^{-j2\pi ft}dt=\\
+           &= \sum_{n = -\infty}^{+\infty} s(nT_S) \int_{-\infty}^{+\infty} \delta(t - nT_S) e^{-j2\pi ft}dt
+\end{align*}
+Possiamo dire che $\delta(t - nT_S) e^{-j2\pi ft}$ è non nulla solo per $t = nT_S$.
+A questo punto, scriviamo la \textbf{formula di Analisi della DTFT}:
+\begin{equation}
+    S_C(f) = \sum_{n = -\infty}^{+\infty} s(nT_S) e^{-j2\pi fnT_S}
+\end{equation}
+\paragraph{Spettro Periodico}Un'importante proprietà di questo spettro è che è periodico di periodo $f_s = \frac{1}{T_S}$. Dimostriamolo:
+\begin{align*}
+    S_C(f + kf_s) &= \sum_{n = -\infty}^{+\infty} s(nT_S) e^{-j2\pi (f + kf_s)nT_S} = \\
+                  &= \sum_{n = -\infty}^{+\infty} s(nT_S) e^{-j2\pi fnT_S}  \underbrace{e^{-j2\pi kf_s nT_S}}_{e^{-j2\pi} = 1} =\\
+                  &= \sum_{n = -\infty}^{+\infty} s(nT_S) e^{-j2\pi fnT_S} =\\
+                  &= S_C(f)
+\end{align*}
+
+\subsection{DTFT Normalizzata}
+Una volta effettuato il campionamento, sarebbe comodo pure dimenticarci il periodo di campionamento ed esprimere lo spettro in forma normalizzata,
+ossia le cui frequenze anzichè andare da $0$ a $f_S$ vanno da $0$ a $1$. Per fare ciò dovremo effettuare un cambio di variabile:
+\begin{equation*}
+    x(t' = n) = s(t = nT_S)
+\end{equation*}
+Dove $t' = \frac{t}{T_S}$. Allora la \textbf{formula di analisi normalizzata} sarà:
+\begin{align*}
+    x(t' = n) \fCouple X(f') = S_C(f' = fT_S) =  \sum_{n = -\infty}^{+\infty} s(nT_S) e^{-j2\pi f'n}
+\end{align*}
+Solitamente $f' = \frac{f}{f_s}$, che è un numero puro, viene rappresentato come $0 \leq \phi \leq 1$, per cui:
+\begin{equation*}
+    x(n) \fCouple X(\phi)
+\end{equation*}
+Analogamente allo sviluppo in serie, possiamo individuare la \textit{"formula inversa"}, la \textbf{formula di Sintesi}:
+\begin{equation}
+    x(n) = \frac{1}{T_\phi} \int_{0}^{1} X(\phi)e^{+j2\pi \phi n}d\phi
+\end{equation}
+
+\subsubsection{Proprietà della DTFT}
+\paragraph{Traslazione nei Tempi.}Data una coppia $x(n) \fCouple X(\phi)$ allora:
+\begin{equation}
+    x(n - m) \fCouple X(\phi)e^{-j2\pi \phi m}
+\end{equation}
+\paragraph{Traslazione nelle Frequenze.}Data una coppia $x(n) \fCouple X(\phi)$ allora:
+\begin{equation}
+    x(n)^{j2\pi \phi n} \fCouple X(\phi - \phi_0)
+\end{equation}
+\paragraph{Convoluzione.}Date le coppie $x(n) \fCouple X(\phi)$ e $y(n) \fCouple Y(\phi)$ allora:
+\begin{equation}
+    x(n) \ast y(n) \fCouple X(\phi)Y(\phi)
+\end{equation}
+Quindi, grazie alla DTFT, siamo riusciti a rappresentare un segnale campionato come una \textbf{combinazione lineare di seni}.
+
+\subsection{Risoluzione e Durata di Campionamento}
+Dato un segnale $s(n)$ rappresentato da $N$ campioni, campionato a frequenza $f_s = \frac{1}{T_s}$, nei \textbf{tempi} la \textbf{risoluzione di campionamento} è la frequenza di campionamento $f_s$.
+Definiamo nei \textbf{tempi} \textbf{durata} $N \cdot T_S$, ossia il numero di campioni per il periodo di campionamento.\\
+Nellle \textbf{frequenze} la \textbf{risoluzione} è $\Delta f = \frac{1}{NT_S}$, mentre la \textbf{durata}, nelle \textbf{frequenze}, corrisponde all'inverso del periodo. Per questo motivo,
+se vogliamo aumentare la risoluzione delle frequenze, dobbiamo ascoltare il segnale per più tempo.
+
+\subsection{Discrete Fourier Transform (DFT)}
+Dunque, grazie al campionamento/quantizzazione e alla DTFT normalizzata, siamo riusciti a tradurre un segnale in una sequenza di valori,
+ognuno dei quali rappresenta l'ampiezza del segnale per il campione $n$-esimo. Tuttavia, per la totale elaborazione di un segnale digitale, ciò non basta:
+$X(\phi)$ continua infatti ad essere una funzione \textbf{continua}, ma noi, per rappresentare in un calcolatore ciò avremmo bisogno di un segnale che sia \textbf{discreto e periodico}
+in modo da poterlo raccontare solo con un numero finito di campioni che costituisce un periodo (tanto tutti gli altri infiniti campioni si ripetono).\\
+Abbiamo dimostrato già che la $X(\phi)$ sia \textbf{periodica}, manca solo la \textbf{discretezza}.\\
+Finora abbiamo osservato che la trasformata di un segnale continuo e periodico, è un segnale discreto (vedi lo sviluppo in serie); mentre la trasformata di un segnale discreto  genera un segnale
+continuo e periodico (vedi la DTFT). Per questo motivo, se noi trasformiamo un segnale discreto e periodico dovremo ottenere uno spettro ancora discreto e periodico:\\
+Solitamente un segnale elaborato digitalmente ha una \textbf{durata finita} (dal momento che l'elaboratore ha memoria finita), per cui sarà campionato con un numero $N$ di campioni. 
+Consideriamo ora la versione \textbf{periodicizzata} di $x(n)$ con periodo $N$, la funzione che alla fine si ripete fino all'infinito, ossia la funzione tale che:
+\begin{equation}
+    x(n) = x(n + iN) \text{  } \forall i \in \mathbb{Z}
+\end{equation}
+Analizziamo lo spettro di questo segnale \textbf{discreto e periodico}:
+\begin{itemize}
+    \item Dal momento che è \textbf{discreto}, tramite \textbf{DTFT} otteniamo uno spettro che è \textbf{periodico} (di periodo $f_s$ o $1$ nel caso sia normalizzato)
+    \item Dal momento che è \textbf{periodico}, tramite \textbf{Sviluppo in serie} otteniamo uno spettro che è \textbf{discreto}, ossia una combinazione lineare di fasori di coefficiente $c_k$ di frequenza $\frac{k}{T}$ (ossia la k-esima armonica),ossia:
+    \begin{equation*}
+        x(n) = \sum_{k = -\infty}^{+\infty} c_k e^{-j2\pi \frac{k}{T}t} dt
+    \end{equation*}
+    Dove $c_k = \frac{1}{T}\int_{T} x(t)e^{-j2\pi \frac{k}{T}t}dt$. Dal momento che abbiamo discretizzato il periodo $T$ in $N$ campioni,
+    possiamo riscrivere $c_k$ come:
+    \begin{equation*}
+        c_k = \frac{1}{N} \sum_{n = 0}^{N - 1} x(n) e^{-j2\pi \frac{k}{N}n}
+    \end{equation*}
+    L'espressione $\sum_{n = 0}^{N - 1} x(n) e^{-j2\pi \frac{k}{N}n}$ ricorda molto $X\left(\phi_k = \frac{k}{N}\right)$, per cui:
+    \begin{equation*}
+        c_k = \frac{1}{N} X(k)
+    \end{equation*}
+    Dove k definisce la k-esima frequenza di $\phi$, dal momento che $k = 0, 1, \dots, N-1$
+\end{itemize}
+In definitiva, possiamo enunciare le formule di \textbf{Discrete Fourier Transform (DFT)}:
+\paragraph{Analisi:}
+\begin{equation}
+    x(n) \DFT X(k) = \sum_{n = 0}^{N - 1}x(n)e^{-j2\pi \frac{kn}{N}}
+\end{equation}
+\paragraph{sintesi:}
+\begin{equation}
+    X(k) \IDFT x(n) = \sum_{k = 0}^{N - 1}X(k)e^{j2\pi \frac{kn}{N}}
+\end{equation}
+Siamo dunque riusciti a trasformare anche la $X(k)$ in una sequenza numerica.
+
+
+
+\subsubsection{Forma Matriciale della DFT}
+Una forma alternativa (e forse computazionalmente più adatta) della DFT è in forma \textbf{matriciale}:
+Dato $X(k) = \frac{1}{N} \sum_{n = 0}^{N - 1} x(n)e^{-j2\pi \frac{nk}{N}}$ possiamo vedere $X(k)$ e $x(n)$ come vettori, mentre $e^{-j2\pi \frac{nk}{N}}$ come una matrice $W$ e il tutto come un prodotto matriciale tra matrice e vettore:
+\begin{equation}
+    \begin{bmatrix}
+        X(0) \\
+        \vdots \\
+        X(N-1)
+        \end{bmatrix} = 
+    \begin{bmatrix}
+        & & & \\
+        & W_{ij} = e^{-j2\pi \frac{ij}{N}} & \\
+        & & &
+        \end{bmatrix}
+    \begin{bmatrix}
+x(0) \\
+\vdots \\
+x(N-1)
+\end{bmatrix}
+\quad
+\end{equation}
+Ossia:
+\begin{equation*}
+    \overline{X} = W \overline{x}
+\end{equation*}
+Calcolare un prodotto del genere ha complessità computazionale $O(N^2)$. Tuttavia, è stato scoperto un modo più agevole e furbo
+per tale calcolo, tramite la FFT (Fast Fourier Transform) che ha complessità computazionale $O(N \log N)$
+
+\subsubsection{Proprietà della DFT}
+\paragraph{Traslazione ciclica nei Tempi.}Data la coppia $x(n) \DFT X(k)$ allora:
+\begin{equation}
+    x(\left< n - a\right>_{N}) \DFT X(k)e^{j2\pi \frac{n}{N}k}
+\end{equation}
+
+\paragraph{Traslazione ciclica nelle Frequenze.}Data la coppia $x(n) \DFT X(k)$ allora:
+\begin{equation}
+    x(n)e^{j2\pi\frac{h}{N}n} \DFT X(\left< k - h\right>_{N})
+\end{equation}
+
+\paragraph{Convoluzione Ciclica.}Date la coppie $x(n) \DFT X(k)$ e $y(n) \DFT Y(k)$ allora:
+\begin{equation}
+    x(n) \circledast y(n) \DFT X(k)Y(k)
+\end{equation}

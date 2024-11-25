@@ -1,0 +1,65 @@
+\subsubsection{Policy Extraction}
+Una volta calcolata la value function, dovremmo semplicemente estrarre la policy a partire dai valori calcolati applicando la formula:
+\begin{equation}
+    \pi^* = \arg \max_a \sum_{s'} P(s' | s,a)[R(s,a,s') + \gamma V^*(s')]
+\end{equation}
+Possiamo però notare quanto sia inefficiente l'algoritmo per 2 grandi motivi:
+\begin{itemize}
+    \item Nel caso peggiore dovremmo considerare per ogni azione qualsiasi transizione ($O(|S|^2 \times |A|)$)
+    \item Non è semplice trovare un $\varepsilon$ giusto per il test di convergenza
+\end{itemize}
+Possiamo tuttavia notare che, già dalle prime iterazioni, avevamo individuato la policy ottima, ancora prima della value function.
+Per questo motivo possiamo cambiare totalmente approccio e iterare sulle policy.
+
+\subsubsection{Policy Iteration}
+Questo è un algoritmo che possiamo descrivere così:
+\begin{itemize}
+    \item Scelgo inizialmente una policy $\pi$ casuale
+    \item \textbf{Policy Evaluation}: calcolo $V^\pi (s)$
+    \item \textbf{Policy Extraction}: estraggo una nuova policy $\pi'$ a partire da $V^\pi (s)$
+\end{itemize}
+Nonappena succede che $\pi = \pi'$, ho trovato la policy ottima. Dal momento che itero sulla policy, $V^\pi(s)$ è :
+\begin{equation}
+    V^\pi(s) = Q(s,\pi(s)) = \sum_{s'} P(s' | s,a)[R(s,a,s') + \gamma V^*(s')]
+\end{equation}
+Non essendoci il $\max$, quella è un'equazione lineare. Mettendo a sistema le equazioni per ogni stato, otteniamo un sistema lineare
+da risolvere.
+
+\section{Reinforcement Learning}
+Potrebbe capitare che l'agente che deve risolvere l'MDP$ = \left<P,R\right>$ (dove $P$ sono le probabilità di transizione e $R$ sono i reward)
+senza conoscere P e R. In ambiente sconosciuto, dunque, l'agente non potrebbe applicare dynamic programming per risolvere il problema, o almeno all'inizio.
+All'inizio, un agente può solo assumere che le azioni siano stocastiche e che esistano dei reward (deterministici). In queste
+condizioni l'agente deve alternare fasi di \textbf{esplorazione}, in cui costruire una \textbf{stima del mondo} e questo può portare
+l'agente a fare decisioni con reward molto bassi, perchè conoscere il mondo ha più valore, e fasi di \textbf{Exploitation} ossia di 
+massimizzazione dei reward (che è il suo obiettivo principale).
+
+\subsection{Passive Reinforcement Learning}
+In questa prima fase, presenteremo una forma più semplice dell'RL, ossia \textbf{l'RL passivo}: un agente, in un ambiente sconosciuto,
+conosce una policy $\pi$ e deve stimarne la \textit{bontà}, o meglio la \textbf{value function} $V^*$. A differenza dei casi precedenti,
+qui non si conoscono nè $P(s'|s,a)$ nè $R(s',a,s)$ per cui dovremo stimare. Il problema di tali approcci è che dipendono troppo dall'esperienza,
+per cui, con nessuna modalità di reasoning, tali agenti non sapranno rispondere ad un input se non l'hanno già incontrato in passato.
+
+\subsubsection{Adaptive Dynamic Programming}
+In questo primo approccio all Passive Reinforcement Learning, \textbf{Model Based}:
+\begin{enumerate}
+    \item Esploro il mondo usando la policy $\pi$ in un \textbf{episodio}, ossia una sequenza di mosse, e colleziono i reward e le probabilità in \textbf{dataset}
+    \item Costruisco una \textbf{stima} di P e di R dal Modello Del Mondo che ho raccolto nel dataset, ossia:
+    \begin{gather}
+        \widehat{P}(s'|s,a) = \frac{\#(s,a,s')}{\#(s,a)} \\
+        \widehat{R}(s,a,s') = R(s,a,s') 
+    \end{gather}
+    \item Calcolo della nuova policy ottima $\pi^*$ usando l'approccio dynamic programming sul modello stimato
+\end{enumerate}
+
+\subsubsection{Stima Diretta}
+Un altro approccio usando la Passive RL \textbf{Model Free} è la \textbf{Stima Diretta}, ossia:
+\begin{enumerate}
+    \item Genero un dataset dall'esplorazione
+    \item Per ogni stato $s$ misuro i reward accumulati per tutto l'episodio
+    \item La stima sarà la \textbf{media aritmetica}:
+    \begin{equation}
+        \widehat{V}^\pi(s) = \frac{1}{k}\sum_{i = 1}^{k} \text{TotR}^s_i
+    \end{equation}
+    dove $\text{TotR}^s_i$ rappresenta il reward totale accumulato all'episodio $i$ partendo dallo stato $s$
+\end{enumerate}
+Il problema di questo approccio è che le stime vengono fatto facendo la (sbagliata) assunzione che gli stati siano indipendenti tra loro.
