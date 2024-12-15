@@ -219,3 +219,35 @@
 \contentsline {paragraph}{Traslazione ciclica nei Tempi.}{67}{section*.125}%
 \contentsline {paragraph}{Traslazione ciclica nelle Frequenze.}{67}{section*.126}%
 \contentsline {paragraph}{Convoluzione Ciclica.}{67}{section*.127}%
+\contentsline {subsection}{\numberline {10.9}Trasformata Zeta}{67}{subsection.10.9}%
+\contentsline {paragraph}{Definizione.}{67}{section*.128}%
+\contentsline {paragraph}{Regione di Convergenza.}{68}{section*.129}%
+\contentsline {paragraph}{Antitrasformata Zeta.}{68}{section*.130}%
+\contentsline {subsubsection}{\numberline {10.9.1}Proprietà}{68}{subsubsection.10.9.1}%
+\contentsline {paragraph}{Linearità.}{68}{section*.131}%
+\contentsline {paragraph}{Traslazione nei Tempi.}{68}{section*.132}%
+\contentsline {paragraph}{Convoluzione.}{69}{section*.133}%
+\contentsline {subsubsection}{\numberline {10.9.2}Relazione tra DTFT e Z}{69}{subsubsection.10.9.2}%
+\contentsline {subsubsection}{\numberline {10.9.3}Famiglie di Trasformate}{69}{subsubsection.10.9.3}%
+\contentsline {paragraph}{Esponenziali.}{69}{section*.134}%
+\contentsline {paragraph}{Segnale Digitale.}{69}{section*.135}%
+\contentsline {subsection}{\numberline {10.10}Antitrasformata di forme razionali}{69}{subsection.10.10}%
+\contentsline {subsection}{\numberline {10.11}Sistemi LTI Discreti nel Dominio Z}{70}{subsection.10.11}%
+\contentsline {subsubsection}{\numberline {10.11.1}Poli e Zeri}{71}{subsubsection.10.11.1}%
+\contentsline {subsubsection}{\numberline {10.11.2}Proprietà}{71}{subsubsection.10.11.2}%
+\contentsline {paragraph}{Causalità.}{71}{section*.136}%
+\contentsline {paragraph}{Stabilità BIBO.}{72}{section*.137}%
+\contentsline {paragraph}{Risposta in Frequenza.}{72}{section*.138}%
+\contentsline {subsubsection}{\numberline {10.11.3}Analisi Di Sistemi Discreti}{72}{subsubsection.10.11.3}%
+\contentsline {paragraph}{Risposta All'Impulso Finita}{73}{section*.139}%
+\contentsline {paragraph}{Risposta All'Impulso Infinita}{73}{section*.140}%
+\contentsline {subsection}{\numberline {10.12}Stabilità dei Filtri FIR}{74}{subsection.10.12}%
+\contentsline {subsection}{\numberline {10.13}Stabilità dei Filtri IIR}{75}{subsection.10.13}%
+\contentsline {subsection}{\numberline {10.14}Sintesi di Filtri Digitali}{76}{subsection.10.14}%
+\contentsline {paragraph}{Convertitore Analogico-Digitale}{76}{section*.141}%
+\contentsline {paragraph}{Ritardatore}{76}{section*.142}%
+\contentsline {paragraph}{Moltiplicazione}{76}{section*.143}%
+\contentsline {paragraph}{Sommatore}{76}{section*.144}%
+\contentsline {paragraph}{Esempi di filtri digitali}{77}{section*.145}%
+\contentsline {subsection}{\numberline {10.15}Filtri a Pettine}{77}{subsection.10.15}%
+\contentsline {subsection}{\numberline {10.16}Filtri Notch}{78}{subsection.10.16}%

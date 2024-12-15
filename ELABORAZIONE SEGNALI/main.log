@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  25 NOV 2024 18:10
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.10.24)  15 DEC 2024 18:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -630,6 +630,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip53
 )
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen262
@@ -847,33 +855,33 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-6.
+7.
 
 (C:\Users\Gabry\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-Package hyperref Info: Link coloring OFF on input line 16.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+Package hyperref Info: Link coloring OFF on input line 17.
 
 (main.out) (main.out)
 \@outlinefile=\write5
@@ -905,11 +913,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [1]
 Package marginnote Info: Using workaround for absolute page number on input lin
 e 66.
- [2])
+ [2] [3])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [3] [4] (lesson1.tex
+ [4] (lesson1.tex
 Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 2.
 
 Package marginnote Info: right page because not two side mode on input line 2.
@@ -1312,16 +1320,50 @@ Overfull \hbox (2.82265pt too wide) in paragraph at lines 90--120
 ) (lesson17.tex [60] [61] [62]) (lesson18.tex
 
 LaTeX Warning: Reference `eq: sampleSpectre' on page 63 undefined on input line
- 5.
+ 6.
 
 [63] [64] [65]
-Overfull \hbox (8.2937pt too wide) in paragraph at lines 96--98
+Overfull \hbox (8.2937pt too wide) in paragraph at lines 97--99
 \TU/lmr/m/n/10 Dove k definisce la k-esima frequenza di $\OML/cmm/m/it/10 ^^^$\
 TU/lmr/m/n/10 , dal momento che $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 0\OML/cmm
 /m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; N \OMS/cmsy/m/n/10 ^^@
  []
 
-[66]) [67] (main.aux)
+[66]) (lesson19.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--20
+
+ []
+
+[67] [68]
+Overfull \hbox (24.02814pt too wide) in paragraph at lines 77--78
+ []\TU/lmr/bx/n/10 Segnale Digitale.[] \TU/lmr/m/n/10 Dato un segnale definito 
+da $\OML/cmm/m/it/10 N$ \TU/lmr/m/n/10 campioni $\OML/cmm/m/it/10 x\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a
+[]; a[]; [] ; a[]\OMS/cmsy/m/n/10 g$\TU/lmr/m/n/10 ,
+ []
+
+[69] [70] [71]) (lesson20.tex [72] [73]) (lesson21.tex [74] [75] [76]
+File: src/Comb20Filter.png Graphic file (type bmp)
+<src/Comb20Filter.png>
+
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 151--160
+[]
+ []
+
+[77] [78]
+File: src/NotchFilter.png Graphic file (type bmp)
+<src/NotchFilter.png>
+)
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 186--97
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--97
+
+ []
+
+[79] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -1331,15 +1373,15 @@ L3 programming layer <2023-08-29>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 30012168BA25B757C97AE2FB34CE85E2;21954.
+(rerunfilecheck)             Checksum: D9061EB2EE97BDFC6F9CC448ABC19F57;24424.
  ) 
 Here is how much of TeX's memory you used:
- 35420 strings out of 410379
- 828332 string characters out of 5788050
- 1942416 words of memory out of 5000000
- 56156 multiletter control sequences out of 15000+600000
+ 35691 strings out of 410379
+ 835124 string characters out of 5788050
+ 1943416 words of memory out of 5000000
+ 56408 multiletter control sequences out of 15000+600000
  565900 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,20n,107p,722b,2178s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (68 pages).
+Output written on main.pdf (80 pages).

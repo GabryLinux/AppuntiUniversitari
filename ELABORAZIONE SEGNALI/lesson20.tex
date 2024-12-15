@@ -1,0 +1,79 @@
+\subsubsection{Analisi Di Sistemi Discreti}
+Consideriamo il sistema discreto $S[\cdot]$ t.c. $y(n) = S[x(n)] = x(n) \ast h(n)$ dove
+\begin{equation*}
+    y(n) = \sum_{i = -\infty}^{+\infty} h(i) x(n - i)
+\end{equation*}
+Dal momento che considereremo sistemi solo causali, la sommatoria diventa:
+\begin{equation*}
+    y(n) = \sum_{i = 0}^{+ \infty} h(i) x(n-i)
+\end{equation*}
+Per il calcolo della convoluzione noi possiamo considerare 2 grandi casi:
+\begin{itemize}
+    \item Risposta All'Impulso Finita (FIR)
+    \item Risposta All'Impulso Infinita (IIR)
+\end{itemize}
+
+\paragraph{Risposta All'Impulso Finita}
+In questo caso, il sistema non solo è causale ma la risposta all'impulso ha una durata \textbf{finita}, che noi possiamo scrivere come:
+\begin{equation*}
+    h(n) = \{h(0), h(1), \dots, h(D)\}
+\end{equation*}
+Dove $D$ è la durata. Grazie a ciò la convoluzione possiamo calcolarla come:
+\begin{equation}
+    \sum_{i = 0}^{D} h(i)x(n - i)
+\end{equation}
+Che noi possiamo calcolare campione per campione. Possiamo dunque vedere l'uscita come \textbf{combinazione lineare} tra ingresso attuale ($h(0)x(n)$)
+e gli ingressi passati $h(1)x(n - 1), \dots, h(n)x(0)$. Questa è la formulazione in forma di \textbf{equazione alle differenze} di un filtro FIR.
+Nel Dominio Z, dal momento che la risposta all'impulso è discreta, possiamo calcolarne la trasformata come combinazione lineare di trasformate di impulsi traslati, ossia:
+\begin{equation}
+    h(n) \zTransform H(z) = \sum_{i = 0}^{D} h(i)z^{-i}
+\end{equation}
+Conoscendo sia $X(z)$ che $H(z)$ posso conoscere facilmente $Y(z)$ e dunque $y(n)$ antritrasformando. Ciò permette di fare elaborazioni sia nel dominio
+delle frequenze che nel dominio dei tempi.
+
+\paragraph{Risposta All'Impulso Infinita}
+In questo caso, la risposta all'impulso ha durata infinita, per cui non è possibile \textit{troncare} la serie e avere somme finite di termini.
+Dobbiamo trovare degli escamotage per riscrivere la serie sottoforma di equazione recursiva.\\
+Consideriamo l'integratore discreto che ha risposta all'impulso $h(n) = u(n)$ per cui il segnale in uscita del sistema è:
+\begin{equation*}
+    y(n) = \sum_{i = 0}^{+\infty}x(n - i)
+\end{equation*}
+Possiamo riscriverlo come:
+\begin{align*}
+    y(n) &= x(n) + \sum_{i = 0}^{+\infty}x(n - i -1) =\\
+         &= x(n) + y(n - 1)
+\end{align*}
+Conoscendo $y(0)$ cioè all'istante iniziale, la computazione del segnale in uscita da questo sistema diventa davvero banale, ossia:
+\begin{equation}
+    y(n) = \begin{cases}
+        y(0)    &\text{ se } n = 0\\
+        x(n) + y(n - 1) &\text{ se } n > 0\\
+    \end{cases}
+\end{equation}
+Consideriamo ora la risposta all'impulso $h(n) = a^n u(n)$, nel dominio Z la sua trasformata sarà $H(z) = \frac{1}{1 - az^{-1}}$. Nel dominio Z
+quindi, la trasformata è rappresentabile da una formula in forma chiusa, ossia, dal momento che $Y(z) = X(z)H(z)$, allora:
+\begin{align*}
+    X(z) &= \frac{Y(z)}{H(z)} =\\
+         &= Y(z) - \underbrace{az^{-1}Y(z)}_{\text{ritardo di 1}}
+\end{align*}
+Possiamo riscrivere il tutto come:
+\begin{equation}
+    y(n) = x(n) + ay(n-1)
+\end{equation}
+Allora, in generale, se abbiamo una $H(z)$ in forma razionale:
+\begin{equation*}
+    H(z) = \frac{N(z)}{D(z)}
+\end{equation*}
+$N(z)$ è la parte \textbf{FIR} che lega gli $y(n)$ agli \textbf{input passati}. $D(z)$ invece è la parte \textbf{IIR}, che lega l'uscita attuale alle uscite passate.
+Per questo motivo, se $H(z)$ è in forma razionale possiamo ricavare molto facilmente le equazioni recursive che descrivono l'output di un sistema.\\
+Più in genrale:
+\begin{align*}
+    H(z) = \frac{\sum_{i = 0}^{M}b_iz^{-i}}{\sum_{i = 0}^{N}a_iz_{-i}} = \frac{\sum_{i = 0}^{M}b_iz^{-i}}{1 - \sum_{i = 1}^{N}a_iz_{-i}}
+\end{align*}
+Inoltre, visto che $H(z) = \frac{Y(z)}{X(z)}$ eguagliando entrambi i membri otteniamo:
+\begin{align*}
+    Y(z)\left[1 - \sum_{i = 1}^{N} a_iz^{-i}\right] &= X(z)\left[\sum_{i = 0}^{M} b_iz^{-i}\right] =\\
+    Y(z) &= Y(z)\sum_{i = 1}^{N} a_iz^{-i} + X(z)\sum_{i = 0}^{M}b_iz^{-i}=\\
+    Y(z) &= \sum_{i = 0}^{N} a_iy(n - i) + \sum_{i = 0}^{M} b_ix(n - i)
+\end{align*}
+Questa equazione appena ottenuta che descrive l'output di un sistema discreto viene detta \textbf{equazione alle differenze in forma recursiva di un IIR}.

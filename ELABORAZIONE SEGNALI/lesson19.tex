@@ -1,0 +1,183 @@
+\newcommand{\zTransform}{\xrightarrow{\mathscr{Z}}}
+\newcommand{\zAntitransform}{\xrightarrow{\mathscr{Z}^{-1}}}
+\subsection{Trasformata Zeta}
+Per diversi semplificare i conti spesso potrebbe tornare utile ricondurci ad una forma della DTFT più "\textit{agevole}".Consideriamo
+un $s(n), n\in \mathbb{Z}$, e calcoliamo lo spettro tramite DTFT:
+\begin{equation*}
+    x(n) \DTFT X(\phi) = \sum_{n = -\infty}^{+\infty} x(n)e^{-j2\pi \phi n}
+\end{equation*}
+Possiamo riscrivere $e^{-j2\pi \phi n}$ come $(e^{j2\pi \phi})^{-n}$ e sostituiamo con $z = e^{j2\pi \phi}$, ottenendo:
+\begin{equation}
+    X(z) = \sum_{-\infty}^{+\infty} x(n)z^{-n}
+\end{equation}
+L'equazione che abbiamo appena scritto è \textbf{l'equazione di analisi} della \textbf{trasformata z}.\\
+Scriviamolo più formalmente:\\
+\begin{highlightedeq}
+\paragraph{Definizione.}Dato un $s(n), n \in \mathbb{Z}$ si definisce \textbf{Trasformata Z} di $x(n)$ la funzione:
+\begin{equation}
+    x(n) \zTransform X(z) = \sum_{-\infty}^{+\infty} x(n)z^{-n}
+\end{equation}
+\end{highlightedeq}
+Con $n \in \mathbb{Z}, z \in \mathbb{C}$. $X(z)$ sembra molto simile ad una \textbf{serie di potenza} per cui ha senso studiarne la regione di convergenza, detta \textbf{ROC}.
+\paragraph{Regione di Convergenza.}Data una $X(z)$, la sua \textbf{regione di convergenza} è il luogo dei punti per cui $X(z)$ esiste (cioè la serie converge).
+Per cui, la trasformata è caratterizzata da:
+\begin{itemize}
+    \item La funzione $H(z)$
+    \item La sua \textbf{ROC}
+\end{itemize}
+\paragraph{Antitrasformata Zeta.}
+Come sempre, possiamo determinare la formula di sintesi o antitrasformata per ottenere il segnale di partenza. La sua formula analitica è:
+\begin{equation}
+    X(z) \zAntitransform x(n) = \frac{1}{j2\pi} \oint_{L} X(z)z^{n-1}dz 
+\end{equation}
+Dove $n \in \mathbb{Z}, z \in \mathbb{C}, L \in ROC$. L, in particolare, è una qualunque traiettoria chiusa che:
+\begin{itemize}
+    \item \textbf{Contiene l'origine}
+    \item è \textbf{interamente contenuta} nella ROC
+    \item è percorsa in senso \textbf{antiorario}
+\end{itemize}
+
+\subsubsection{Proprietà}
+
+\paragraph{Linearità.}Dati $x(n) \zTransform X(z), y(n) \zTransform Y(z)$ allora:
+\begin{equation}
+    ax(n) + by(n) \zTransform aX(z) + bY(z)
+\end{equation}
+
+\paragraph{Traslazione nei Tempi.}Dato $x(n) \zTransform X(z)$ allora:
+\begin{equation}
+    x(n - a) \zTransform X(z)z^{-a}
+\end{equation}
+Dimostrazione:
+\begin{align*}
+    \mathscr{Z}\{x(n - a)\} &= \sum_{-\infty}^{+\infty} x(n - a)z^{-n} =\\
+                            &= \sum_{-\infty}^{+\infty} x(n - a)z^{-(n - a)}z^{-a} =\\
+                            &= z^{-a}\sum_{-\infty}^{+\infty} x(n - a)z^{-(n - a)}=\\
+                            &= z^{-a}X(z)
+\end{align*}
+
+\paragraph{Convoluzione.}Dati $x(n) \zTransform X(z), y(n) \zTransform Y(z)$ allora:
+\begin{equation}
+    x(n) \ast y(n) \zTransform X(z)Y(z)
+\end{equation}
+
+\subsubsection{Relazione tra DTFT e Z}
+Possiamo vedere la trasformata z come una \textbf{generalizzazione} della DTFT, per cui, dato un segnale $x(n)$:
+\begin{equation}
+    X_{DTFT}(\phi) = X_z(z = e^{-j2\pi \phi})
+\end{equation}
+Dove $0 \leq \phi < 1$ è la frequenza normalizzata.
+
+\subsubsection{Famiglie di Trasformate}
+Dal momento che calcolare trasformata/antitrasformata spesso non è proprio semplice, sono utili alcune coppie di trasformate notevoli:
+\paragraph{Esponenziali.} Data la coppia $x(n) = a^nu(n) \zTransform \frac{1}{1 - az^{-1}}$ allora possiamo risolvere una qualsiasi trasformata nella forma:
+\begin{equation}
+    x(n) = \sum_{i} c_i a_i u(n) \zTransform X(z) = \sum_{i} \frac{c_i}{1 - a_iz_-1}
+\end{equation}
+\paragraph{Segnale Digitale.}Dato un segnale definito da $N$ campioni $x(n) = \{a_0, a_1, \dots, a_N\}$, possiamo riscrivere $x(n)$ come \textbf{combinazione di impulsi traslati con peso $a_i$}:
+\begin{equation*}
+   \sum_{i = 0}^{N} a_i \delta(n - i) \zTransform \mathscr{Z}\left\{\sum_{i = 0}^{N} a_i \delta(n - i) \right\} = \sum_{i = 0}^{N} a_i \underbrace{\mathscr{Z}(\delta(n - i))}_{z^{-i}}
+\end{equation*}
+Dunque
+\begin{equation}
+    \sum_{i = 0}^{N} a_i \delta(n - i) \zTransform \sum_{i = 0}^{N} a_i z-i
+\end{equation}
+
+\subsection{Antitrasformata di forme razionali}
+Molto spesso l'antitrasformata calcolata con la formula analitica precedente è difficile se non impossibile. Per fortuna che nei 
+casi del corso, dobbiamo calcolare l'antitrasformata di funzioni di trasferimenti che sono sempre in forma \textbf{razionale}.
+Dato $X(z) = \frac{N(z)}{D(z)}$ $N,D$ sono polinomi di grado rispettivamente $M,N$, per cui possiamo rappresentarlo nella seguente maniera:
+\begin{equation*}
+    X(z) = \frac{b_0 + b_1z + \dots + b_MzM}{1 + a_1z + \dots a_Nz^N}
+\end{equation*}
+Normalizziamo ora rispetto a $z^N$ sia il numeratore che il denominatore per ottenere:
+\begin{equation*}
+    X(z) = \frac{b'_0z^{M - N} + b'_1z^{M - N - 1} + \dots + b'_Mz^{-N}}{1 + a'_1z^{-1} + \dots a'_Nz^{-N}} = \frac{B(z^{-1})}{A(z^{-1})}
+\end{equation*}
+I casi possibili sono:
+\begin{itemize}
+    \item M < N: in questo caso la frazione è \textbf{propria} e per il \textbf{teorema fondamentale dell'algebra} possiamo fattorizzare il denominatore in frazioni parziali:
+    \begin{align*}
+        X(z) &= \frac{B(z^{-1})}{1 + a'_1z^{-1} + \dots a'_Nz^{-N}} = \\
+             &= \frac{B(z^{-1})}{(1 - p_1z^{-1})(1 - p_2z^{-1})\dots(1 - p_nz^{-1})}=\\
+             &= \frac{B(z^{-1})}{\prod_{i = 0}^{n} (1 - p_iz^{-1})}=
+    \end{align*}
+    Si può dimostrare che possiamo scomprre in somme la frazione appena ottenuta:
+    \begin{gather*}
+        \frac{B(z^{-1})}{\prod_{i = 0}^{n} (1 - p_iz^{-1})} = \frac{A_1}{1 - p_1z^{-1}} + \dots + \frac{A_N}{1 - p_Nz^{-1}}
+    \end{gather*}
+    Allora:
+    \begin{equation}
+        \sum_{i = 1}^{N} \frac{A_i}{1 - p_iz^{-1}} \zAntitransform \left(\sum_{i = 1}^{N}A_i p_i\right) u(n)
+    \end{equation}
+
+    \item $M \geq N$: allora la frazione è \textbf{impropria}. Chiamiamo ora $r = M - N$ il \textbf{grado relativo}, possiamo allora scomporre così:
+    \begin{equation}
+        X(z) = \frac{N(z)}{D(z)} = c_0 + c_1z^{-1} + \dots + c_rz^{-r} + \frac{B_{N - 1}(z)}{A_N(z)}
+    \end{equation}
+    Allora l'antitrasformata sarà:
+    \begin{gather*}
+        X(z) = c_0 + c_1z^{-1} + \dots + c_rz^{-r} + \frac{B_{N - 1}(z)}{A_N(z)}
+        \\\downarrow \mathscr{Z}\\
+        x(n) = c_0 \delta(n) + \dots c_r + \delta(n - r) + u(n)\sum_{i = 1}^{N} A_i p_i^N
+    \end{gather*}
+\end{itemize}
+
+\subsection{Sistemi LTI Discreti nel Dominio Z}
+Abbiamo già studiato, in precedenza, la proprietà fondamentale dei sistemi LTI \eqref{prop: fondLTI}. Nel dominio Z, l'equazione diventa:
+\begin{equation}
+    x(n) \ast h(n) = \zTransform X(z)H(z)
+\end{equation}
+Dove $H(z)$ è detta \textbf{Funzione di Trasferimento} ossia:
+\begin{equation}
+    H(z) = \mathscr{Z}\{h(n)\}
+\end{equation}
+\subsubsection{Poli e Zeri}
+Importanti proprietà che si devono studiare della funzione di trasferimento sono i punti in cui si annulla e in cui diverge:
+\begin{itemize}
+    \item Si definiscono \textbf{zeri} di H(z) i valori d $z_i$ per cui $H(z_i) = 0$
+    \item Si definiscono \textbf{poli} di H(z) i valori di $p_i$ per cui $\lim_{z \to p_i} H(z) = \pm \infty$
+\end{itemize}
+Questi 2 insiemi di punti corrispondono rispettivamente agli zeri del numeratore e del denominatore rispettivamente. Dal momento
+che sia numeratore che denominatore possono essere scritti come prodotto delle loro radici, allora conoscendo i poli e gli zeri di $H(z)$
+conosciamo già tutta la funzione, ossia:
+\begin{equation}
+    H(z) = b_0\frac{\prod_{i = 1}^{m}(1 - z_iz^{-1})}{\prod_{i = 1}^{n}(1 - p_iz^{-1})}
+\end{equation}
+Inoltre, una funzione di trasferimento è facilmente rappresentabile tramite il \textbf{diagramma poli-zeri}
+
+\subsubsection{Proprietà}
+\paragraph{Causalità.}Un sistema $S[\cdot]$ è causale nel dominio Z se $h(n) = 0$ per $n > 0$, per cui:
+\begin{align*}
+    H(z) &= \mathscr{Z}\{h(n)\} =\\
+         &= \sum_{n = -\infty}^{+\infty}h(n) z^{-n} =\\
+         &= \sum_{n = 0}^{+\infty}h(n)z^{-n}
+\end{align*} 
+Per far convergere la serie, è necessario che $z > |R|$, dove $R$ è un raggio della circonferenza centrata nell'origine. Per cui,
+tutte le trasformate Z di sistemi discreti e causali (cioè tutti i sistemi reali) avranno ROC esterna ad una circonferenza.
+In particolare, conoscendo la forma razionale della funzione di trasferimento, e dunque i suoi poli $p_1,\dots, p_N$, allora 
+$R$ sarà il massimo tra i moduli di tutti i poli:
+\begin{equation}
+    ROC: |z| > \max_{i = 0,\dots,N} \{|p_i|\}
+\end{equation}
+\paragraph{Stabilità BIBO.}
+Avevamo già visto che, dato un sistema $S[\cdot]$ stabile BIBO, allora la somma infinita della risposta all'impulso doveva convergere
+assolutamente (\eqref{prop: BIBO}). Consideriamo ora la funzione di trasferimento del sistema:
+\begin{align*}
+    |H(z)| = \left|\sum_{n = -\infty}^{+\infty} h(n) z^{-n}\right| \leq \sum_{n = -\infty}^{+\infty}\left| h(n) z^{-n}\right|
+\end{align*}
+Visto che $\sum_{n = -\infty}^{+\infty}|h(n)|$ converge se il sistema è stabile, allora per far convergere l'intera trasformata
+è necessario che $z \geq 1$. Unendo le 2 proprietà (che non sono poi così impossibili), ne deduciamo che $\forall i = 0,\dots,N$ $|p_i| < 1$,
+ossia tutti i poli sono contenuti nel cerchio unitario.
+\paragraph{Risposta in Frequenza.}Avevamo già visto che per un sistema discreto, la risposta in frequenza è la DTFT della risposta all'impulso, ossia:
+\begin{equation}
+    \text{DTFT}\{h(n)\} = H_\text{DTFT}(\phi) = \sum_{n = -\infty}^{+\infty} h(n)e^{-j2\pi \phi n}
+\end{equation}
+Dal momento che avevamo definito la funzione di trasferimento H(z) come:
+\begin{equation*}
+    \mathscr{Z}\{h(n)\} = \sum_{n = -\infty}^{+\infty} h(n)z^{-n}
+\end{equation*}
+Allora, la risposta in frequenza nel dominio z corrisponde alla funzione di trasferimento di $e^{j2\pi \phi}$:
+\begin{equation}
+    H_\text{DTFT} = H_z (e^{j2\pi \phi})
+\end{equation}
