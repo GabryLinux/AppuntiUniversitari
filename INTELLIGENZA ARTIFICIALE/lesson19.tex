@@ -1,0 +1,64 @@
+\section{Machine Learning}
+\subsection{Supervised Learning}
+\lezione{Lezione 19}{9/12/2024}
+La tecnica di \textbf{Supervised learning} è una delle principali in ML e si basa su un \textbf{Dataset di Training} $\tau = \langle(x_1,z_1),\dots,(x_n,z_n)\rangle$
+dove $x_i$ è un vettore di lunghezza $m$ e rappresenta \textbf{l'input} e $z_i$ è uno scalare e rappresenta \textbf{l'output}. Tutti gli input $x_i$ hanno la stessa lunghezza.
+Il dataset $\tau$ si ottiene a partire da un \textbf{processo} che è ignoto (gli input/output potrebbero essere umani o generati
+da un algoritmo) che noi possiamo vedere come una funzione $f : \mathbb{R}^n \to \mathbb{R}$ tale che $x_i = f(x_i)$ che vogliamo scoprire.
+Dal dataset di training la macchina deve trovare una $h(x)$ che approssima $f(x)$. Quindi l'apprendimento è \textit{supervisionato}
+poichè la macchina apprende da degli esempi forniti da un arbitro/processo di cui ci fidiamo. In teoria, vorremmo che dopo l'addestramento
+la macchina sappia rispondere correttamente a tutti gli $x_\text{NEW}$, detti \textbf{testcase}, non appartenenti al dataset.\\
+Una cosa su cui soffermarsi è proprio la funzione $h$: è detta cosi perchè è una \textbf{ipotesi}, ossia tale funzione deve appartenere ad una
+famiglia di funzioni scelta, per ipotesi, dall'esperto di ML. Funzioni più complesse permetteranno di imitare meglio la $f$ e di fare analisi
+più interessanti, ma sono difficili da computare. Funzioni più semplici permetteranno invece di fare analisi più semplici ma anche di computarle in
+meno tempo. Le classi di funzioni possono essere:
+\begin{itemize}
+    \item Lineari
+    \item Polinomiali
+    \item Sinusoidali
+    \item Esponenziali
+    \item Altre molto più complesse (di solito usate nei modelli di oggi)
+\end{itemize}
+
+\paragraph{Classe Lineare.}Per semplicità, studieremo il caso di funzioni lineari, che possiamo scrivere cosi:
+\begin{equation}
+    z = \theta[1,x]^T = 1\cdot\theta_0 + x_1\theta_1 + \dots x_n\theta_n
+\end{equation}
+Dove $\theta$ è un vettore riga di coefficienti, e $[1,x]^T$ è il vettore colonna che ha nel primo valore 1. Il compito Dunque
+degli algoritmi di ML è di trovare il $\theta$ che permetta di \textbf{fittare} il modello sui dati. L'algoritmo che fa ciò è la
+\textbf{Regressione Lineare Multivariata}
+
+\subsubsection{Regressione Lineare Multivariata.}Quest'algoritmo effettua la regressione basandosi sul concetto di \textbf{loss}:
+il loss è la distanza tra $f(x_i) = z_i$ e $h(x_i)$.
+La funzione di loss più usata è lo \textbf{scarto quadratico medio}:
+\begin{equation}
+    (z_i - h(x_i))^2
+\end{equation}
+Per diversi motivi:
+\begin{itemize}
+    \item Lo scarto quadratico è \textbf{facile }da trattare matematicamente
+    \item Amplifica i grandi errori e diminuisce i piccoli errori.
+\end{itemize}
+In particolare, quello che dev'essere minimizzato è il valore atteso di $\theta$, ossia: 
+\begin{equation}
+    \mathbb{E}[\theta] = \frac{1}{N} \sum_{i = 1}^{N}(z_i - h(x_i))^2
+\end{equation}
+Possiamo dunque dire che $h(x)$ è una funzione $h : \mathbb{R}^{n + 1} \to \mathbb{R}$, dal momento che $h$ deve anche stimare il $\theta_0$.
+Per minimizzare il valore atteso possiamo scegliere 2 strade:
+\paragraph{Approccio Analitico.}A partire dall'espressione della funzione di loss, dobbiamo calcolare la derivata prima. Una volta trovata dobbiamo
+trovare la $x$ che annulli la derivata in un \textbf{punto di minimo globale}. Si potrebbe infatti ricadere nel caso di un punto di massimo o minimo locale,
+che a noi non interessa.
+
+\paragraph{Approccio Numerico.}Si calcola \textbf{iterativamente} il \textbf{gradiente} della funzione nel punto. Dal momento che il gradiente
+è un vettore che indica sempre la \textbf{direzione di salita} dovremmo seguire il vettore opposto con un passo iterativo che noi definiamo così:\\
+Dal momento che (considerando come funzione di loss lo scarto quadratico), calcoliamo così la i-esima derivata parziale:
+\begin{equation}
+        \frac{\partial \mathbb{E}[\theta]}{\partial \theta_i} = \frac{1}{2} \frac{\partial(z_i - h(x_i)^2)}{\partial \theta_i} = -(z_i - h(x_i))x_i 
+\end{equation}
+A questo punto, ad ogni iterazione effettuiamo l'aggiornamento di $\theta_i$:
+\begin{equation}
+    \theta_i \leftarrow \theta_i + \alpha\underbrace{(z_i - h(x_i))x_i}_{\text{correzione}}
+\end{equation}
+L'algoritmo che abbiamo visto viene detto \textbf{discesa del gradiente} perchè consiste appunto nel discendere dal gradiente della funzione.
+Il fatto è che non possiamo calcolare tutto questo per ogni dato del dataset, piuttosto si scelgono alcuni esempi detti \textbf{minibatch}.
+La ricerca dell'ottimo nell'intervallo può essere fatta pure tramite algoritmo di search \textbf{Hill Climbing}.

@@ -1,0 +1,44 @@
+\subsection{Problemi del Machine Learning}
+\lezione{Lezione 20}{12/12/2024}
+I problemi che possono essere risolti sono diversi in base alle tecniche adottate.\\
+Nel caso della \textbf{Supervised Learning}, i problemi affrontati sono:
+\begin{itemize}
+    \item \textbf{Regressione} o approssimazione, quando il problema consiste nel trovare la funzione $h$ che lega input e output del dataset minimizzandone l'errore, con input e output \textbf{reali}
+    \item \textbf{Classificazione} quando il problema consiste nell'assegnare ad una classe vettori di feature di un dataset (l'output è una classe mentre l'input può essere numerico o con valori discreti).
+\end{itemize}
+Nel caso della \textbf{Unsupervised Learning}, in cui non viene fornita alcun output ad ogni input, tra i problemi risolvibili riconosciamo il:
+\begin{itemize}
+    \item \textbf{Clustering} cioè raggruppare in cluster oggetti simili (pattern recognition).
+\end{itemize}
+
+\subsubsection{Classificazione}
+Come detto prima, un problema di classificazione consiste nell'assegnare ad un vettore di feature (quindi ad un input) una certa classe. A causa
+della discretezza delle classi, il \textbf{Gradient Discent} non è più applicabile. Dobbiamo usare un alto approccio basato su \textbf{alberi di decisione}.
+Un albero di decisione è un modello basato su una \textbf{sequenza di test} in base al quale determinare la classe dell'input.
+In particolare ha questa struttura:
+\begin{itemize}
+    \item Ogni \textbf{nodo} rappresenta una \textbf{condizione }su una particolare feature del vettore input
+    \item Ogni \textbf{foglia} rappresenza una \textbf{decisione} cioè l'assegnazione dell'input ad una classe
+    \item Ogni \textbf{ramificazione} rappresenta un \textbf{possibile esito} della condizione.
+\end{itemize}
+Il nostro obiettivo è quello di generare un albero \textbf{consistente} ossia completamente aderente ai dati, in modo che abbia massima precisione
+e massima accuratezza.
+Per la creazione di questi alberi possiamo seguire un approccio \textbf{greedy iterativo} oppure \textbf{ricorsivo}
+
+\paragraph{Approccio Ricorsivo}
+Per generare l'albero dobbiamo inizalmente individuare la condizione per la feature $x_i$ che splitti meglio l'insieme degli input in 2 o più sottinsiemi.
+Le condizioni usate devono \textbf{minimizzare} la eterogeneità degli input nei vari insiemi a cui corrisponde una classe.\\
+In seguito ad uno split possono verificarsi 4 casi:
+\begin{enumerate}
+    \item Gruppo Omogeneo: con la condizione scelta sono riuscito a classificare correttamente -> Fermo la ricorsione.
+    \item Gruppo Vuoto: con la condizione scelta ho escluso tutti i valori e il gruppo è vuoto -> Assegno la classe di maggioranza del Padre
+    \item Gruppo Disomogeneo: con la condizione scelta ho generato dei gruppi non totalmente classificati -> Continuo con la ricorsione
+    \item Gruppo Disomogeneo ma con condizioni terminate: con le condizioni scelte ottengo gruppi ancora disomogeni, ma sono arrivato alla fine dell'albero -> Assegno al gruppo la classe della maggioranza
+\end{enumerate}
+Per misurare le prestazioni del classificatore possiamo usare un \textbf{indice di eterogeneità} ossia un indice che quantifica la diversità degli elementi 
+all'interno del gruppo. Un indice del genere è \textbf{l'entropia}:\\
+Data una variabile aleatoria $X$ con valori $x_1, x_2, \dots,x_n$ e con le probabilità rispettivamente $p_1,p_2,\dots,p_n$ definiamo l'entropia come:
+\begin{equation}
+    H(X) = \sum_{i} p_i \log \frac{1}{p_i}
+\end{equation}
+Possiamo vedere l'entropia come \textbf{incertezza d'informazione} e quindi è massima quando l'incertezza è massima ed è minima quando l'incertezza è minima.

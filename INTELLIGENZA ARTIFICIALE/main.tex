@@ -5,6 +5,9 @@
 \usepackage{tikz}
 \usepackage{tcolorbox}
 \usepackage{graphicx}
+\usepackage{marginnote}
+\usepackage{svg}
+
 \usetikzlibrary{shapes.geometric, arrows}
 \tcbuselibrary{most}
 \tcbset{
@@ -30,6 +33,13 @@
 \renewcommand{\eqref}[1]{%
   \hyperref[#1]{\textup{\tagform@{\ref*{#1}}}}%
 }
+
+\newcommand{\lezione}[2]{{\reversemarginpar \raggedbottom \marginnote{
+  \includesvg[height=1.5em, keepaspectratio]{src/book.svg}
+  \parbox{1.5cm}{  
+  \footnotesize { #1 \\#2 }
+  }
+}}}
 
 \begin{document}
 \begin{titlepage}
@@ -66,4 +76,10 @@
 \input{lesson13.tex}
 \input{lesson14.tex}
 \input{lesson15.tex}
+\input{lesson16.tex}
+\input{lesson17.tex}
+\input{lesson18.tex}
+\input{lesson19.tex}
+\input{lesson20.tex}
+\input{lesson21.tex}
 \end{document}

@@ -1,0 +1,82 @@
+\paragraph{Approccio Random Forest}
+\lezione{Lezione 21}{16/12/2024}
+L'albero di decisione che noi decidiamo di realizzare a partire dal dataset di training potrebbe comunque
+non avere buone performance per diversi motivi:
+\begin{itemize}
+    \item Potrebbe essere molto influenzato dal \textbf{rumore (dati sbagliati)}
+    \item I dati potrebbero essere distribuiti nella maniera sbagliata
+    \item Le feature selezionate per realizzare l'albero potrebbero non essere correlate con la classe
+\end{itemize}
+Per tutti questi motivi si è deciso di realizzare algoritmi più robusti , come il \textbf{Random Forest}.
+Una random forest è un'insieme di alberi, ognuno dei quali viene generato a partire da un dataset che viene
+generato pescando con reimmissione dal dataset di partenza. Questa scelta è fatta per generare dei dataset
+che simulino le probabilità reali delle varie entry; inoltre, dal momento che ne vengono generati tanti,
+gli alberi realmente affetti da rumore per quel particolare dato saranno pochi nella foresta, cioè diminunisce 
+la varianza, per cui la classificazione avviene selezionando la decisione di maggioranza.
+
+\subsection{Metodi Non Parametrici}
+I metodi visti finora (sia di regressione che di classificazione) erano \textbf{parametrici} perchè cercavano
+i parametri della funzione (nel caso di regressione) o le condizioni delle feature da testare 
+(nel caso degli alberi di decisione). Una volta addestrati i modelli e trovati i parametri, il dataset diventava
+inutile. Esistono altre tecniche che invece lavorano esclusivamente sul dataset e non sono parametrici come:
+\begin{itemize}
+    \item Table Lookup
+    \item k-Nearest Neighbours Lookup
+\end{itemize}
+
+\subsubsection{Table Lookup}
+Questo tipo di metodo non parametrico è molto semplice e funziona nella seguente maniera:\\
+Dato un $x_\text{new}$ di cui ricercare lo $z_\text{new}$ dobbiamo:
+\begin{enumerate}
+    \item Ricercare $x_\text{new}$ nel training set
+    \item Se c'è, restituire il suo $z_\text{new}$ 
+    \item Altrimenti generare errore
+\end{enumerate} 
+Come già detto questo è un algoritmo molto semplice perchè essenzialmente basato sul lookup in un database,
+nulla più e nulla meno. Per quanto possa essere veloce, il grande limite di questo algoritmo è che \textbf{
+    non generalizza
+}; problema che viene risolto dalla sua evoluzione \textbf{k-Nearest Neighbours Lookup}
+
+
+\subsubsection{k-Nearest Neighbours Lookup}
+Una volta impostato il parametro $k$, che viene detto \textbf{iperparametro} poichè un parametro deciso 
+da un esperto e non da un'algoritmo, bisogna cercare per ogni $x_\text{new}$ i $k$ vettori più vicini a lui
+e assegnare a $k_\text{new}$ la classe di maggioranza dei vicini (nel caso della classificazione) o la
+media degli $z_i$ di tutti i vicini. L'idea di base di questo algoritmo è che elementi simili saranno in 
+classi simili, e questo avviene così spesso che fare quest'assunzione dà buoni risultati.
+Chiaramente le prestazioni e il costo computazionale di tale tecnica sono influenzati da $k$:
+\begin{itemize}
+    \item Per k molto bassi, il risultato sarà molto affetto da rumore 
+    \item Per k molto alti, i costi computazionali potrebbero essere ingestibili
+\end{itemize}
+Per implementare quest'algoritmo, però, è necessario poter quantificare la \textbf{somiglianza} dei vari
+input. Per farlo consideriamo ogni input come un \textbf{vettore di feature} rappresentati in uno 
+\textbf{spazio n-dimensionale}; la somiglianza sarà dunque la \textbf{distanza} di un vettore da un altro.
+Il tipo di distanza che si usa è la \textbf{distanza di Minkowsky}, detta anche distanza $L^p$ poichè:
+\begin{equation}
+    L^p(x_1,x_2) = \left[\sum_{i} |x_{1,i} - x_{2,i}|^p\right]^\frac{1}{p}
+\end{equation}
+Per alcuni $p$ le distanze formulate diventano interessanti:
+\begin{itemize}
+    \item $p = 1$: Otteniamo la \textbf{Distanza di Manhattan}, dove la distanza è semplicemente la somma delle differenze delle singole feature
+    \item $p = 2$: Otteniamo la \textbf{Distanza Euclidea} in $n$ dimensioni
+    \item $p \to +\infty$ otteniamo una distanza particolare in cui viene selezionata la distanza più grande tra tutte le altre.
+\end{itemize}
+Un altro tipo di distanza è la \textbf{cosine similarity} formulata così:
+\begin{equation}
+    s(x_1,x_2) = -\cos(\angle(x_1,x_2)) = -\frac{\sum_{i} x_{1,i}x_{2,i}}{\sqrt{\sum_{i} x_{1,i}^2}\sqrt{\sum_{i} x_{2,i}^2}}
+\end{equation}
+
+\paragraph{Curse of Dimensionality}
+Un grande problema di questo algoritmo è che scala male all'aumentare del numero di feature che descrivono i vettori
+del dataset. Questo perchè all'aumentare delle dimensioni tutti gli elementi sono più lontani.
+Possiamo dimostrarlo così:\\
+Consideriamo, in uno spazio normalizzato, un insieme di vettori generati casualmente, tale per cui un qualsiasi \textit{sottocubo} del cubo di partenza (ipotizziamo uno spazio a 3 dimensioni inizialmente)
+di lato $L$ che contiene $\frac{k}{n}$ vettori. Possiamo dunque dire che:
+\begin{equation*}
+    L^d \approx \frac{k}{n}
+\end{equation*} 
+Dove $d$ è la dimensione dello spazio. All'aumentare di $d$, L, che è un valore $0 \leq L \leq 1$ tenderà
+a diminuire, per cui le probabilità, di volta in volta, diminuiscono esponenzialmente. Questo problema è
+noto come \textbf{Curse of Dimensionality} e per risolverlo si possono usare diverse tecniche di Statistica
+come l'APC.

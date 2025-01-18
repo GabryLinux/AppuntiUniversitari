@@ -1,0 +1,51 @@
+\subsubsection{Temporal Difference Learning}
+\lezione{Lezione 16}{21/11/2024}
+Questa tecnica \textbf{model-free} corregge i difetti della stima diretta, ossia dell'assunzione di indipendenza tra le transizioni
+(che era ciò che rendeva non affidabile l'approccio). L'idea di base di quest'approccio è quello di calcolare, ad ogni transizione
+una stima di $\widehat{V}^{\pi}(s)$ migliore.\\
+Inizialmente, si parte da una stima per nulla buona, ossia che $\widehat{V}^{\pi}(s) = 0, \forall s$. Appena l'agente esegue
+un azione $\pi(s)$ e transita da $s$ a $s'$ ottiene il reward $R(s,\pi(s),s')$, per cui, dopo aver acquisito una prima \textit{esperienza} di 
+s. Definisco poi z nella seguente maniera:
+\begin{equation}
+    z = R(s,a,s') + \gamma \widehat{V}^{\pi}(s')
+\end{equation} E corrisponde all'esperienza acquisita nell'ultima transizione. 
+Aggiorno, allora, nella seguente maniera la state-function:
+\begin{equation}
+    \widehat{V}^{\pi}(s) \leftarrow \widehat{V}^{\pi}(s) + \alpha(z - \widehat{V}^{\pi}(s))
+\end{equation}
+Quest'operazione aggiorna $\widehat{V}^{\pi}(s)$ tramite una combinazione tra ciò che conosco già ($\widehat{V}^{\pi}(s)$) e
+la \textbf{differenza temporale}, ossia la differenza tra ciò che ho scoperto nell'ultima iterazione ($z$) 
+e quello che sapevo già ($\widehat{V}^{\pi}(s)$). La combinazione avviene attraverso un fattore $\alpha$, il \textbf{learning rate}.
+Analizziamone i 2 possibili casi:
+\begin{itemize}
+    \item $\alpha = 1$: considero solo $z$, per cui l'agente non ricorda niente di ciò che ha appreso in precedenza
+    \item $\alpha = 0$: l'agente è molto conservativo e qualsiasi nuova esperienza non cambia la sua state-function 
+\end{itemize}
+Possiamo riscrivere l'update nella seguente maniera, sostituendo $z$ con l'espressione precedente:
+\begin{equation}
+    \widehat{V}^{\pi}(s) \leftarrow (1- \alpha)\widehat{V}^{\pi}(s) + \alpha(R(s,a,s') + \gamma \widehat{V}^{\pi}(s'))
+\end{equation}
+In questa equazione, dunque, compare la dipendenza tra gli stati $s$ e $s'$ per cui viene corretto il problema principale della \textbf{stima diretta}.
+Generalizziamo questo ragionamento: consideriamo ora $z_i = R(s,\pi(s),s') + \gamma \widehat{V}_{i - 1}^{\pi}(s')$ dove
+$\widehat{V}_{i}^{\pi}(s)$ è la stima di $\widehat{V}^{\pi}(s)$ all'iterazione $i$. Al passo k-esimo possiamo riscrivere
+l'equazione nella maniera seguente:
+\begin{equation}
+    \widehat{V}_k^{\pi}(s) = \alpha\sum_{i = 1}^{k} \left[\underbrace{(1- \alpha)^{k - i}z_{k - i}}_{\text{temporal differences}}+ (1 - \alpha)^k \underbrace{\widehat{V}_0^{\pi}(s')}_{\text{bootstrap}}\right]
+\end{equation}
+La cosa interessante di questo approccio è che la \textbf{stima iniziale} o \textbf{bootstrap}, viene man mano corretta e andrà a contare sempre di meno nella stima finale.
+Solitamente viene inizializzata a 0. Il \textbf{temporal difference} viene invece calcolato tramite \textbf{media mobile esponenziale} in modo che 
+le esperienze più recenti sono più rilevanti mentre quelle più passate di meno.
+
+\paragraph{Convergenza della Temporal Difference Learning.}
+Il learning rate che avevamo introdotto per combinare esperienza e conoscenza non è altro che un coefficiente per bilanciare
+\textbf{exploitation} e \textbf{exploration} che avevamo incontrato in UCB per risolvere il MAB Problem. Affinchè $\widehat{V}^{\pi}(s)$ 
+converga al vero $V(s)$ è necessario che $\alpha$ vari. Solitamente $\alpha $ varia in funzione del numero di volte $N_s$ che è
+stato visitato un nodo $s$, per cui possiamo esprimerlo come funzione $\alpha(N_s)$. Si può dimostrare che, affinchè converga,
+$\alpha(N_s)$ deve presentare le seguenti proprietà:
+\begin{equation}
+    \sum_{n = 1}^{\infty} \alpha(n) = \infty
+\end{equation}
+ \begin{equation}
+    \sum_{n = 1}^{\infty} \alpha^2(n) < \infty
+\end{equation}
+Solitamente si adotta, per $\alpha$, una funzione che cresce con $O(\frac{1}{n})$

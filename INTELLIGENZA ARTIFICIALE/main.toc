@@ -1,133 +1,168 @@
 \contentsline {section}{}{1}{Doc-Start}%
-\contentsline {section}{\numberline {1}Intelligenza}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Definizione Operativa}{2}{subsection.1.1}%
-\contentsline {paragraph}{Pensare Umanamente.}{2}{section*.2}%
-\contentsline {paragraph}{Pensare Razionalmente.}{2}{section*.3}%
-\contentsline {paragraph}{Agire Umanamente.}{2}{section*.4}%
-\contentsline {paragraph}{Agire Razionalmente.}{2}{section*.5}%
-\contentsline {subsection}{\numberline {1.2}Problema dell'agire umanamente}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Test di Turing}{3}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Storia dell'IA}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Nascita}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Prima era: l'Approccio Simbolico}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Seconda era: I Sistemi Esperti}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Un Nuovo Approccio}{5}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Agenti}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Definizione}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Caratteristiche dell'Ambiente}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Tipi di Agenti}{7}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Agente Reflex}{7}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Agente Reflex con Modello}{7}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Agente basato su Goal}{7}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Agente basato su Utilità}{8}{subsubsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.4}Relazione di Preferenza}{8}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Definizioni}{8}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Proprietà}{8}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Teorema di Neumann-Morgenstein}{9}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Problemi di Search}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Formulazione del Problema}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Classificazione dei problemi}{10}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Approccio Esaustivo/Esplicito}{11}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Approccio Implicito}{11}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Caratteristiche di un Algoritmo}{11}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Problema di Riferimento}{12}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Ricerca Non Informata}{12}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Depth-First-Search}{12}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Breath-First-Search}{13}{subsubsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.3}DFS/BFS Ottimizzati}{13}{subsubsection.4.7.3}%
-\contentsline {paragraph}{EQL (Enqueued List).}{14}{section*.6}%
-\contentsline {paragraph}{Frontiera.}{14}{section*.7}%
-\contentsline {subsection}{\numberline {4.8}UCS (Uniform Cost Search)}{15}{subsection.4.8}%
-\contentsline {paragraph}{Cost To Go Function. }{15}{section*.8}%
-\contentsline {subsubsection}{\numberline {4.8.1}Algoritmo (Ad alto livello)}{15}{subsubsection.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.8.2}Ottimalità di UCS}{16}{subsubsection.4.8.2}%
-\contentsline {paragraph}{Ipotesi. }{16}{section*.9}%
-\contentsline {paragraph}{Dimostrazione. }{16}{section*.10}%
-\contentsline {subsubsection}{\numberline {4.8.3}UCS con EXL}{16}{subsubsection.4.8.3}%
-\contentsline {subsection}{\numberline {4.9}Ricerca Informata}{16}{subsection.4.9}%
-\contentsline {subsubsection}{\numberline {4.9.1}A*}{17}{subsubsection.4.9.1}%
-\contentsline {subsubsection}{\numberline {4.9.2}A* con EXL}{17}{subsubsection.4.9.2}%
-\contentsline {paragraph}{Euristica Consistente}{17}{section*.11}%
-\contentsline {subsubsection}{\numberline {4.9.3}Monotonicità di $f$}{17}{subsubsection.4.9.3}%
+\contentsline {section}{\numberline {1}Intelligenza}{4}{section.1}%
+\contentsline {paragraph}{Definizione.}{4}{section*.2}%
+\contentsline {subsection}{\numberline {1.1}Definizione Operativa}{4}{subsection.1.1}%
+\contentsline {paragraph}{Pensare Umanamente.}{4}{section*.3}%
+\contentsline {paragraph}{Pensare Razionalmente.}{4}{section*.4}%
+\contentsline {paragraph}{Agire Umanamente.}{4}{section*.5}%
+\contentsline {paragraph}{Agire Razionalmente.}{4}{section*.6}%
+\contentsline {subsection}{\numberline {1.2}Problema dell'agire umanamente}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Test di Turing}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Storia dell'IA}{6}{section.2}%
+\contentsline {paragraph}{Definizione.}{6}{section*.7}%
+\contentsline {subsection}{\numberline {2.1}Nascita}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Prima era: l'Approccio Simbolico}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Seconda era: I Sistemi Esperti}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Un Nuovo Approccio}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Agenti}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Definizione}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caratteristiche dell'Ambiente}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Tipi di Agenti}{9}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Agente Reflex}{9}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Agente Reflex con Modello}{9}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Agente basato su Goal}{9}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Agente basato su Utilità}{10}{subsubsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.4}Relazione di Preferenza}{10}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Definizioni}{10}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Proprietà}{10}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Teorema di Neumann-Morgenstein}{11}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Problemi di Search}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Formulazione del Problema}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Classificazione dei problemi}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Approccio Esaustivo/Esplicito}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Approccio Implicito}{13}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Caratteristiche di un Algoritmo}{13}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Problema di Riferimento}{14}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Ricerca Non Informata}{14}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Depth-First-Search}{14}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Breath-First-Search}{15}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}DFS/BFS Ottimizzati}{15}{subsubsection.4.7.3}%
+\contentsline {paragraph}{EQL (Enqueued List).}{16}{section*.8}%
+\contentsline {paragraph}{Frontiera.}{16}{section*.9}%
+\contentsline {subsection}{\numberline {4.8}UCS (Uniform Cost Search)}{17}{subsection.4.8}%
+\contentsline {paragraph}{Cost To Go Function. }{17}{section*.10}%
+\contentsline {subsubsection}{\numberline {4.8.1}Algoritmo (Ad alto livello)}{17}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Ottimalità di UCS}{18}{subsubsection.4.8.2}%
+\contentsline {paragraph}{Ipotesi. }{18}{section*.11}%
 \contentsline {paragraph}{Dimostrazione. }{18}{section*.12}%
-\contentsline {subsubsection}{\numberline {4.9.4}Ottimalità di A*}{18}{subsubsection.4.9.4}%
-\contentsline {paragraph}{Ipotesi}{18}{section*.13}%
-\contentsline {paragraph}{Dimostrazione}{18}{section*.14}%
-\contentsline {subsection}{\numberline {4.10}Progettare un'Euristica}{18}{subsection.4.10}%
-\contentsline {subsubsection}{\numberline {4.10.1}Problema Rilassato}{19}{subsubsection.4.10.1}%
-\contentsline {subsubsection}{\numberline {4.10.2}Limiti di A*}{19}{subsubsection.4.10.2}%
-\contentsline {subsection}{\numberline {4.11}Focal Search}{19}{subsection.4.11}%
-\contentsline {subsubsection}{\numberline {4.11.1}Terminologia}{19}{subsubsection.4.11.1}%
-\contentsline {subsubsection}{\numberline {4.11.2}Descrizione Algoritmo}{20}{subsubsection.4.11.2}%
-\contentsline {subsubsection}{\numberline {4.11.3}Limiti di Focal: Trashing}{21}{subsubsection.4.11.3}%
-\contentsline {section}{\numberline {5}Adversarial Search}{22}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Caratteristiche di un gioco}{22}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Formalizzazione di un Gioco}{23}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Gioco A Somma Zero}{23}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Strategie}{24}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Albero di Gioco}{24}{subsubsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.2}Minimax}{24}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Descrizione Gioco}{24}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Descrizione Algoritmo}{25}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Minimax a $n$ agenti}{25}{subsubsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.3}Ottimizzazioni di Minimax}{25}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}$\alpha ,\beta $ Pruning}{25}{subsubsection.5.3.1}%
-\contentsline {paragraph}{Algoritmo.}{26}{section*.15}%
-\contentsline {paragraph}{Analisi}{26}{section*.16}%
-\contentsline {paragraph}{Esiti di una partita.}{27}{section*.17}%
-\contentsline {subsubsection}{\numberline {5.3.2}Funzioni di Valutazione e CUTOFF}{27}{subsubsection.5.3.2}%
-\contentsline {paragraph}{Euristiche basate sull'esperienza.}{27}{section*.18}%
-\contentsline {paragraph}{Combinazione Lineare.}{27}{section*.19}%
-\contentsline {paragraph}{Iterative Deepening.}{28}{section*.20}%
-\contentsline {paragraph}{Quiescient Search.}{28}{section*.21}%
-\contentsline {subsubsection}{\numberline {5.3.3}Tabella delle Trasposizioni}{28}{subsubsection.5.3.3}%
-\contentsline {paragraph}{Funzionamento.}{28}{section*.22}%
-\contentsline {subsubsection}{\numberline {5.3.4}Forward Pruning (PROBCUT)}{29}{subsubsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.4}Expectimax}{30}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Monte Carlo Tree Search (MTSC)}{30}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Multi-Armed Bandit Problem (MAB)}{30}{subsubsection.5.4.2}%
-\contentsline {paragraph}{Approccio Naive.}{30}{section*.23}%
-\contentsline {paragraph}{Upper Confidence Bound.}{31}{section*.24}%
-\contentsline {section}{\numberline {6}Constraint Satisfaction Problem (CSP)}{32}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Formalizzazione}{32}{subsection.6.1}%
-\contentsline {paragraph}{Rappresentazione dei Vincoli.}{32}{section*.25}%
-\contentsline {paragraph}{Tipologie di Vincoli.}{32}{section*.26}%
-\contentsline {paragraph}{Esempio.}{32}{section*.27}%
-\contentsline {subsection}{\numberline {6.2}Tecniche per il CSP}{33}{subsection.6.2}%
-\contentsline {paragraph}{Consistenza di Nodo.}{33}{section*.28}%
-\contentsline {paragraph}{Consistenza ad Arco.}{33}{section*.29}%
-\contentsline {paragraph}{Caso Patologico:}{34}{section*.30}%
-\contentsline {subsubsection}{\numberline {6.2.1}AC-3}{34}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Path Consistency}{35}{subsubsection.6.2.2}%
-\contentsline {paragraph}{Definizione.}{35}{section*.31}%
-\contentsline {subsubsection}{\numberline {6.2.3}Backtracking Search}{35}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}Ordering Delle Variabili}{35}{subsubsection.6.2.4}%
-\contentsline {paragraph}{Ordine Lessicografico}{35}{section*.32}%
-\contentsline {paragraph}{Ordine Random}{35}{section*.33}%
-\contentsline {paragraph}{Euristica di Grado (EG)}{35}{section*.34}%
-\contentsline {paragraph}{Minimum Remain Value (MRV)}{36}{section*.35}%
-\contentsline {subsubsection}{\numberline {6.2.5}Euristica per i Valori}{36}{subsubsection.6.2.5}%
-\contentsline {paragraph}{Forward Checking}{36}{section*.36}%
-\contentsline {subsection}{\numberline {6.3}Local Search}{36}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Min Conflicts}{36}{subsubsection.6.3.1}%
-\contentsline {section}{\numberline {7}Markov Decision Processes}{37}{section.7}%
-\contentsline {paragraph}{Descrizione Generale.}{37}{section*.37}%
-\contentsline {paragraph}{Formalizzazioni.}{37}{section*.38}%
-\contentsline {subsection}{\numberline {7.1}Markovianità}{38}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Risoluzione di un MDP}{38}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Stimare la bontà di una policy}{39}{subsection.7.3}%
-\contentsline {paragraph}{Definizione}{39}{section*.39}%
-\contentsline {subsection}{\numberline {7.4}Reward Scontati}{39}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Policy Stazionaria}{40}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Ricerca Policy Ottima in DP}{40}{subsection.7.6}%
-\contentsline {paragraph}{Programmazione Dinamica.}{40}{section*.40}%
-\contentsline {subsubsection}{\numberline {7.6.1}Approccio Value Iteration}{42}{subsubsection.7.6.1}%
-\contentsline {subsubsection}{\numberline {7.6.2}Dimostrazione di Convergenza}{43}{subsubsection.7.6.2}%
-\contentsline {paragraph}{Caso Migliore}{43}{section*.41}%
-\contentsline {paragraph}{Caso Peggiore}{44}{section*.42}%
-\contentsline {subsubsection}{\numberline {7.6.3}Policy Extraction}{44}{subsubsection.7.6.3}%
-\contentsline {subsubsection}{\numberline {7.6.4}Policy Iteration}{44}{subsubsection.7.6.4}%
-\contentsline {section}{\numberline {8}Reinforcement Learning}{45}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Passive Reinforcement Learning}{45}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Adaptive Dynamic Programming}{45}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}Stima Diretta}{45}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {4.8.3}UCS con EXL}{18}{subsubsection.4.8.3}%
+\contentsline {subsection}{\numberline {4.9}Ricerca Informata}{18}{subsection.4.9}%
+\contentsline {subsubsection}{\numberline {4.9.1}A*}{19}{subsubsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.2}A* con EXL}{19}{subsubsection.4.9.2}%
+\contentsline {paragraph}{Euristica Consistente}{19}{section*.13}%
+\contentsline {subsubsection}{\numberline {4.9.3}Monotonicità di $f$}{19}{subsubsection.4.9.3}%
+\contentsline {paragraph}{Dimostrazione. }{20}{section*.14}%
+\contentsline {subsubsection}{\numberline {4.9.4}Ottimalità di A*}{20}{subsubsection.4.9.4}%
+\contentsline {paragraph}{Ipotesi}{20}{section*.15}%
+\contentsline {paragraph}{Dimostrazione}{20}{section*.16}%
+\contentsline {subsection}{\numberline {4.10}Progettare un'Euristica}{20}{subsection.4.10}%
+\contentsline {subsubsection}{\numberline {4.10.1}Problema Rilassato}{21}{subsubsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.2}Limiti di A*}{21}{subsubsection.4.10.2}%
+\contentsline {subsection}{\numberline {4.11}Focal Search}{21}{subsection.4.11}%
+\contentsline {subsubsection}{\numberline {4.11.1}Terminologia}{21}{subsubsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.2}Descrizione Algoritmo}{22}{subsubsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.3}Limiti di Focal: Trashing}{23}{subsubsection.4.11.3}%
+\contentsline {section}{\numberline {5}Adversarial Search}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Caratteristiche di un gioco}{24}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Formalizzazione di un Gioco}{25}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Gioco A Somma Zero}{25}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Strategie}{26}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Albero di Gioco}{26}{subsubsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.2}Minimax}{26}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Descrizione Gioco}{26}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Descrizione Algoritmo}{27}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Minimax a $n$ agenti}{27}{subsubsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.3}Ottimizzazioni di Minimax}{27}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}$\alpha ,\beta $ Pruning}{27}{subsubsection.5.3.1}%
+\contentsline {paragraph}{Algoritmo.}{28}{section*.17}%
+\contentsline {paragraph}{Analisi}{28}{section*.18}%
+\contentsline {paragraph}{Esiti di una partita.}{29}{section*.19}%
+\contentsline {subsubsection}{\numberline {5.3.2}Funzioni di Valutazione e CUTOFF}{29}{subsubsection.5.3.2}%
+\contentsline {paragraph}{Euristiche basate sull'esperienza.}{29}{section*.20}%
+\contentsline {paragraph}{Combinazione Lineare.}{29}{section*.21}%
+\contentsline {paragraph}{Iterative Deepening.}{30}{section*.22}%
+\contentsline {paragraph}{Quiescient Search.}{30}{section*.23}%
+\contentsline {subsubsection}{\numberline {5.3.3}Tabella delle Trasposizioni}{30}{subsubsection.5.3.3}%
+\contentsline {paragraph}{Funzionamento.}{30}{section*.24}%
+\contentsline {subsubsection}{\numberline {5.3.4}Forward Pruning (PROBCUT)}{31}{subsubsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.4}Expectimax}{32}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Monte Carlo Tree Search (MTSC)}{32}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Multi-Armed Bandit Problem (MAB)}{32}{subsubsection.5.4.2}%
+\contentsline {paragraph}{Approccio Naive.}{32}{section*.25}%
+\contentsline {paragraph}{Upper Confidence Bound.}{33}{section*.26}%
+\contentsline {section}{\numberline {6}Constraint Satisfaction Problem (CSP)}{34}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Formalizzazione}{34}{subsection.6.1}%
+\contentsline {paragraph}{Rappresentazione dei Vincoli.}{34}{section*.27}%
+\contentsline {paragraph}{Tipologie di Vincoli.}{34}{section*.28}%
+\contentsline {paragraph}{Esempio.}{34}{section*.29}%
+\contentsline {subsection}{\numberline {6.2}Tecniche per il CSP}{35}{subsection.6.2}%
+\contentsline {paragraph}{Consistenza di Nodo.}{35}{section*.30}%
+\contentsline {paragraph}{Consistenza ad Arco.}{35}{section*.31}%
+\contentsline {paragraph}{Caso Patologico:}{36}{section*.32}%
+\contentsline {subsubsection}{\numberline {6.2.1}AC-3}{36}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Path Consistency}{37}{subsubsection.6.2.2}%
+\contentsline {paragraph}{Definizione.}{37}{section*.33}%
+\contentsline {subsubsection}{\numberline {6.2.3}Backtracking Search}{37}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Ordering Delle Variabili}{37}{subsubsection.6.2.4}%
+\contentsline {paragraph}{Ordine Lessicografico}{37}{section*.34}%
+\contentsline {paragraph}{Ordine Random}{37}{section*.35}%
+\contentsline {paragraph}{Euristica di Grado (EG)}{37}{section*.36}%
+\contentsline {paragraph}{Minimum Remain Value (MRV)}{38}{section*.37}%
+\contentsline {subsubsection}{\numberline {6.2.5}Euristica per i Valori}{38}{subsubsection.6.2.5}%
+\contentsline {paragraph}{Forward Checking}{38}{section*.38}%
+\contentsline {subsection}{\numberline {6.3}Local Search}{38}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Min Conflicts}{38}{subsubsection.6.3.1}%
+\contentsline {section}{\numberline {7}Markov Decision Processes}{39}{section.7}%
+\contentsline {paragraph}{Descrizione Generale.}{39}{section*.39}%
+\contentsline {paragraph}{Formalizzazioni.}{39}{section*.40}%
+\contentsline {subsection}{\numberline {7.1}Markovianità}{40}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Risoluzione di un MDP}{40}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Stimare la bontà di una policy}{41}{subsection.7.3}%
+\contentsline {paragraph}{Definizione}{41}{section*.41}%
+\contentsline {subsection}{\numberline {7.4}Reward Scontati}{41}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Policy Stazionaria}{42}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Ricerca Policy Ottima in DP}{42}{subsection.7.6}%
+\contentsline {paragraph}{Programmazione Dinamica.}{42}{section*.42}%
+\contentsline {subsubsection}{\numberline {7.6.1}Approccio Value Iteration}{44}{subsubsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.2}Dimostrazione di Convergenza}{45}{subsubsection.7.6.2}%
+\contentsline {paragraph}{Caso Migliore}{45}{section*.43}%
+\contentsline {paragraph}{Caso Peggiore}{46}{section*.44}%
+\contentsline {subsubsection}{\numberline {7.6.3}Policy Extraction}{46}{subsubsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.4}Policy Iteration}{46}{subsubsection.7.6.4}%
+\contentsline {section}{\numberline {8}Reinforcement Learning}{47}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Passive Reinforcement Learning}{47}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Adaptive Dynamic Programming}{47}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Stima Diretta}{47}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}Temporal Difference Learning}{48}{subsubsection.8.1.3}%
+\contentsline {paragraph}{Convergenza della Temporal Difference Learning.}{49}{section*.45}%
+\contentsline {subsection}{\numberline {8.2}Active Reinforcement Learning}{49}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Active Adaptive Dynamic Programming}{49}{subsubsection.8.2.1}%
+\contentsline {paragraph}{Approccio Naive.}{50}{section*.46}%
+\contentsline {paragraph}{Approccio Random.}{50}{section*.47}%
+\contentsline {paragraph}{Approccio Greedy.}{50}{section*.48}%
+\contentsline {paragraph}{Approccio $\varepsilon -$Greedy.}{50}{section*.49}%
+\contentsline {paragraph}{Approccio con Funzione di Esplorazione.}{50}{section*.50}%
+\contentsline {subsubsection}{\numberline {8.2.2}Q-Learning}{51}{subsubsection.8.2.2}%
+\contentsline {paragraph}{Algoritmo Q-Learning}{51}{section*.51}%
+\contentsline {paragraph}{Scelta prossima azione}{52}{section*.52}%
+\contentsline {subsection}{\numberline {8.3}SARSA}{52}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Convergenza dell'Active RL}{52}{subsection.8.4}%
+\contentsline {paragraph}{Infinite Exploration(IE).}{52}{section*.53}%
+\contentsline {paragraph}{Greedy in the Limit(GL).}{53}{section*.54}%
+\contentsline {paragraph}{Boltzman Exploration.}{53}{section*.55}%
+\contentsline {subsection}{\numberline {8.5}Limiti del Reinforcement Learning}{53}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Generalizzare in Reinforcement Learning}{54}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Machine Learning}{54}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Supervised Learning}{54}{subsection.9.1}%
+\contentsline {paragraph}{Classe Lineare.}{55}{section*.56}%
+\contentsline {subsubsection}{\numberline {9.1.1}Regressione Lineare Multivariata.}{55}{subsubsection.9.1.1}%
+\contentsline {paragraph}{Approccio Analitico.}{55}{section*.57}%
+\contentsline {paragraph}{Approccio Numerico.}{55}{section*.58}%
+\contentsline {subsection}{\numberline {9.2}Problemi del Machine Learning}{56}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Classificazione}{56}{subsubsection.9.2.1}%
+\contentsline {paragraph}{Approccio Ricorsivo}{57}{section*.59}%
+\contentsline {paragraph}{Approccio Random Forest}{57}{section*.60}%
+\contentsline {subsection}{\numberline {9.3}Metodi Non Parametrici}{58}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Table Lookup}{58}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}k-Nearest Neighbours Lookup}{58}{subsubsection.9.3.2}%
+\contentsline {paragraph}{Curse of Dimensionality}{59}{section*.61}%

@@ -1,0 +1,165 @@
+\subsection{Active Reinforcement Learning}
+\lezione{Lezione 17}{25/11/2024}
+In questo caso, a differenza della passiva, non viene data alcuna policy da valutare; l'agente deve scoprire da solo la policy
+ottima in un ambiente totalmente sconosciuto (all'inizio).
+
+\subsubsection{Active Adaptive Dynamic Programming}
+Questa versione attiva dell'ADP, \textbf{model based} consiste nel stimare il modello del mondo in qualche modo per poi poter applicare gli algoritmi
+di programmazione dinamica che abbiamo studiato (value iteration o policy iteration). Possiamo utilizzare diversi approcci:
+
+\paragraph{Approccio Naive.}Inizialmente si dà all'agente una policy molto banale $\pi_e$ per esplorare il mondo e, con l'esperienza appresa,
+costruire il modello $\langle \widehat{P},\widehat{R} \rangle$ e infine applicarci su un algoritmo di Dynamic Programming. Il
+principale \textbf{problema} è che l'esperienza ottenuta, e quindi il modello del mondo, sarà \textbf{fortemente influenzato}
+dalla policy $\pi_e$ che abbiamo fornito, per cui alcuni stati potrebbero non venir mai scoperti.
+
+\paragraph{Approccio Random.}Piuttosto che fornire una policy banale, l'agente deve esplorare l'ambiente eseguendo \textbf{azioni casuali}.
+In questa maniera siamo sicuri che, in un tempo sufficientemente grande, l'agente \textbf{esplori tutte possibilità}. Il principale
+\textbf{problema} di quest'approccio è che anche quando l'agente ha una stima del mondo molto affidabile, questo continuerà a
+eseguire azioni random, per cui non massimizzerà mai i reward (\textbf{massima exploration, minima exploitation}). In particolare,
+nostro obiettivo è di minimizzare il \textbf{regret}, ossia la differenza tra il reward ottenuto e la policy di riferimento.
+
+\paragraph{Approccio Greedy.}
+Ad ogni iterazione, con la policy ottima calcolata sul modello del mondo esplorato al passo precedente, esploro il mondo. Con l'esperienza
+ottenuta, calcolo una nuova stima del modello e calcolo la policy ottima da usare al prossimo passo. Sebbene l'approccio
+converga ad una policy, non è detto che la policy ottenuta sia ottima, perchè l'agente è \textbf{greedy}, ossia ricerca sempre
+\textbf{l'ottimo locale}, cioè l'ottimo circoscritto al modello del mondo appena osservato.
+
+\paragraph{Approccio $\varepsilon-$Greedy.}
+Con questa variante, dato un $0 \leq \varepsilon \leq 1$, ad ogni iterazione si esplora tramite la \textbf{policy ottima} con probabilità $\varepsilon$ o 
+esploro tramite \textbf{azioni random} con probabilità $1 - \varepsilon$. Anche in questo caso, una volta stimato $\langle \widehat{P},\widehat{R} \rangle$,
+si calcola la policy ottima e si riparte. Quest'approccio garantisce di convergere, ma molto lentamente, poichè anche dopo molte
+iterazioni (e quindi con stime affidabili del modello), l'agente continuerà ad eseguire azioni random con probabilità $1 -\varepsilon$.
+Potremmo, come avevamo fatto per il TD Learning, far diminuire $\epsilon$ in funzione delle iterazioni $k$.
+
+\paragraph{Approccio con Funzione di Esplorazione.}
+Piuttosto che scegliere con una certa probabilità l'azione random e con la sua complementare l'azione ottima, potremmo incorporare entrambe
+costruendo una policy che deve ottimizzare la \textbf{combinazione di exploration e exploitation}. In questo caso, le azioni
+con buoni reward vengono ancora predilette, tuttavia vengono dati dei \textbf{bonus} agli stati \textbf{poco esplorati}; è come se l'agente
+fosse curioso di esplorarli, curiosità che col tempo decrescerà. La modellazione matematica della \textit{"curiosità"} è espressa
+dalla \textbf{funzoone di esplorazione} $f(u,n)$:
+\begin{equation}
+    f(u,n) = u + \frac{v^+}{1 + n}
+\end{equation}
+Dove:
+\begin{itemize}
+    \item $u$ è il reward dello stato
+    \item $n$ è il numero di visite di quello stato
+    \item $v^+$ è un parametro positivo per bilanciare \textbf{exploration/exploitation}
+\end{itemize}
+Man mano che $n$ cresce, il termine $\frac{v^+}{1 + n}$ decresce, per cui, all'infinito, la funzione di esplorazione dello stato convergerà al reward dello stesso stato.
+Con la funzione di esplorazione il \textbf{Bellman Update} sarà:
+\begin{equation}
+    V_{k + 1}(s) \leftarrow \max_a \{f(\underbrace{\sum_{s'} \widehat{P}(s' | s,a)\left[\widehat{R}(s,a,s') + \gamma V_k(s')\right]}_{Q(s,a)},  \#(s,a))\}
+\end{equation}
+Dunque, man mano che $\#(s,a)$ aumenta, $f(Q(s,a),\#(s,a))$ converge a $Q(s,a)$.
+
+\subsubsection{Q-Learning}
+Un'altra classe di algoritmi è la \textbf{Active Model-Free Learning}. A differenza dell'Active ADP, quest'approccio all' Active Reinforcement Learning punta \textbf{solo} a trovare la policy ottima e 
+non a stimare il mondo, ossia vuole calcolare:
+\begin{equation}
+    \pi^* = \arg \max_a Q(s,a)
+\end{equation}
+L'algoritmo principe di questa classe di algoritmi è il \textbf{Q-Learning}:
+\paragraph{Algoritmo Q-Learning}
+\begin{enumerate}
+    \item Allo stato $s$, l'agente osserva $s$ e, se non l'ha mai visitato, prima inizializza $\#(s,a) = 0$  $ Q(s,a) = 0$  $ \forall a$. In questo caso
+    scelgo $a$ in maniera arbitraria.
+    \item Eseguo $a$, registro il reward della transizione $R(s \xrightarrow{a} s')$ e incremento $\#(s,a) = 0$. A questo punto possiamo correggere la stima 
+          di Q:
+          \begin{equation} \label{eq: stimaQ}
+            z = R + \gamma \max_{a'}Q(s',a')
+          \end{equation}
+    \item Se $s'$ non è stato mai osservato prima, inizializzo tutto ($\#(s,a) = 0$  $ Q(s,a) = 0$  $ \forall a$)
+    \item Faccio Update di $Q(s,a)$ sulla base di quanto osservato in questa maniera:
+          \begin{equation}
+            Q(s,a) \leftarrow Q(s,a) + \underbrace{\alpha(\#(s,a))}_{\text{learning rate}}(\underbrace{z - Q(s,a)}_{\text{correzione}})
+          \end{equation}
+    \item Riparto dalla (2)
+\end{enumerate}
+Anche in questo caso dovremmo adottare un $\alpha$ in funzione del numero di iterazioni per far si che all'inizio prevalga l'exploration
+e verso la fine l'exploitation. Dobbiamo ora puntare l'attenzione su $z$: la sua definizione è \textit{il reward di a + 
+il reward massimo ottenibile allo stato s' raggiunto tramite a}. Questo \textit{sguardo in avanti} rappresenta la parte peculiare
+di questo algoritmo, perchè stiamo valutando l'azione sapendo che al prossimo stato eseguiremo l'azione ottima, che non è necessariamente
+prescritta dalla policy che abbiamo calcolato. Per questo motivo, il q-learning è anche detto \textbf{Metodo Off-Policy.}
+
+\paragraph{Scelta prossima azione}
+Tra le tante possibilità, possima implementare la scelta della prossima azione con la \textbf{funzione di esplorazione},
+cioè scegliendo l'azione che massimizza la $f$:
+\begin{equation}
+    a \leftarrow \arg \max_a' f(Q(s',a'), \#(s',a'))
+\end{equation}
+Il punto di forza di Q-Learning è che è un metodo off-policy, ossia un'azione la scegliamo ipotizzando
+che da quel momento in poi sceglieremo sempre quella che massimizza il reward. Quindi update
+e prossima azione sono \textbf{indipendenti}.
+
+\subsection{SARSA}
+Se il Q-Learning è un algoritmo d'apprendimento off-policy, cioè che per funzionare deve effettuare
+una fase d'addestramento e poi può lavorare, il SARSA, essendo un algoritmo \textbf{On-Policy}, cerca
+sempre l'ottimo al momento dell'esplorazione, senza alcun addestramento precedente.
+L'\textbf{update} è il seguente:
+\begin{equation}
+    Q(s,a) \leftarrow Q(s,a) + \alpha(\#(s,a))(R + \gamma Q(a',s') - Q(s,a))
+\end{equation}
+Quindi la grande differenza è che, se i metodi off-policy cercano sempre di agiure con l'ipotesi
+di fare successivamente \textbf{sempre ottime} (anche se tali azioni non vengono scelte,
+magari perchè l'agente ha bisogno di esplorare), i metodi on-policy possono solo considerare
+le azioni che massimizzano la funzione d'esplorazione (e quindi le azioni possono non essere ottime).
+
+\subsection{Convergenza dell'Active RL}
+Possiamo dire per qualsiasi algoritmo di Active Reinforcement Learning, che la convergenza 
+all'ottimo si raggiunge solo se si soddisfano 2 condizioni:
+\begin{itemize}
+    \item Infinite Exploration
+    \item Greedy in the Limit
+\end{itemize}
+
+\paragraph{Infinite Exploration(IE).}L'avevamo già incontrato per verificare la convergenza del TD Learning.
+Se la \textit{learning rate} dell'algoritmo soddisfa la IE, allora per $t\to +\infty$ l'agente avrà esplorato tutte le coppie <stato,azione> infinite volte.
+Le condizioni sono:
+\begin{gather*}
+    \sum_{n = 1}^{+\infty} \alpha(n) = +\infty\\
+    \sum_{n = 1}^{+\infty} \alpha^2(n) < \infty
+\end{gather*}
+
+\paragraph{Greedy in the Limit(GL).}Una volta che le $Q(s,a)$ si sono stabilizzate per ogni coppia <stato,azione>
+è necessario che l'algoritmo scelga sempre l'azione ottima e non azioni random, altrimenti non si converge
+alla policy ottima. Dunque, per $t \to \infty$ $\pi^* = \pi_\text{greedy}$.
+
+In definitiva, un algoritmo \textit{"funziona"} se è solo se rispetta le GLIE. Riporto ora un esempio:
+
+\paragraph{Boltzman Exploration.}Questa funzione di esplorazione si presenta nella seguente forma:
+\begin{equation}
+    \pi_e(s) \sim P(a | s) = \frac{e^{\frac{Q_t(s,a)}{\tau}}}{\sum_{b} e^{\frac{Q_t(s,b)}{\tau}}}
+\end{equation}
+Dove $\tau$ è detta \textbf{temperatura}; analizziamo i vari casi:
+\begin{itemize}
+    \item Per temperature \textbf{molto alte}: gli esponenti tenderanno a 0, per cui la funzione corrisponderà a:
+    \begin{equation}
+        \pi_e(s) = \frac{1}{\sum_{b}}
+    \end{equation}
+    Ossia la distribuzione del \textbf{uniforme discreto} (esploro a caso)
+    \item per temperature \textbf{molto basse}: gli esponenti cresceranno all'infinito; il valore che non viene annullato è quello che ha il $Q(s,a)$ più alto, per cui ci sarà il $100\%$ di probabilità di scegliere quella mossa.
+\end{itemize}
+Facendo partire l'algoritmo con temperature molto alte e abbassandole man mano, si può dimostrare che vengono rispettate sia la IE che la GL.
+
+\subsection{Limiti del Reinforcement Learning}
+Il limite che tutti gli algoritmi di Reinforcement Learning condividono è la \textbf{quantità di esplorazione prima di convergere all'ottimo},
+oltre al fatto di tenere in memoria una rappresentazione almeno delle tabelle di $Q(s,a)$ o di $V(s,a)$. Per uno spazio degli stati 
+superiori a $10^6$, il RL è \textbf{impraticabile}. Sono necessari allora dei modi per \textbf{generalizzare} a partire da un training
+set molto ridotto, in modo da poter applicare quest'esperienza per molti altri \textit{input} che l'agente non ha mai visto. L'argomento
+è così importante che esiste una grande branca dell'Intelligenza Artificiale detta \textbf{Machine Learning}.
+
+\subsection{Generalizzare in Reinforcement Learning}
+Per generalizzare in questo contesto potremmo usare uno strumento che avevamo già usato in passato per MINIMAX, ossia le \textbf{feature}.
+Possiamo infatti \textbf{assumere} che una \textbf{action value function} sia rappresentabile che combinazione lineare di feature, ossia:
+\begin{equation}
+    Q(s,a) = \theta_0 + \theta_1f_1(s,a) + \dots + \theta_nf_n(s,a)
+\end{equation}
+Dove le varie feature stimano la Q in base ad una particolare caratteristica della coppia <stato,azione> (NB: spesso la Q non è rappresentabile in questa maniera, 
+ma pensarla così ci permette di semplificare molti calcoli). Quindi, dati:
+\begin{itemize}
+    \item un vettore $x_i = \langle f_1(s,a), \dots, f_n(s,a)\rangle $ di feature all'i-esima transizione
+    \item L'esperienza $z_i$ all'iesima transizione
+\end{itemize} 
+L'agente deve risolvere un problema di \textbf{regressione lineare} in modo da \textit{adattare} il vettore di feature all'output atteso dell'esperienza.
+Quest'approccio al Reinforcement Learning è detto \textbf{Supervised Learning}.
